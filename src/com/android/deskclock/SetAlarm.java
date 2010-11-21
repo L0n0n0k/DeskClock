@@ -29,15 +29,8 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
 import android.text.format.DateFormat;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -54,7 +47,6 @@ public class SetAlarm extends PreferenceActivity
     private AlarmPreference mAlarmPref;
     private CheckBoxPreference mVibratePref;
     private RepeatPreference mRepeatPref;
-    private MenuItem mTestAlarmItem;
 
     private int     mId;
     private int     mHour;

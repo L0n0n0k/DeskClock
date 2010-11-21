@@ -21,13 +21,9 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.database.Cursor;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.LayoutInflater;
@@ -39,7 +35,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CursorAdapter;
 import android.widget.ImageButton;
@@ -60,7 +55,6 @@ public class AlarmClock extends Activity implements OnItemClickListener {
         test code, etc. */
     static final boolean DEBUG = false;
 
-    private SharedPreferences mPrefs;
     private LayoutInflater mFactory;
     private ListView mAlarmsList;
     private Cursor mCursor;
@@ -199,7 +193,6 @@ public class AlarmClock extends Activity implements OnItemClickListener {
         super.onCreate(icicle);
 
         mFactory = LayoutInflater.from(this);
-        mPrefs = getSharedPreferences(PREFERENCES, 0);
         mCursor = Alarms.getAlarmsCursor(getContentResolver());
 
         updateLayout();
@@ -304,7 +297,7 @@ public class AlarmClock extends Activity implements OnItemClickListener {
         return super.onCreateOptionsMenu(menu);
     }
 
-    public void onItemClick(AdapterView parent, View v, int pos, long id) {
+    public void onItemClick(AdapterView<?> parent, View v, int pos, long id) {
         Intent intent = new Intent(this, SetAlarm.class);
         intent.putExtra(Alarms.ALARM_ID, (int) id);
         startActivity(intent);

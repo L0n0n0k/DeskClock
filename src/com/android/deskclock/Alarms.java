@@ -32,7 +32,6 @@ import android.provider.Settings;
 import android.text.format.DateFormat;
 
 import java.util.Calendar;
-import java.text.DateFormatSymbols;
 
 /**
  * The Alarms provider supplies info about Alarm Clock settings
@@ -148,12 +147,6 @@ public class Alarms {
 
     private static ContentValues createContentValues(Alarm alarm) {
         ContentValues values = new ContentValues(8);
-        // Set the alarm_time value if this alarm does not repeat. This will be
-        // used later to disable expire alarms.
-        long time = 0;
-        if (!alarm.daysOfWeek.isRepeatSet()) {
-            time = calculateAlarm(alarm);
-        }
 
         values.put(Alarm.Columns.ENABLED, alarm.enabled ? 1 : 0);
         values.put(Alarm.Columns.HOUR, alarm.hour);
