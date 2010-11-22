@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA9n///UU\u003d",
+        "filename": "src/com/android/deskclock/Alarms.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 1000660
+      },
+      "writtenOn": "2010-11-22T18:53:17Z",
+      "side": 0,
+      "message": "Let\u0027s keep that variable in, as it\u0027s used in Google\u0027s internal master tree",
+      "revId": "529ffc1c601d7387d69826692aed01add4e7271e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
