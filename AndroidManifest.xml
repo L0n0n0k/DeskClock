@@ -14,7 +14,8 @@
     <uses-permission android:name="android.permission.DEVICE_POWER" />
 
     <application android:label="@string/app_label"
-                 android:icon="@drawable/ic_launcher_alarmclock">
+                 android:icon="@drawable/ic_launcher_alarmclock"
+                 android:theme="@style/DeskClockDefaultTheme">
 
         <provider android:name="AlarmProvider"
                 android:authorities="com.android.deskclock"
@@ -22,7 +23,7 @@
 
         <activity android:name="DeskClock"
                 android:label="@string/app_label"
-                android:theme="@android:style/Theme.Wallpaper.NoTitleBar"
+                android:theme="@style/DeskClockTheme"
                 android:icon="@drawable/ic_launcher_alarmclock"
                 android:launchMode="singleInstance"
                 android:configChanges="orientation|keyboardHidden|keyboard|navigation">
