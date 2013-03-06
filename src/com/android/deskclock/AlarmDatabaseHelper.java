@@ -83,9 +83,13 @@ class AlarmDatabaseHelper extends SQLiteOpenHelper {
                     final Cursor cursor = db
                             .query("alarms", new String[]{Alarm.Columns._ID}, "_id = ?",
                                     new String[]{id + ""}, null, null, null);
-                    if (cursor.moveToFirst()) {
-                        // Record exists. Remove the id so sqlite can generate a new one.
-                        values.putNull(Alarm.Columns._ID);
+                    try {
+                        if (cursor.moveToFirst()) {
+                            // Record exists. Remove the id so sqlite can generate a new one.
+                            values.putNull(Alarm.Columns._ID);
+                        }
+                    } finally {
+                        if (cursor != null) cursor.close();
                     }
                 }
             }
