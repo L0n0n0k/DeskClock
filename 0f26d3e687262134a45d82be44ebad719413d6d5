@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Q-gR9dvQ",
+        "filename": "src/com/android/deskclock/AlarmDatabaseHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1020314
+      },
+      "writtenOn": "2013-03-06T18:07:17Z",
+      "side": 1,
+      "message": "The null check should be around the try clause. If db.query can return null , then cursor.moveToFirst can crash.",
+      "revId": "0f26d3e687262134a45d82be44ebad719413d6d5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
