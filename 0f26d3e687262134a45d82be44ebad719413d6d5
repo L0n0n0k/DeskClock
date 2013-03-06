@@ -16,6 +16,24 @@
       "revId": "0f26d3e687262134a45d82be44ebad719413d6d5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "RA6K14Ns",
+        "filename": "src/com/android/deskclock/AlarmDatabaseHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1020248
+      },
+      "writtenOn": "2013-03-06T23:52:03Z",
+      "side": 1,
+      "message": "This commit is only for the cursor leak prevention. If cursor is null, I don\u0027t know what will happen to the next insert operation. I can test for this if you think it needs to be the null check.",
+      "parentUuid": "Q-gR9dvQ",
+      "revId": "0f26d3e687262134a45d82be44ebad719413d6d5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
