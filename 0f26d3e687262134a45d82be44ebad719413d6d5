@@ -34,6 +34,24 @@
       "revId": "0f26d3e687262134a45d82be44ebad719413d6d5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "RneVkdvw",
+        "filename": "src/com/android/deskclock/AlarmDatabaseHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1020248
+      },
+      "writtenOn": "2013-03-13T07:39:01Z",
+      "side": 1,
+      "message": "I tested this case and figured out that there is no problem to the next operation even if cursor is null.\nso I modified new patch to be null check around the try clause.",
+      "parentUuid": "Q-gR9dvQ",
+      "revId": "0f26d3e687262134a45d82be44ebad719413d6d5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
