@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "R4MWUTDo",
+        "filename": "src/com/android/deskclock/AlarmDatabaseHelper.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1020314
+      },
+      "writtenOn": "2013-03-19T01:43:00Z",
+      "side": 1,
+      "message": "Why not change \"_id \u003d ?\" to reference Alarm.Columns ?",
+      "revId": "e359fb0ffdf3d63a3a44c0c47fdfd37a2b914dee",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
