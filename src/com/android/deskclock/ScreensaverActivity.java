@@ -124,7 +124,7 @@ public class ScreensaverActivity extends Activity {
     public void onPause() {
         mHandler.removeCallbacks(mMoveSaverRunnable);
         Utils.cancelAlarmOnQuarterHour(this, mQuarterlyIntent);
-        finish();
+        //finish();
         super.onPause();
     }
 
