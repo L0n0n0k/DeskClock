@@ -124,7 +124,6 @@ public class ScreensaverActivity extends Activity {
     public void onPause() {
         mHandler.removeCallbacks(mMoveSaverRunnable);
         Utils.cancelAlarmOnQuarterHour(this, mQuarterlyIntent);
-        finish();
         super.onPause();
     }
 
@@ -150,13 +149,16 @@ public class ScreensaverActivity extends Activity {
     }
 
     private void setWakeLock() {
+        /* {@param mFlags} allows override of lockscreen to keep clock 
+         * in screensaver mode when toggling screen off/on
+         */
         Window win = getWindow();
         WindowManager.LayoutParams winParams = win.getAttributes();
-        winParams.flags |= WindowManager.LayoutParams.FLAG_FULLSCREEN;
+        winParams.flags |= mFlags;
         if (mPluggedIn)
-            winParams.flags |= mFlags;
+            winParams.flags |= WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
         else
-            winParams.flags &= (~mFlags);
+            winParams.flags &= (~WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         win.setAttributes(winParams);
     }
 
