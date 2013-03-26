@@ -124,7 +124,7 @@ public class ScreensaverActivity extends Activity {
     public void onPause() {
         mHandler.removeCallbacks(mMoveSaverRunnable);
         Utils.cancelAlarmOnQuarterHour(this, mQuarterlyIntent);
-        finish();
+        //finish(); //don't finish() onPause()
         super.onPause();
     }
 
@@ -150,13 +150,33 @@ public class ScreensaverActivity extends Activity {
     }
 
     private void setWakeLock() {
-        Window win = getWindow();
+        /* original master branch setWakeLock() code below. 
+         * {@param mFlags} seems pointless as onPause()
+         * finishes the activity
+         */
+        /*Window win = getWindow();
         WindowManager.LayoutParams winParams = win.getAttributes();
         winParams.flags |= WindowManager.LayoutParams.FLAG_FULLSCREEN;
         if (mPluggedIn)
             winParams.flags |= mFlags;
         else
             winParams.flags &= (~mFlags);
+        win.setAttributes(winParams);*/
+
+        /* Use old 4.1.1 setWakeLock() code below 
+         * as it allows override of lockscreen
+         * to keep clock in screensaver mode
+         */
+        Window win = getWindow();
+        WindowManager.LayoutParams winParams = win.getAttributes();
+        winParams.flags |= (WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
+                | WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
+                | WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON
+                | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+        if (mPluggedIn)
+            winParams.flags |= WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
+        else
+            winParams.flags &= (~WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         win.setAttributes(winParams);
     }
 
