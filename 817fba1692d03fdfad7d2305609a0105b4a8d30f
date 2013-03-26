@@ -16,6 +16,23 @@
       "revId": "817fba1692d03fdfad7d2305609a0105b4a8d30f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "SnEaaMrA",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1016558
+      },
+      "writtenOn": "2013-03-26T02:38:39Z",
+      "side": 1,
+      "message": "I didn\u0027t clarify that well. Each line should be no more than 72 characters long.",
+      "revId": "817fba1692d03fdfad7d2305609a0105b4a8d30f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
