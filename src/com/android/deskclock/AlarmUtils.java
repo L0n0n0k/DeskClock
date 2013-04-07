@@ -33,7 +33,7 @@ public class AlarmUtils {
         if (prev != null) {
             ft.remove(prev);
         }
-        ft.addToBackStack(null);
+       // ft.addToBackStack(null);//This will cause exception when quickly repeat to show fragment dialog
 
         final AlarmTimePickerDialogFragment fragment = AlarmTimePickerDialogFragment.newInstance(
                 alarm);
