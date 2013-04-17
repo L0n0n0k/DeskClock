@@ -1,0 +1,10 @@
+Verified+1: Deckard Autoverifier <deckard@android.com>
+Code-Review+1: Matt Gumbel <matthew.k.gumbel@intel.com>
+Code-Review+2: Isaac Katzenelson <isaackatz@google.com>
+Code-Review+1: Anton Cherkashyn <mail@antonc.com>
+Code-Review+1: Isaac Katzenelson <isaack@android.com>
+Submitted-by: Isaac Katzenelson <isaackatz@google.com>
+Submitted-at: Wed, 17 Apr 2013 16:44:37 +0000
+Reviewed-on: https://android-review.googlesource.com/53845
+Project: platform/packages/apps/DeskClock
+Branch: refs/heads/master
