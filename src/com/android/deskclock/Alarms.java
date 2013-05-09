@@ -447,7 +447,7 @@ public class Alarms {
         intent.putExtra(ALARM_RAW_DATA, out.marshall());
 
         PendingIntent sender = PendingIntent.getBroadcast(
-                context, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+                context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         am.set(AlarmManager.RTC_WAKEUP, atTimeInMillis, sender);
 
@@ -469,7 +469,7 @@ public class Alarms {
                 context.getSystemService(Context.ALARM_SERVICE);
         PendingIntent sender = PendingIntent.getBroadcast(
                 context, 0, new Intent(ALARM_ALERT_ACTION),
-                PendingIntent.FLAG_CANCEL_CURRENT);
+                PendingIntent.FLAG_UPDATE_CURRENT);
         am.cancel(sender);
         setStatusBarIcon(context, false);
         // Intentionally verbose: always log the lack of a next alarm to provide useful
