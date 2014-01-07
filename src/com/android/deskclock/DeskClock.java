@@ -23,6 +23,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -103,12 +104,9 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
         // not the most recent launch was via a dock event
         setIntent(newIntent);
 
-        // Timer receiver may ask to go to the timers fragment if a timer expired.
-        int tab = newIntent.getIntExtra(SELECT_TAB_INTENT_EXTRA, -1);
-        if (tab != -1) {
-            if (mActionBar != null) {
-                mActionBar.setSelectedNavigationItem(tab);
-            }
+        int tab = determineTargetTab(newIntent);
+        if (tab != -1 && mActionBar != null) {
+            mActionBar.setSelectedNavigationItem(tab);
         }
     }
 
@@ -166,10 +164,9 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
             mSelectedTab = icicle.getInt(KEY_SELECTED_TAB, CLOCK_TAB_INDEX);
         }
 
-        // Timer receiver may ask the app to go to the timer fragment if a timer expired
         Intent i = getIntent();
         if (i != null) {
-            int tab = i.getIntExtra(SELECT_TAB_INTENT_EXTRA, -1);
+            int tab = determineTargetTab(i);
             if (tab != -1) {
                 mSelectedTab = tab;
             }
@@ -221,6 +218,24 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt(KEY_SELECTED_TAB, mActionBar.getSelectedNavigationIndex());
+    }
+
+    private int determineTargetTab(Intent intent) {
+        // Timer receiver may ask the app to go to the timer fragment if a timer expired
+        int tab = intent.getIntExtra(SELECT_TAB_INTENT_EXTRA, -1);
+        if (tab >= 0) {
+            return tab;
+        }
+
+        // Go to alarm tab if we were launched with the alarm activity alias
+        ComponentName component = intent.getComponent();
+        if (component != null
+                && component.getClassName() != null
+                && component.getClassName().endsWith("AlarmClock")) {
+            return isRtl() ? RTL_ALARM_TAB_INDEX : ALARM_TAB_INDEX;
+        }
+
+        return -1;
     }
 
     public void clockButtonsOnClick(View v) {
@@ -335,6 +350,11 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
         if (mTabsAdapter != null) {
             mTabsAdapter.unregisterPageChangedListener(frag);
         }
+    }
+
+    private static boolean isRtl() {
+        return TextUtils.getLayoutDirectionFromLocale(Locale.getDefault()) ==
+                View.LAYOUT_DIRECTION_RTL;
     }
 
 
@@ -475,13 +495,8 @@ public class DeskClock extends Activity implements LabelDialogFragment.TimerLabe
             mFragmentTags.remove(frag.getTag());
         }
 
-        private boolean isRtl() {
-            return TextUtils.getLayoutDirectionFromLocale(Locale.getDefault()) ==
-                    View.LAYOUT_DIRECTION_RTL;
-        }
-
         private int getRtlPosition(int position) {
-            if (isRtl()) {
+            if (DeskClock.isRtl()) {
                 switch (position) {
                     case TIMER_TAB_INDEX:
                         return RTL_TIMER_TAB_INDEX;
