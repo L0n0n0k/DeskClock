@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "92bf0a8c_3e38fde8",
+        "filename": "src/com/android/deskclock/DeskClock.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 1010105
+      },
+      "writtenOn": "2014-01-23T22:45:36Z",
+      "side": 1,
+      "message": "ComponentName c \u003d intent.getComponent();\nif (c !\u003d null \u0026\u0026 c.getClassName() .....) {",
+      "range": {
+        "startLine": 230,
+        "startChar": 19,
+        "endLine": 230,
+        "endChar": 31
+      },
+      "revId": "593faad7f6739820e13b349de4c74f34cf4ff7c8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
