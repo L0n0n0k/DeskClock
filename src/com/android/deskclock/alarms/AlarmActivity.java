@@ -235,7 +235,12 @@ public class AlarmActivity extends Activity {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        unregisterReceiver(mReceiver);
+        //Per the logic in onCreate, mReceiver will be registered only when
+        //mInstance is not null. Otherwise, it will throw exception causing app crash.
+        //You can also use 'try catch' here to ignore the exception.
+        if (mInstance != null) {
+            unregisterReceiver(mReceiver);
+        }
     }
 
     @Override
