@@ -168,33 +168,38 @@ class ClockDatabaseHelper extends SQLiteOpenHelper {
             };
             Cursor cursor = db.query(OLD_ALARMS_TABLE_NAME, OLD_TABLE_COLUMNS,
                     null, null, null, null, null);
-            Calendar currentTime = Calendar.getInstance();
-            while (cursor.moveToNext()) {
-                Alarm alarm = new Alarm();
-                alarm.id = cursor.getLong(0);
-                alarm.hour = cursor.getInt(1);
-                alarm.minutes = cursor.getInt(2);
-                alarm.daysOfWeek = new DaysOfWeek(cursor.getInt(3));
-                alarm.enabled = cursor.getInt(4) == 1;
-                alarm.vibrate = cursor.getInt(5) == 1;
-                alarm.label = cursor.getString(6);
+            if (cursor != null) {
+                try {
+                    Calendar currentTime = Calendar.getInstance();
+                    while (cursor.moveToNext()) {
+                        Alarm alarm = new Alarm();
+                        alarm.id = cursor.getLong(0);
+                        alarm.hour = cursor.getInt(1);
+                        alarm.minutes = cursor.getInt(2);
+                        alarm.daysOfWeek = new DaysOfWeek(cursor.getInt(3));
+                        alarm.enabled = cursor.getInt(4) == 1;
+                        alarm.vibrate = cursor.getInt(5) == 1;
+                        alarm.label = cursor.getString(6);
 
-                String alertString = cursor.getString(7);
-                if ("silent".equals(alertString)) {
-                    alarm.alert = Alarm.NO_RINGTONE_URI;
-                } else {
-                    alarm.alert = TextUtils.isEmpty(alertString) ? null : Uri.parse(alertString);
-                }
+                        String alertString = cursor.getString(7);
+                        if ("silent".equals(alertString)) {
+                            alarm.alert = Alarm.NO_RINGTONE_URI;
+                        } else {
+                            alarm.alert = TextUtils.isEmpty(alertString) ? null : Uri.parse(alertString);
+                        }
 
-                // Save new version of alarm and create alarminstance for it
-                db.insert(ALARMS_TABLE_NAME, null, Alarm.createContentValues(alarm));
-                if (alarm.enabled) {
-                    AlarmInstance newInstance = alarm.createInstanceAfter(currentTime);
-                    db.insert(INSTANCES_TABLE_NAME, null,
-                            AlarmInstance.createContentValues(newInstance));
+                        // Save new version of alarm and create alarminstance for it
+                        db.insert(ALARMS_TABLE_NAME, null, Alarm.createContentValues(alarm));
+                        if (alarm.enabled) {
+                            AlarmInstance newInstance = alarm.createInstanceAfter(currentTime);
+                            db.insert(INSTANCES_TABLE_NAME, null,
+                                    AlarmInstance.createContentValues(newInstance));
+                        }
+                    }
+                } finally {
+                    cursor.close();
                 }
             }
-            cursor.close();
 
             Log.i("Dropping old alarm table");
             db.execSQL("DROP TABLE IF EXISTS " + OLD_ALARMS_TABLE_NAME + ";");
@@ -217,9 +222,15 @@ class ClockDatabaseHelper extends SQLiteOpenHelper {
                             new String[]{ClockContract.AlarmsColumns._ID},
                             ClockContract.AlarmsColumns._ID + " = ?",
                             new String[]{id + ""}, null, null, null);
-                    if (cursor.moveToFirst()) {
-                        // Record exists. Remove the id so sqlite can generate a new one.
-                        values.putNull(ClockContract.AlarmsColumns._ID);
+                    if (cursor != null) {
+                        try {
+                            if (cursor.moveToFirst()) {
+                                // Record exists. Remove the id so sqlite can generate a new one.
+                                values.putNull(ClockContract.AlarmsColumns._ID);
+                            }
+                        } finally {
+                            cursor.close();
+                        }
                     }
                 }
             }
