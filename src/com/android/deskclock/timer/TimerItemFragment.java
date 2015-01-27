@@ -133,6 +133,9 @@ public class TimerItemFragment extends Fragment {
     }
 
     private void onLabelPressed(TimerObj t) {
+        if (getActivity() == null || getActivity().isFinishing()) {
+            return;
+        }
         final String dialogTag = "label_dialog";
         final FragmentTransaction ft = getFragmentManager().beginTransaction();
         final Fragment prev = getFragmentManager().findFragmentByTag(dialogTag);

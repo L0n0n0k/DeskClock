@@ -388,6 +388,9 @@ public class AlarmClockFragment extends DeskClockFragment implements
     }
 
     private void showLabelDialog(final Alarm alarm) {
+        if (getActivity() == null || getActivity().isFinishing()) {
+            return;
+        }
         final FragmentTransaction ft = getFragmentManager().beginTransaction();
         final Fragment prev = getFragmentManager().findFragmentByTag("label_dialog");
         if (prev != null) {
