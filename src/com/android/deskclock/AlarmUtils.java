@@ -57,6 +57,9 @@ public class AlarmUtils {
      * @param alarm The clicked alarm, it can be null if user was clicking the fab instead.
      */
     public static void showTimeEditDialog(Fragment fragment, final Alarm alarm) {
+        if (fragment == null || !fragment.isResumed()) {
+            return;
+        }
         final FragmentManager manager = fragment.getFragmentManager();
         final FragmentTransaction ft = manager.beginTransaction();
         final Fragment prev = manager.findFragmentByTag(FRAG_TAG_TIME_PICKER);
