@@ -40,6 +40,8 @@ import android.widget.TextClock;
 import com.android.deskclock.alarms.AlarmNotifications;
 import com.android.deskclock.worldclock.WorldClockAdapter;
 
+import java.lang.reflect.Method;
+
 /**
  * Fragment that shows  the clock (analog or digital), the next alarm info and the world clock.
  */
@@ -256,6 +258,18 @@ public class ClockFragment extends DeskClockFragment implements OnSharedPreferen
         Activity activity = getActivity();
         activity.unregisterReceiver(mIntentReceiver);
         activity.getContentResolver().unregisterContentObserver(mAlarmObserver);
+    }
+
+    @Override
+    public void onDestroy(){
+        try {
+            Method onDetachedFromWindowMethod = ViewGroup.class.getDeclaredMethod("removeDetachedView",View.class,boolean.class);
+            onDetachedFromWindowMethod.setAccessible(true);
+            onDetachedFromWindowMethod.invoke((Object)mList, mClockFrame,false);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        super.onDestroy();
     }
 
     @Override
