@@ -388,17 +388,27 @@ public class AlarmClockFragment extends DeskClockFragment implements
     }
 
     private void showLabelDialog(final Alarm alarm) {
-        final FragmentTransaction ft = getFragmentManager().beginTransaction();
-        final Fragment prev = getFragmentManager().findFragmentByTag("label_dialog");
-        if (prev != null) {
-            ft.remove(prev);
+        if (!isResumed()) {
+            return;
         }
-        ft.addToBackStack(null);
 
-        // Create and show the dialog.
-        final LabelDialogFragment newFragment =
-                LabelDialogFragment.newInstance(alarm, alarm.label, getTag());
-        newFragment.show(ft, "label_dialog");
+        try {
+            final FragmentTransaction ft = getFragmentManager()
+                    .beginTransaction();
+            final Fragment prev = getFragmentManager().findFragmentByTag(
+                    "label_dialog");
+            if (prev != null) {
+                ft.remove(prev);
+            }
+            ft.addToBackStack(null);
+
+            // Create and show the dialog.
+            final LabelDialogFragment newFragment = LabelDialogFragment
+                    .newInstance(alarm, alarm.label, getTag());
+            newFragment.show(ft, "label_dialog");
+        } catch (Exception e) {
+            LogUtils.e("Show label dialog fragment error:", e);
+        }
     }
 
     public void setLabel(Alarm alarm, String label) {

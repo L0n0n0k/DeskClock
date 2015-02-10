@@ -33,6 +33,7 @@ import com.android.deskclock.CircleButtonsLayout;
 import com.android.deskclock.DeskClock;
 import com.android.deskclock.DeskClock.OnTapListener;
 import com.android.deskclock.LabelDialogFragment;
+import com.android.deskclock.LogUtils;
 import com.android.deskclock.R;
 
 public class TimerItemFragment extends Fragment {
@@ -133,15 +134,25 @@ public class TimerItemFragment extends Fragment {
     }
 
     private void onLabelPressed(TimerObj t) {
-        final String dialogTag = "label_dialog";
-        final FragmentTransaction ft = getFragmentManager().beginTransaction();
-        final Fragment prev = getFragmentManager().findFragmentByTag(dialogTag);
-        if (prev != null) {
-            ft.remove(prev);
+       if (!isResumed()) {
+            return;
         }
-        ft.addToBackStack(null);
-        final LabelDialogFragment newFragment =
-                LabelDialogFragment.newInstance(t, t.mLabel, getParentFragment().getTag());
-        newFragment.show(ft, dialogTag);
+
+        try {
+            final String dialogTag = "label_dialog";
+            final FragmentTransaction ft = getFragmentManager()
+                    .beginTransaction();
+            final Fragment prev = getFragmentManager().findFragmentByTag(
+                    dialogTag);
+            if (prev != null) {
+                ft.remove(prev);
+            }
+            ft.addToBackStack(null);
+            final LabelDialogFragment newFragment = LabelDialogFragment
+                    .newInstance(t, t.mLabel, getParentFragment().getTag());
+            newFragment.show(ft, dialogTag);
+        } catch (Exception e) {
+            LogUtils.e("show timer label dialog error: ", e);
+        }
     }
 }
