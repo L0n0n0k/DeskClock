@@ -57,18 +57,25 @@ public class AlarmUtils {
      * @param alarm The clicked alarm, it can be null if user was clicking the fab instead.
      */
     public static void showTimeEditDialog(Fragment fragment, final Alarm alarm) {
-        final FragmentManager manager = fragment.getFragmentManager();
-        final FragmentTransaction ft = manager.beginTransaction();
-        final Fragment prev = manager.findFragmentByTag(FRAG_TAG_TIME_PICKER);
-        if (prev != null) {
-            ft.remove(prev);
+        if (fragment == null || !fragment.isResumed()) {
+            return;
         }
-        ft.commit();
-        final TimePickerFragment timePickerFragment = new TimePickerFragment();
-        timePickerFragment.setTargetFragment(fragment, 0);
-        timePickerFragment.setOnTimeSetListener((TimePickerDialog.OnTimeSetListener) fragment);
-        timePickerFragment.setAlarm(alarm);
-        timePickerFragment.show(manager, FRAG_TAG_TIME_PICKER);
+        try {
+            final FragmentManager manager = fragment.getFragmentManager();
+            final FragmentTransaction ft = manager.beginTransaction();
+            final Fragment prev = manager.findFragmentByTag(FRAG_TAG_TIME_PICKER);
+            if (prev != null) {
+                ft.remove(prev);
+            }
+            ft.commit();
+            final TimePickerFragment timePickerFragment = new TimePickerFragment();
+            timePickerFragment.setTargetFragment(fragment, 0);
+            timePickerFragment.setOnTimeSetListener((TimePickerDialog.OnTimeSetListener) fragment);
+            timePickerFragment.setAlarm(alarm);
+            timePickerFragment.show(manager, FRAG_TAG_TIME_PICKER);
+        } catch (Exception e) {
+            LogUtils.e("Show time edit dialog error: ", e);
+        }
     }
 
     /**
