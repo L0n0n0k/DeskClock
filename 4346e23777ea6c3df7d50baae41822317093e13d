@@ -1,0 +1,208 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d6b42de0_7aec7919",
+        "filename": "src/com/android/deskclock/AlarmClockFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 391,
+      "author": {
+        "id": 1048480
+      },
+      "writtenOn": "2015-02-11T22:28:04Z",
+      "side": 1,
+      "message": "Let\u0027s remove this check since it is okay to commit FragmentTransactions before onResume is called.",
+      "revId": "4346e23777ea6c3df7d50baae41822317093e13d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d6b42de0_9a322d1a",
+        "filename": "src/com/android/deskclock/AlarmClockFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 396,
+      "author": {
+        "id": 1048480
+      },
+      "writtenOn": "2015-02-11T22:28:04Z",
+      "side": 1,
+      "message": "nit: AOSP uses 100-char line limit, please restore the original line wrapping where this limit is not exceeded.",
+      "revId": "4346e23777ea6c3df7d50baae41822317093e13d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d6b42de0_da566511",
+        "filename": "src/com/android/deskclock/AlarmClockFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 406,
+      "author": {
+        "id": 1048480
+      },
+      "writtenOn": "2015-02-11T22:28:04Z",
+      "side": 1,
+      "message": "nit: in AOSP we generally do not wrap at this point, the class name should be wrapped with the static method name.",
+      "revId": "4346e23777ea6c3df7d50baae41822317093e13d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76b381fa_17ed1418",
+        "filename": "src/com/android/deskclock/AlarmClockFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 409,
+      "author": {
+        "id": 1048480
+      },
+      "writtenOn": "2015-02-11T22:28:04Z",
+      "side": 1,
+      "message": "It\u0027s much better to scope these catch statements as much as possible otherwise more subtle bugs may be obscured.\n\nUsing IllegalStateException should be sufficient here.",
+      "revId": "4346e23777ea6c3df7d50baae41822317093e13d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "36c5895d_f5ded85e",
+        "filename": "src/com/android/deskclock/AlarmClockFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 410,
+      "author": {
+        "id": 1048480
+      },
+      "writtenOn": "2015-02-11T22:28:04Z",
+      "side": 1,
+      "message": "nit: reword \"Error showing LabelDialogFragment\"",
+      "revId": "4346e23777ea6c3df7d50baae41822317093e13d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b6b979da_79ec8719",
+        "filename": "src/com/android/deskclock/AlarmUtils.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1048480
+      },
+      "writtenOn": "2015-02-11T22:28:04Z",
+      "side": 1,
+      "message": "Per comment in AlarmClockFragment, remove this check (it should also be okay if the passed in fragment is null).",
+      "revId": "4346e23777ea6c3df7d50baae41822317093e13d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b6b979da_f92977ad",
+        "filename": "src/com/android/deskclock/AlarmUtils.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1048480
+      },
+      "writtenOn": "2015-02-11T22:28:04Z",
+      "side": 1,
+      "message": "Per comment in AlarmClockFragment, use IllegalStateException.",
+      "revId": "4346e23777ea6c3df7d50baae41822317093e13d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f6be91c5_93d77c47",
+        "filename": "src/com/android/deskclock/AlarmUtils.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1048480
+      },
+      "writtenOn": "2015-02-11T22:28:04Z",
+      "side": 1,
+      "message": "nit: re-word \"Error showing TimePickerFragment\"",
+      "revId": "4346e23777ea6c3df7d50baae41822317093e13d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d6998d84_722598dd",
+        "filename": "src/com/android/deskclock/timer/TimerItemFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 1048480
+      },
+      "writtenOn": "2015-02-11T22:28:04Z",
+      "side": 1,
+      "message": "Per comment in AlarmClockFragment, remove this check.",
+      "revId": "4346e23777ea6c3df7d50baae41822317093e13d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d6998d84_123fece7",
+        "filename": "src/com/android/deskclock/timer/TimerItemFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1048480
+      },
+      "writtenOn": "2015-02-11T22:28:04Z",
+      "side": 1,
+      "message": "Per comment in AlarmClockFragment, please restore original line wrapping in this file.",
+      "revId": "4346e23777ea6c3df7d50baae41822317093e13d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "56c83d75_f653401e",
+        "filename": "src/com/android/deskclock/timer/TimerItemFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1048480
+      },
+      "writtenOn": "2015-02-11T22:28:04Z",
+      "side": 1,
+      "message": "Per comment in AlarmClockFragment, use IllegalStateException.",
+      "revId": "4346e23777ea6c3df7d50baae41822317093e13d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "16c24557_9473e4ce",
+        "filename": "src/com/android/deskclock/timer/TimerItemFragment.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1048480
+      },
+      "writtenOn": "2015-02-11T22:28:04Z",
+      "side": 1,
+      "message": "nit: re-word \"Error showing LabelDialogFragment\"",
+      "revId": "4346e23777ea6c3df7d50baae41822317093e13d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
