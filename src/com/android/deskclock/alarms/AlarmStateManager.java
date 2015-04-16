@@ -631,6 +631,7 @@ public final class AlarmStateManager extends BroadcastReceiver {
         // TODO: Refactor this code to not use the overloaded registerInstance method.
         ContentResolver contentResolver = context.getContentResolver();
         for (AlarmInstance instance : AlarmInstance.getInstances(contentResolver, null)) {
+            instance = getFixedAlarmInstance(context, instance);
             AlarmStateManager.registerInstance(context, instance, false);
         }
         AlarmStateManager.updateNextAlarm(context);
@@ -746,5 +747,35 @@ public final class AlarmStateManager extends BroadcastReceiver {
      */
     public static Intent createIndicatorIntent(Context context) {
         return new Intent(context, AlarmStateManager.class).setAction(INDICATOR_ACTION);
+    }
+
+    private static AlarmInstance getFixedAlarmInstance(Context context, AlarmInstance instance) {
+        ContentResolver resolver = context.getContentResolver();
+        Alarm alarm = Alarm.getAlarm(resolver, instance.mAlarmId);
+        Calendar currentTime = Calendar.getInstance();
+        AlarmInstance newInstance = alarm.createInstanceAfter(currentTime);
+        Calendar newTime = newInstance.getAlarmTime();
+        Calendar alarmTime = instance.getAlarmTime();
+
+        // If the new instance's time is before the original instance's time
+        // then we can use the new instance's year,month and day with original instance's
+        // hour and minutes, so that we can keep all the state of the alarm
+        if (newTime.before(alarmTime)) {
+            int newYear = newTime.get(Calendar.YEAR);
+            int newMonth = newTime.get(Calendar.MONTH);
+            int newDay = newTime.get(Calendar.DAY_OF_MONTH);
+
+            alarmTime.set(Calendar.YEAR, newYear);
+            alarmTime.set(Calendar.MONTH, newMonth);
+            alarmTime.set(Calendar.DAY_OF_MONTH, newDay);
+            while (alarmTime.before(currentTime)) {
+                alarmTime.add(Calendar.DAY_OF_MONTH, 1);
+            }
+            instance.setAlarmTime(alarmTime);
+
+            AlarmInstance.updateInstance(resolver, instance);
+        }
+
+        return instance;
     }
 }
