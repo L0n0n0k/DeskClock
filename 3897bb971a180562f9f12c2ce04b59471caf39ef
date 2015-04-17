@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d080bec6_10e5c34c",
+        "filename": "src/com/android/deskclock/alarms/AlarmStateManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 771,
+      "author": {
+        "id": 1060350
+      },
+      "writtenOn": "2015-04-17T19:19:56Z",
+      "side": 1,
+      "message": "Could you add a comment or an example when this condition is true?",
+      "range": {
+        "startLine": 771,
+        "startChar": 19,
+        "endLine": 771,
+        "endChar": 48
+      },
+      "revId": "3897bb971a180562f9f12c2ce04b59471caf39ef",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
