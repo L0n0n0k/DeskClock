@@ -1,0 +1,10 @@
+Code-Review+2: Justin Klaassen <justinklaassen@google.com>
+Code-Review+1: Neil Fuller <nfuller@google.com>
+Code-Review+1: guotao deng <guotao.deng@ck-telecom.com>
+Code-Review+2: Narayan Kamath <narayan@google.com>
+Verified+1: Deckard Autoverifier <deckard@android.com>
+Submitted-by: Annie Chin <afchin@google.com>
+Submitted-at: Thu, 23 Apr 2015 17:04:11 +0000
+Reviewed-on: https://android-review.googlesource.com/147815
+Project: platform/packages/apps/DeskClock
+Branch: refs/heads/master
