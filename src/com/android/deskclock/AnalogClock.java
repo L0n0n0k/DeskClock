@@ -256,7 +256,9 @@ public class AnalogClock extends View {
         public void onReceive(Context context, Intent intent) {
             if (intent.getAction().equals(Intent.ACTION_TIMEZONE_CHANGED)) {
                 String tz = intent.getStringExtra("time-zone");
-                mCalendar = new Time(TimeZone.getTimeZone(tz).getID());
+                if (tz != null) {
+                    mCalendar = new Time(TimeZone.getTimeZone(tz).getID());
+                }
             }
             onTimeChanged();
             invalidate();
