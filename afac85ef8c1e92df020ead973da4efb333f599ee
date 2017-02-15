@@ -1,0 +1,8 @@
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Code-Review+2: Dan Willemsen <dwillemsen@google.com>
+Verified+1: Colin Cross <ccross@android.com>
+Submitted-by: Colin Cross <ccross@android.com>
+Submitted-at: Wed, 15 Feb 2017 20:20:27 +0000
+Reviewed-on: https://android-review.googlesource.com/338423
+Project: platform/packages/apps/DeskClock
+Branch: refs/heads/master
