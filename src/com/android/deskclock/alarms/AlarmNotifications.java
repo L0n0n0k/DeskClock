@@ -37,6 +37,7 @@ import com.android.deskclock.R;
 import com.android.deskclock.Utils;
 import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.provider.AlarmInstance;
+import com.android.deskclock.DeskClockNotificationChannelsUtil;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -88,6 +89,7 @@ final class AlarmNotifications {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
                 .setShowWhen(false)
+                .setChannelId(DeskClockNotificationChannelsUtil.DEFAULT_CHANNEL)
                 .setContentTitle(context.getString(
                         R.string.alarm_alert_predismiss_title))
                 .setContentText(AlarmUtils.getAlarmText(context, instance, true /* includeLabel */))
@@ -137,6 +139,7 @@ final class AlarmNotifications {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
                 .setShowWhen(false)
+                .setChannelId(DeskClockNotificationChannelsUtil.DEFAULT_CHANNEL)
                 .setContentTitle(context.getString(R.string.alarm_alert_predismiss_title))
                 .setContentText(AlarmUtils.getAlarmText(context, instance, true /* includeLabel */))
                 .setColor(ContextCompat.getColor(context, R.color.default_background))
@@ -245,6 +248,7 @@ final class AlarmNotifications {
                 || !Objects.equals(summary.contentIntent, firstUpcoming.contentIntent)) {
             summary = new NotificationCompat.Builder(context)
                     .setShowWhen(false)
+                    .setChannelId(DeskClockNotificationChannelsUtil.DEFAULT_CHANNEL)
                     .setContentIntent(firstUpcoming.contentIntent)
                     .setColor(ContextCompat.getColor(context, R.color.default_background))
                     .setSmallIcon(R.drawable.stat_notify_alarm)
@@ -279,6 +283,7 @@ final class AlarmNotifications {
                 || !Objects.equals(summary.contentIntent, firstMissed.contentIntent)) {
             summary = new NotificationCompat.Builder(context)
                     .setShowWhen(false)
+	            .setChannelId(DeskClockNotificationChannelsUtil.DEFAULT_CHANNEL)
                     .setContentIntent(firstMissed.contentIntent)
                     .setColor(ContextCompat.getColor(context, R.color.default_background))
                     .setSmallIcon(R.drawable.stat_notify_alarm)
@@ -299,6 +304,7 @@ final class AlarmNotifications {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
                 .setShowWhen(false)
+                .setChannelId(DeskClockNotificationChannelsUtil.DEFAULT_CHANNEL)
                 .setContentTitle(instance.getLabelOrDefault(context))
                 .setContentText(context.getString(R.string.alarm_alert_snooze_until,
                         AlarmUtils.getFormattedTime(context, instance.getAlarmTime())))
@@ -343,6 +349,7 @@ final class AlarmNotifications {
         String alarmTime = AlarmUtils.getFormattedTime(context, instance.getAlarmTime());
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
                 .setShowWhen(false)
+                .setChannelId(DeskClockNotificationChannelsUtil.DEFAULT_CHANNEL)
                 .setContentTitle(context.getString(R.string.alarm_missed_title))
                 .setContentText(instance.mLabel.isEmpty() ? alarmTime :
                         context.getString(R.string.alarm_missed_text, alarmTime, label))
@@ -385,6 +392,7 @@ final class AlarmNotifications {
 
         Resources resources = service.getResources();
         NotificationCompat.Builder notification = new NotificationCompat.Builder(service)
+                .setChannelId(DeskClockNotificationChannelsUtil.DEFAULT_CHANNEL)
                 .setContentTitle(instance.getLabelOrDefault(service))
                 .setContentText(AlarmUtils.getFormattedTime(service, instance.getAlarmTime()))
                 .setColor(ContextCompat.getColor(service, R.color.default_background))

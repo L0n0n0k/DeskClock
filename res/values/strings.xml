@@ -119,6 +119,9 @@
         <item quantity="other">Snoozing for <xliff:g id="minutes">%d</xliff:g> minutes.</item>
     </plurals>
 
+    <!-- Text shown when viewing channel settings for default Alarm notifications [CHAR LIMIT=50] -->
+    <string name="alarm_default_notification_channel">Notifications</string>
+
     <!-- Text to appear inside a notification while an alarm is snoozing. -->
     <string name="alarm_alert_snooze_until">Snoozing until <xliff:g id="time">%s</xliff:g></string>
 
