@@ -30,6 +30,9 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.widget.RemoteViews;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.support.v4.os.BuildCompat;
 
 import com.android.deskclock.AlarmUtils;
 import com.android.deskclock.R;
@@ -53,6 +56,8 @@ class TimerNotificationBuilder {
 
     private static final int REQUEST_CODE_UPCOMING = 0;
     private static final int REQUEST_CODE_MISSING = 1;
+
+    private static final String CHANNEL_ID_TIMER = "timer";
 
     public Notification build(Context context, NotificationModel nm, List<Timer> unexpired) {
         final Timer timer = unexpired.get(0);
@@ -148,6 +153,7 @@ class TimerNotificationBuilder {
                 PendingIntent.getService(context, REQUEST_CODE_UPCOMING, showApp,
                         PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_UPDATE_CURRENT);
 
+        createNotificationTimerChannel(context, NotificationManager.IMPORTANCE_HIGH);
         final Builder notification = new NotificationCompat.Builder(context)
                 .setOngoing(true)
                 .setLocalOnly(true)
@@ -160,6 +166,7 @@ class TimerNotificationBuilder {
                 .setSortKey(nm.getTimerNotificationSortKey())
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                .setChannelId(CHANNEL_ID_TIMER)
                 .setColor(ContextCompat.getColor(context, R.color.default_background));
 
         for (Action action : actions) {
@@ -261,6 +268,7 @@ class TimerNotificationBuilder {
                 .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_USER_ACTION);
         final PendingIntent pendingFullScreen = Utils.pendingActivityIntent(context, fullScreen);
 
+        createNotificationTimerChannel(context, NotificationManager.IMPORTANCE_HIGH);
         final Builder notification = new NotificationCompat.Builder(context)
                 .setOngoing(true)
                 .setLocalOnly(true)
@@ -272,6 +280,7 @@ class TimerNotificationBuilder {
                 .setSmallIcon(R.drawable.stat_notify_timer)
                 .setFullScreenIntent(pendingFullScreen, true)
                 .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                .setChannelId(CHANNEL_ID_TIMER)
                 .setColor(ContextCompat.getColor(context, R.color.default_background));
 
         for (Action action : actions) {
@@ -344,6 +353,7 @@ class TimerNotificationBuilder {
                 PendingIntent.getService(context, REQUEST_CODE_MISSING, showApp,
                         PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_UPDATE_CURRENT);
 
+        createNotificationTimerChannel(context, NotificationManager.IMPORTANCE_HIGH);
         final Builder notification = new NotificationCompat.Builder(context)
                 .setLocalOnly(true)
                 .setShowWhen(false)
@@ -356,6 +366,7 @@ class TimerNotificationBuilder {
                 .setSortKey(nm.getTimerNotificationMissedSortKey())
                 .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
                 .addAction(action)
+                .setChannelId(CHANNEL_ID_TIMER)
                 .setColor(ContextCompat.getColor(context, R.color.default_background));
 
         if (Utils.isNOrLater()) {
@@ -392,5 +403,16 @@ class TimerNotificationBuilder {
         content.setChronometer(R.id.chronometer, base, null, running);
         content.setTextViewText(R.id.state, stateText);
         return content;
+    }
+
+    private static void createNotificationTimerChannel(Context context, int important) {
+        if (!BuildCompat.isAtLeastO()) {
+            return;
+        }
+        final NotificationManager nm = context.getSystemService(NotificationManager.class);
+        final NotificationChannel channel = new NotificationChannel(CHANNEL_ID_TIMER,
+            context.getString(R.string.default_label),
+            important);
+            nm.createNotificationChannel(channel);
     }
 }
