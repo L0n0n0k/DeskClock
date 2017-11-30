@@ -17,6 +17,8 @@
 package com.android.deskclock.data;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
@@ -28,6 +30,7 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationCompat.Action;
 import android.support.v4.app.NotificationCompat.Builder;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.os.BuildCompat;
 import android.widget.RemoteViews;
 
 import com.android.deskclock.R;
@@ -46,6 +49,7 @@ import static android.view.View.VISIBLE;
  */
 class StopwatchNotificationBuilder {
 
+    static final String CHANNEL_ID = "StopwatchNotification";
     public Notification build(Context context, NotificationModel nm, Stopwatch stopwatch) {
         @StringRes final int eventLabel = R.string.label_notification;
 
@@ -127,7 +131,9 @@ class StopwatchNotificationBuilder {
             content.setViewVisibility(R.id.state, VISIBLE);
         }
 
+        createNotificationStopwatchChannel(context, NotificationManager.IMPORTANCE_HIGH);
         final Builder notification = new NotificationCompat.Builder(context)
+                .setChannelId(CHANNEL_ID)
                 .setLocalOnly(true)
                 .setOngoing(running)
                 .setCustomContentView(content)
@@ -147,5 +153,16 @@ class StopwatchNotificationBuilder {
         }
 
         return notification.build();
+    }
+
+    private static void createNotificationStopwatchChannel(Context context, int important) {
+        if (!BuildCompat.isAtLeastO()) {
+            return;
+        }
+        final NotificationManager nm = context.getSystemService(NotificationManager.class);
+        final NotificationChannel channel = new NotificationChannel(CHANNEL_ID,
+            context.getString(R.string.default_label),
+            important);
+            nm.createNotificationChannel(channel);
     }
 }
