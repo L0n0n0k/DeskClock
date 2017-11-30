@@ -30,6 +30,11 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.widget.RemoteViews;
+import android.app.NotificationChannel;
+import android.app.Notification.Action;
+import android.app.NotificationManager;
+import android.support.v4.os.BuildCompat;
+import android.support.v4.app.NotificationManagerCompat;
 
 import com.android.deskclock.AlarmUtils;
 import com.android.deskclock.R;
@@ -37,12 +42,11 @@ import com.android.deskclock.Utils;
 import com.android.deskclock.events.Events;
 import com.android.deskclock.timer.ExpiredTimersActivity;
 import com.android.deskclock.timer.TimerService;
+import com.android.deskclock.NotificationChannelManager;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.support.v4.app.NotificationCompat.Action;
-import static android.support.v4.app.NotificationCompat.Builder;
 import static android.text.format.DateUtils.MINUTE_IN_MILLIS;
 import static android.text.format.DateUtils.SECOND_IN_MILLIS;
 
@@ -148,7 +152,7 @@ class TimerNotificationBuilder {
                 PendingIntent.getService(context, REQUEST_CODE_UPCOMING, showApp,
                         PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_UPDATE_CURRENT);
 
-        final Builder notification = new NotificationCompat.Builder(context)
+        Notification.Builder notification = new Notification.Builder(context)
                 .setOngoing(true)
                 .setLocalOnly(true)
                 .setShowWhen(false)
@@ -159,7 +163,7 @@ class TimerNotificationBuilder {
                 .setSmallIcon(R.drawable.stat_notify_timer)
                 .setSortKey(nm.getTimerNotificationSortKey())
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
-                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                .setChannelId(NotificationChannelManager.CHANNEL_ID_TIMER)
                 .setColor(ContextCompat.getColor(context, R.color.default_background));
 
         for (Action action : actions) {
@@ -261,7 +265,7 @@ class TimerNotificationBuilder {
                 .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_NO_USER_ACTION);
         final PendingIntent pendingFullScreen = Utils.pendingActivityIntent(context, fullScreen);
 
-        final Builder notification = new NotificationCompat.Builder(context)
+        Notification.Builder notification = new Notification.Builder(context)
                 .setOngoing(true)
                 .setLocalOnly(true)
                 .setShowWhen(false)
@@ -271,7 +275,7 @@ class TimerNotificationBuilder {
                 .setDefaults(Notification.DEFAULT_LIGHTS)
                 .setSmallIcon(R.drawable.stat_notify_timer)
                 .setFullScreenIntent(pendingFullScreen, true)
-                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
+                .setChannelId(NotificationChannelManager.CHANNEL_ID_TIMER)
                 .setColor(ContextCompat.getColor(context, R.color.default_background));
 
         for (Action action : actions) {
@@ -344,7 +348,7 @@ class TimerNotificationBuilder {
                 PendingIntent.getService(context, REQUEST_CODE_MISSING, showApp,
                         PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_UPDATE_CURRENT);
 
-        final Builder notification = new NotificationCompat.Builder(context)
+        Notification.Builder notification = new Notification.Builder(context)
                 .setLocalOnly(true)
                 .setShowWhen(false)
                 .setAutoCancel(false)
@@ -354,8 +358,8 @@ class TimerNotificationBuilder {
                 .setSmallIcon(R.drawable.stat_notify_timer)
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setSortKey(nm.getTimerNotificationMissedSortKey())
-                .setStyle(new NotificationCompat.DecoratedCustomViewStyle())
                 .addAction(action)
+                .setChannelId(NotificationChannelManager.CHANNEL_ID_TIMER)
                 .setColor(ContextCompat.getColor(context, R.color.default_background));
 
         if (Utils.isNOrLater()) {

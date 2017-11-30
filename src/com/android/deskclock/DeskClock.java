@@ -22,6 +22,7 @@ import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
 import android.app.Fragment;
 import android.content.Intent;
+import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.StringRes;
@@ -52,6 +53,7 @@ import com.android.deskclock.provider.Alarm;
 import com.android.deskclock.uidata.TabListener;
 import com.android.deskclock.uidata.UiDataModel;
 import com.android.deskclock.widget.toast.SnackbarManager;
+import com.android.deskclock.NotificationChannelManager;
 
 import static android.support.v4.view.ViewPager.SCROLL_STATE_DRAGGING;
 import static android.support.v4.view.ViewPager.SCROLL_STATE_IDLE;
@@ -304,6 +306,8 @@ public class DeskClock extends BaseActivity
 
         // Honor changes to the selected tab from outside entities.
         UiDataModel.getUiDataModel().addTabListener(mTabChangeWatcher);
+        NotificationChannelManager ncm = new NotificationChannelManager();
+        ncm.createChannels(this);
     }
 
     @Override
