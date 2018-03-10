@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f6901eea_85fb9fd4",
+        "filename": "src/com/android/deskclock/NotificationChannelManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 1005571
+      },
+      "writtenOn": "2018-03-10T13:31:48Z",
+      "side": 1,
+      "message": "IMPORTANCE_MAX is unused according to the documentation.\n\nhttps://developer.android.com/reference/android/app/NotificationManager.html#IMPORTANCE_MAX\n\nWhat shows up as \"Urgent\" in the GUI is IMPORTANCE_HIGH. Confusingly, what shows up as \"High\" in the GUI is actually IMPORTANCE_DEFAULT if I\u0027m not mistaken.",
+      "range": {
+        "startLine": 170,
+        "startChar": 25,
+        "endLine": 170,
+        "endChar": 59
+      },
+      "revId": "e453d93c0e7fb1adfbeb96de8a1ceb1331333660",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
