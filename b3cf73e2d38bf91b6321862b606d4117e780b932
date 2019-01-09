@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "caf19bfe_0337b6c4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2019-01-09T00:19:40Z",
+      "side": 1,
+      "message": "You\u0027ll want Merged-In here now",
+      "revId": "b3cf73e2d38bf91b6321862b606d4117e780b932",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
