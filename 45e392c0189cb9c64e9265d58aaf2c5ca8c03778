@@ -16,6 +16,24 @@
       "revId": "45e392c0189cb9c64e9265d58aaf2c5ca8c03778",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "67496440_3aca2d84",
+        "filename": "src/com/android/deskclock/alarms/AlarmNotifications.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2019-11-07T19:41:30Z",
+      "side": 1,
+      "message": "Thanks Bob for catching this.\n\nDone",
+      "parentUuid": "dd3641bf_4462ed10",
+      "revId": "45e392c0189cb9c64e9265d58aaf2c5ca8c03778",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
