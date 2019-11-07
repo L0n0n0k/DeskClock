@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dd3641bf_4462ed10",
+        "filename": "src/com/android/deskclock/alarms/AlarmNotifications.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1359095
+      },
+      "writtenOn": "2019-11-07T19:30:31Z",
+      "side": 1,
+      "message": "Nit: Odd whitespace.",
+      "revId": "45e392c0189cb9c64e9265d58aaf2c5ca8c03778",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
