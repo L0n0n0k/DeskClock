@@ -37,11 +37,6 @@ import java.util.List;
  */
 final class StopwatchModel {
 
-    /**
-     * Notification channel containing all stopwatch notifications.
-     */
-    static final String STOPWATCH_NOTIFICATION_CHANNEL_ID = "StopwatchNotification";
-
     private final Context mContext;
 
     private final SharedPreferences mPrefs;
@@ -74,13 +69,6 @@ final class StopwatchModel {
         mPrefs = prefs;
         mNotificationModel = notificationModel;
         mNotificationManager = NotificationManagerCompat.from(context);
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel(
-                    STOPWATCH_NOTIFICATION_CHANNEL_ID,
-                    context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
-            mNotificationManager.createNotificationChannel(channel);
-        }
 
         // Update stopwatch notification when locale changes.
         final IntentFilter localeBroadcastFilter = new IntentFilter(Intent.ACTION_LOCALE_CHANGED);
@@ -247,6 +235,7 @@ final class StopwatchModel {
         // Otherwise build and post a notification reflecting the latest stopwatch state.
         final Notification notification =
                 mNotificationBuilder.build(mContext, mNotificationModel, stopwatch);
+        mNotificationBuilder.buildChannel(mContext, mNotificationManager);
         mNotificationManager.notify(mNotificationModel.getStopwatchNotificationId(), notification);
     }
 
