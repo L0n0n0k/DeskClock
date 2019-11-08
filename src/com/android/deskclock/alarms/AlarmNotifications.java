@@ -340,6 +340,7 @@ final class AlarmNotifications {
                     ALARM_UPDATE_MISSED_NOTIFICATION_CHANNEL_ID,
                     context.getString(R.string.default_label),
                     NotificationManagerCompat.IMPORTANCE_DEFAULT);
+            nm.createNotificationChannel(channel);
         }
 
         final Notification firstMissed = getFirstActiveNotification(context, MISSED_GROUP_KEY,
@@ -352,6 +353,13 @@ final class AlarmNotifications {
         Notification summary = getActiveGroupSummaryNotification(context, MISSED_GROUP_KEY);
         if (summary == null
                 || !Objects.equals(summary.contentIntent, firstMissed.contentIntent)) {
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                NotificationChannel channel = new NotificationChannel(
+                        ALARM_MISSED_NOTIFICATION_CHANNEL_ID,
+                        context.getString(R.string.default_label),
+                        NotificationManagerCompat.IMPORTANCE_DEFAULT);
+                nm.createNotificationChannel(channel);
+            }
             summary = new NotificationCompat.Builder(
                     context, ALARM_UPDATE_MISSED_NOTIFICATION_CHANNEL_ID)
                             .setShowWhen(false)

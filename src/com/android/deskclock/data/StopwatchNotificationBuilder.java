@@ -17,6 +17,7 @@
 package com.android.deskclock.data;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
@@ -27,6 +28,7 @@ import androidx.annotation.StringRes;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationCompat.Action;
 import androidx.core.app.NotificationCompat.Builder;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
 import android.widget.RemoteViews;
 
@@ -45,6 +47,21 @@ import static android.view.View.VISIBLE;
  * Builds notification to reflect the latest state of the stopwatch and recorded laps.
  */
 class StopwatchNotificationBuilder {
+
+    /**
+     * Notification channel containing all stopwatch notifications.
+     */
+    private static final String STOPWATCH_NOTIFICATION_CHANNEL_ID = "StopwatchNotification";
+
+    public void buildChannel(Context context, NotificationManagerCompat notificationManager) {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(
+                    STOPWATCH_NOTIFICATION_CHANNEL_ID,
+                    context.getString(R.string.default_label),
+                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
+            notificationManager.createNotificationChannel(channel);
+        }
+    }
 
     public Notification build(Context context, NotificationModel nm, Stopwatch stopwatch) {
         @StringRes final int eventLabel = R.string.label_notification;
@@ -128,7 +145,7 @@ class StopwatchNotificationBuilder {
         }
 
         final Builder notification = new NotificationCompat.Builder(
-                context, StopwatchModel.STOPWATCH_NOTIFICATION_CHANNEL_ID)
+                context, STOPWATCH_NOTIFICATION_CHANNEL_ID)
                         .setLocalOnly(true)
                         .setOngoing(running)
                         .setCustomContentView(content)

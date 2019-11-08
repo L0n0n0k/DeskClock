@@ -58,11 +58,6 @@ import static com.android.deskclock.data.Timer.State.RESET;
 final class TimerModel {
 
     /**
-     * Notification channel containing all TimerModel notifications.
-     */
-    static final String TIMER_MODEL_NOTIFICATION_CHANNEL_ID = "TimerModelNotification";
-
-    /**
      * Running timers less than this threshold are left running/expired; greater than this
      * threshold are considered missed.
      */
@@ -142,13 +137,6 @@ final class TimerModel {
         mRingtoneModel = ringtoneModel;
         mNotificationModel = notificationModel;
         mNotificationManager = NotificationManagerCompat.from(context);
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel(
-                    TIMER_MODEL_NOTIFICATION_CHANNEL_ID,
-                    context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT);
-            mNotificationManager.createNotificationChannel(channel);
-        }
 
         mAlarmManager = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
 
@@ -765,8 +753,8 @@ final class TimerModel {
         final Notification notification =
                 mNotificationBuilder.build(mContext, mNotificationModel, unexpired);
         final int notificationId = mNotificationModel.getUnexpiredTimerNotificationId();
+        mNotificationBuilder.buildChannel(mContext, mNotificationManager);
         mNotificationManager.notify(notificationId, notification);
-
     }
 
     /**
