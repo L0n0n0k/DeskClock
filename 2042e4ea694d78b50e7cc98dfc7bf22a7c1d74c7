@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b927605f_b1bfd5f4",
+        "filename": "src/com/android/deskclock/alarms/AlarmNotifications.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2019-11-08T06:14:05Z",
+      "side": 1,
+      "message": "this channel isn\u0027t being created",
+      "range": {
+        "startLine": 339,
+        "startChar": 32,
+        "endLine": 339,
+        "endChar": 39
+      },
+      "revId": "2042e4ea694d78b50e7cc98dfc7bf22a7c1d74c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1bfd01b5_d07ae8a8",
+        "filename": "src/com/android/deskclock/alarms/AlarmNotifications.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 480,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2019-11-08T06:14:05Z",
+      "side": 1,
+      "message": "where is this channel created?",
+      "range": {
+        "startLine": 480,
+        "startChar": 25,
+        "endLine": 480,
+        "endChar": 54
+      },
+      "revId": "2042e4ea694d78b50e7cc98dfc7bf22a7c1d74c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a944c08e_a4e3a9e0",
+        "filename": "src/com/android/deskclock/data/StopwatchModel.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2019-11-08T06:14:05Z",
+      "side": 1,
+      "message": "Declare this in StopwatchNotificationBuilder, it\u0027s a more natural home.",
+      "range": {
+        "startLine": 43,
+        "startChar": 24,
+        "endLine": 43,
+        "endChar": 57
+      },
+      "revId": "2042e4ea694d78b50e7cc98dfc7bf22a7c1d74c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c02c3507_f6b259fa",
+        "filename": "src/com/android/deskclock/data/StopwatchModel.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2019-11-08T06:14:05Z",
+      "side": 1,
+      "message": "A more natural home for this is in updateNotification()",
+      "range": {
+        "startLine": 77,
+        "startChar": 0,
+        "endLine": 83,
+        "endChar": 9
+      },
+      "revId": "2042e4ea694d78b50e7cc98dfc7bf22a7c1d74c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0c5e7b94_2a85d420",
+        "filename": "src/com/android/deskclock/data/TimerModel.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2019-11-08T06:14:05Z",
+      "side": 1,
+      "message": "move this to TimerNotificationBuilder",
+      "range": {
+        "startLine": 63,
+        "startChar": 24,
+        "endLine": 63,
+        "endChar": 59
+      },
+      "revId": "2042e4ea694d78b50e7cc98dfc7bf22a7c1d74c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "faa52716_5d8dcd94",
+        "filename": "src/com/android/deskclock/data/TimerModel.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2019-11-08T06:14:05Z",
+      "side": 1,
+      "message": "make a method out of this and call it from each of the update*Notification methods.\n\nWhen you do it here in the model constructor, it occurs on main thread during app startup. The call to createNotificationChannel is an interprocess call, which should ideally not occur on the main thread or slow down app start.",
+      "range": {
+        "startLine": 145,
+        "startChar": 0,
+        "endLine": 151,
+        "endChar": 9
+      },
+      "revId": "2042e4ea694d78b50e7cc98dfc7bf22a7c1d74c7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
