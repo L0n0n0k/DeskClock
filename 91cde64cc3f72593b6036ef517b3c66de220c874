@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da9f4c1d_7bc954af",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-02-22T17:06:49Z",
+      "side": 1,
+      "message": "Makes sense since we\u0027re using setFullScreenIntent in some notifications, but can you upload in another CL?",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 80
+      },
+      "revId": "91cde64cc3f72593b6036ef517b3c66de220c874",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
