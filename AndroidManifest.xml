@@ -104,9 +104,11 @@
         <!-- ============================================================== -->
 
         <activity
-            android:name=".HandleApiCalls"
+            android:name="com.android.deskclock.HandleApiCalls"
+            android:directBootAware="true"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
+            android:showWhenLocked="true"
             android:taskAffinity=""
             android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
@@ -122,9 +124,9 @@
         </activity>
 
         <activity-alias
-            android:name=".HandleSetAlarmApiCalls"
+            android:name="com.android.deskclock.HandleSetAlarmApiCalls"
             android:permission="com.android.alarm.permission.SET_ALARM"
-            android:targetActivity=".HandleApiCalls">
+            android:targetActivity="com.android.deskclock.HandleApiCalls">
             <intent-filter>
                 <action android:name="android.intent.action.SET_ALARM" />
                 <action android:name="android.intent.action.SET_TIMER" />
