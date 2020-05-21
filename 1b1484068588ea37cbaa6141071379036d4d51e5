@@ -34,6 +34,24 @@
       "revId": "1b1484068588ea37cbaa6141071379036d4d51e5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "055595e9_303b44b7",
+        "filename": "src/com/android/alarmclock/DigitalAppWidgetCityViewsFactory.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1359095
+      },
+      "writtenOn": "2020-05-21T18:21:25Z",
+      "side": 1,
+      "message": "When fixing a review comment, please fix it everywhere the comment might apply.",
+      "parentUuid": "b1650121_797e32b0",
+      "revId": "1b1484068588ea37cbaa6141071379036d4d51e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
