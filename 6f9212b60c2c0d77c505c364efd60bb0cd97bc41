@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "3d6d6b2f_55b7c13b",
+        "filename": "src/com/android/alarmclock/DigitalAppWidgetCityViewsFactory.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-05-21T20:17:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "09f9e93b_79cc5510",
+      "revId": "6f9212b60c2c0d77c505c364efd60bb0cd97bc41",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cb9c71da_f1332d95",
         "filename": "src/com/android/alarmclock/DigitalAppWidgetCityViewsFactory.kt",
         "patchSetId": 3
@@ -33,6 +51,24 @@
       "revId": "6f9212b60c2c0d77c505c364efd60bb0cd97bc41",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fa65375e_e6c5882c",
+        "filename": "src/com/android/alarmclock/DigitalAppWidgetCityViewsFactory.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-05-21T20:17:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cb9c71da_f1332d95",
+      "revId": "6f9212b60c2c0d77c505c364efd60bb0cd97bc41",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "ad1ecd5b_556ca7af",
+        "filename": "src/com/android/alarmclock/DigitalAppWidgetProvider.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-05-21T20:17:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "56d402de_b45568f2",
+      "revId": "6f9212b60c2c0d77c505c364efd60bb0cd97bc41",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "01776b6d_a4ceba07",
         "filename": "src/com/android/alarmclock/DigitalAppWidgetProvider.kt",
         "patchSetId": 3
@@ -67,6 +121,24 @@
       "revId": "6f9212b60c2c0d77c505c364efd60bb0cd97bc41",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e67fa1dc_7eb457de",
+        "filename": "src/com/android/alarmclock/DigitalAppWidgetProvider.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-05-21T20:17:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "01776b6d_a4ceba07",
+      "revId": "6f9212b60c2c0d77c505c364efd60bb0cd97bc41",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }

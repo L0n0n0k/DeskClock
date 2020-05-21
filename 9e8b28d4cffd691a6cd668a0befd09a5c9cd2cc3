@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8dec8993_783f0b31",
+        "filename": "src/com/android/alarmclock/AnalogAppWidgetProvider.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-05-21T20:17:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8488ad1a_7013a92d",
+      "revId": "9e8b28d4cffd691a6cd668a0befd09a5c9cd2cc3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "18fa5e51_66839584",
         "filename": "src/com/android/alarmclock/DigitalAppWidgetCityViewsFactory.kt",
         "patchSetId": 4
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "2bb64268_3930124b",
+        "filename": "src/com/android/alarmclock/DigitalAppWidgetCityViewsFactory.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-05-21T20:17:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "18fa5e51_66839584",
+      "revId": "9e8b28d4cffd691a6cd668a0befd09a5c9cd2cc3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "169b7913_1c3dc6ea",
         "filename": "src/com/android/alarmclock/DigitalAppWidgetCityViewsFactory.kt",
         "patchSetId": 4
@@ -47,6 +83,30 @@
       "writtenOn": "2020-05-21T19:24:28Z",
       "side": 1,
       "message": "nit: LogUtils.Logger LOGGER \u003d new LogUtils.Logger(\"DigitalAppWidgetCityViewsFactory\")... ala java and delete the duplicated string here and line#64.",
+      "range": {
+        "startLine": 60,
+        "startChar": 15,
+        "endLine": 60,
+        "endChar": 16
+      },
+      "revId": "9e8b28d4cffd691a6cd668a0befd09a5c9cd2cc3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "54c2c1c8_6b469782",
+        "filename": "src/com/android/alarmclock/DigitalAppWidgetCityViewsFactory.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-05-21T20:17:33Z",
+      "side": 1,
+      "message": "The LOGGER is defined in this classes companion object on line#206, similar to it\u0027s definition in Java. I\u0027m not sure what you mean by the duplicated string here?",
+      "parentUuid": "169b7913_1c3dc6ea",
       "range": {
         "startLine": 60,
         "startChar": 15,
@@ -76,6 +136,24 @@
     },
     {
       "key": {
+        "uuid": "db359626_77fa77f2",
+        "filename": "src/com/android/alarmclock/DigitalAppWidgetProvider.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-05-21T20:17:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b99d8a58_8b874547",
+      "revId": "9e8b28d4cffd691a6cd668a0befd09a5c9cd2cc3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "31920460_fcfc6dcb",
         "filename": "src/com/android/alarmclock/WidgetUtils.kt",
         "patchSetId": 4
@@ -93,6 +171,24 @@
     },
     {
       "key": {
+        "uuid": "51a5cd94_66709151",
+        "filename": "src/com/android/alarmclock/WidgetUtils.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-05-21T20:17:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "31920460_fcfc6dcb",
+      "revId": "9e8b28d4cffd691a6cd668a0befd09a5c9cd2cc3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5dd72f86_d6849b95",
         "filename": "src/com/android/alarmclock/WidgetUtils.kt",
         "patchSetId": 4
@@ -104,6 +200,24 @@
       "writtenOn": "2020-05-21T19:24:28Z",
       "side": 1,
       "message": "I am not sure if this converted code is handling the case when options is null. May be it is doing the right thing. If it is not doing the right thing, add a comment with a TODO to handle options being null.",
+      "revId": "9e8b28d4cffd691a6cd668a0befd09a5c9cd2cc3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "556ac467_3510af8d",
+        "filename": "src/com/android/alarmclock/WidgetUtils.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-05-21T20:17:33Z",
+      "side": 1,
+      "message": "getHeightScaleRatio is only called from the above getScaleRatio function, where the passed in options cannot be null. In the Java code as well, getHeightScaleRatio is only called after checking that options !\u003d null in the getScaleRatio function. I believe this code is doing the right thing, unless there is something I have missed.",
+      "parentUuid": "5dd72f86_d6849b95",
       "revId": "9e8b28d4cffd691a6cd668a0befd09a5c9cd2cc3",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
