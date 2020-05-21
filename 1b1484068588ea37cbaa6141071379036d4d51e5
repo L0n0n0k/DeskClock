@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c7a4ea30_df862c2a",
+        "filename": "src/com/android/alarmclock/DigitalAppWidgetCityViewsFactory.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1359095
+      },
+      "writtenOn": "2020-05-21T17:22:44Z",
+      "side": 1,
+      "message": "Please avoid using wildcard imports.\n\nhttps://developer.android.com/kotlin/style-guide#import_statements",
+      "revId": "1b1484068588ea37cbaa6141071379036d4d51e5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
