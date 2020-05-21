@@ -1,0 +1,112 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8488ad1a_7013a92d",
+        "filename": "src/com/android/alarmclock/AnalogAppWidgetProvider.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-05-21T19:24:28Z",
+      "side": 1,
+      "message": "nit:  leave a blank line before line#25 (ala Java files?). This file and others.",
+      "revId": "9e8b28d4cffd691a6cd668a0befd09a5c9cd2cc3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "18fa5e51_66839584",
+        "filename": "src/com/android/alarmclock/DigitalAppWidgetCityViewsFactory.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-05-21T19:24:28Z",
+      "side": 1,
+      "message": "nit: blank line to separate android vs java vs deskclock imports.",
+      "revId": "9e8b28d4cffd691a6cd668a0befd09a5c9cd2cc3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "169b7913_1c3dc6ea",
+        "filename": "src/com/android/alarmclock/DigitalAppWidgetCityViewsFactory.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-05-21T19:24:28Z",
+      "side": 1,
+      "message": "nit: LogUtils.Logger LOGGER \u003d new LogUtils.Logger(\"DigitalAppWidgetCityViewsFactory\")... ala java and delete the duplicated string here and line#64.",
+      "range": {
+        "startLine": 60,
+        "startChar": 15,
+        "endLine": 60,
+        "endChar": 16
+      },
+      "revId": "9e8b28d4cffd691a6cd668a0befd09a5c9cd2cc3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b99d8a58_8b874547",
+        "filename": "src/com/android/alarmclock/DigitalAppWidgetProvider.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-05-21T19:24:28Z",
+      "side": 1,
+      "message": "nit: nit: blank line to separate android vs java vs deskclock imports.",
+      "revId": "9e8b28d4cffd691a6cd668a0befd09a5c9cd2cc3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "31920460_fcfc6dcb",
+        "filename": "src/com/android/alarmclock/WidgetUtils.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-05-21T19:24:28Z",
+      "side": 1,
+      "message": "nit: blank line ala java?",
+      "revId": "9e8b28d4cffd691a6cd668a0befd09a5c9cd2cc3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5dd72f86_d6849b95",
+        "filename": "src/com/android/alarmclock/WidgetUtils.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-05-21T19:24:28Z",
+      "side": 1,
+      "message": "I am not sure if this converted code is handling the case when options is null. May be it is doing the right thing. If it is not doing the right thing, add a comment with a TODO to handle options being null.",
+      "revId": "9e8b28d4cffd691a6cd668a0befd09a5c9cd2cc3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}

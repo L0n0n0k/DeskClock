@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "09f9e93b_79cc5510",
+        "filename": "src/com/android/alarmclock/DigitalAppWidgetCityViewsFactory.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-05-21T19:24:28Z",
+      "side": 1,
+      "message": "nit: Consider capitalizing \"number\" to be consistent with rest of the file.",
+      "revId": "6f9212b60c2c0d77c505c364efd60bb0cd97bc41",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cb9c71da_f1332d95",
+        "filename": "src/com/android/alarmclock/DigitalAppWidgetCityViewsFactory.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-05-21T19:24:28Z",
+      "side": 1,
+      "message": "nit: Delete the blank line to be consistent with rest of the files. Consider fixing the java version also.",
+      "revId": "6f9212b60c2c0d77c505c364efd60bb0cd97bc41",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "56d402de_b45568f2",
+        "filename": "src/com/android/alarmclock/DigitalAppWidgetProvider.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-05-21T19:24:28Z",
+      "side": 1,
+      "message": "nit: Extra line before line#54 and 62.",
+      "revId": "6f9212b60c2c0d77c505c364efd60bb0cd97bc41",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "01776b6d_a4ceba07",
+        "filename": "src/com/android/alarmclock/DigitalAppWidgetProvider.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-05-21T19:24:28Z",
+      "side": 1,
+      "message": "nit: capitalize scale?",
+      "revId": "6f9212b60c2c0d77c505c364efd60bb0cd97bc41",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
