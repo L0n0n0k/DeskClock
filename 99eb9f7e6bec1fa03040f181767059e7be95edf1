@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1ee62ae0_ddbd586c",
+        "filename": "src/com/android/deskclock/controller/ShortcutController.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-05-26T17:00:48Z",
+      "side": 1,
+      "message": "nit: extra space/tab.",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 4
+      },
+      "revId": "99eb9f7e6bec1fa03040f181767059e7be95edf1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
