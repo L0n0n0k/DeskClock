@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "b5d8991b_587c1aaa",
+        "filename": "src/com/android/deskclock/stopwatch/StopwatchCircleView.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-05-28T20:31:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "322d4ee5_c044b6a1",
+      "revId": "88edd09e9bb6881dd8c316cf9f5daf89437a4f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c71feb86_f78ea2c5",
         "filename": "src/com/android/deskclock/stopwatch/StopwatchLandscapeLayout.kt",
         "patchSetId": 1
@@ -33,6 +51,24 @@
       "revId": "88edd09e9bb6881dd8c316cf9f5daf89437a4f3a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "677ffab0_7727b3b1",
+        "filename": "src/com/android/deskclock/stopwatch/StopwatchLandscapeLayout.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-05-28T20:31:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c71feb86_f78ea2c5",
+      "revId": "88edd09e9bb6881dd8c316cf9f5daf89437a4f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
