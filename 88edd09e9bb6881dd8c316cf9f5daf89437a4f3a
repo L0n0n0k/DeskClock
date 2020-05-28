@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "322d4ee5_c044b6a1",
+        "filename": "src/com/android/deskclock/stopwatch/StopwatchCircleView.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-05-28T20:21:10Z",
+      "side": 1,
+      "message": "nit: extra blank line?",
+      "revId": "88edd09e9bb6881dd8c316cf9f5daf89437a4f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c71feb86_f78ea2c5",
+        "filename": "src/com/android/deskclock/stopwatch/StopwatchLandscapeLayout.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-05-28T20:21:10Z",
+      "side": 1,
+      "message": "nit: extra blank line?",
+      "revId": "88edd09e9bb6881dd8c316cf9f5daf89437a4f3a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
