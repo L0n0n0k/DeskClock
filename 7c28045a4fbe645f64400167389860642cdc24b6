@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5c2be8d1_52c40a15",
+        "filename": "src/com/android/deskclock/provider/Alarm.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 478,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-06-02T21:59:18Z",
+      "side": 1,
+      "message": "nit: extra blank line",
+      "range": {
+        "startLine": 478,
+        "startChar": 0,
+        "endLine": 478,
+        "endChar": 0
+      },
+      "revId": "7c28045a4fbe645f64400167389860642cdc24b6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c2d4bfd0_c5d35199",
+        "filename": "src/com/android/deskclock/provider/ClockContract.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-06-02T21:59:18Z",
+      "side": 1,
+      "message": "nit: I am not sure if this blank line is needed or not. It looks like \u003cp\u003e was converted to this. Same at line#39. Please ignore the comment if it is needed.",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 2
+      },
+      "revId": "7c28045a4fbe645f64400167389860642cdc24b6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
