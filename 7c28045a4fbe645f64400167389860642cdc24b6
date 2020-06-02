@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "3b62c538_b14dc9e6",
+        "filename": "src/com/android/deskclock/provider/Alarm.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 478,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-06-02T22:16:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5c2be8d1_52c40a15",
+      "range": {
+        "startLine": 478,
+        "startChar": 0,
+        "endLine": 478,
+        "endChar": 0
+      },
+      "revId": "7c28045a4fbe645f64400167389860642cdc24b6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c2d4bfd0_c5d35199",
         "filename": "src/com/android/deskclock/provider/ClockContract.kt",
         "patchSetId": 2
@@ -45,6 +69,30 @@
       "revId": "7c28045a4fbe645f64400167389860642cdc24b6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2e316f55_0d6332ba",
+        "filename": "src/com/android/deskclock/provider/ClockContract.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-06-02T22:16:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c2d4bfd0_c5d35199",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 2
+      },
+      "revId": "7c28045a4fbe645f64400167389860642cdc24b6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
