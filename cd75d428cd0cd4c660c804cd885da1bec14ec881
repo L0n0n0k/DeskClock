@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0d023c8e_c70ecdfb",
+        "filename": "src/com/android/deskclock/actionbarmenu/MenuItemControllerFactory.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1359095
+      },
+      "writtenOn": "2020-06-03T16:49:03Z",
+      "side": 1,
+      "message": "Prefer a buganizer to an ldap. It could be the existing buganizer you are working under.",
+      "range": {
+        "startLine": 26,
+        "startChar": 8,
+        "endLine": 26,
+        "endChar": 19
+      },
+      "revId": "cd75d428cd0cd4c660c804cd885da1bec14ec881",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
