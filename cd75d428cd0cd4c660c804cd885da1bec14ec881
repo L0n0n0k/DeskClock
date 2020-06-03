@@ -22,6 +22,30 @@
       "revId": "cd75d428cd0cd4c660c804cd885da1bec14ec881",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9af5afe5_3f42172c",
+        "filename": "src/com/android/deskclock/actionbarmenu/MenuItemControllerFactory.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-06-03T17:18:33Z",
+      "side": 1,
+      "message": "Changed, thanks for mentioning!",
+      "parentUuid": "0d023c8e_c70ecdfb",
+      "range": {
+        "startLine": 26,
+        "startChar": 8,
+        "endLine": 26,
+        "endChar": 19
+      },
+      "revId": "cd75d428cd0cd4c660c804cd885da1bec14ec881",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
