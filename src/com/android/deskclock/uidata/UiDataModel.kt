@@ -19,7 +19,7 @@ package com.android.deskclock.uidata
 import android.content.Context
 import android.content.SharedPreferences
 import android.graphics.Typeface
-import androidx.annotation.DrawableRes
+import androidx.annotation.IntegerRes
 import androidx.annotation.StringRes
 
 import com.android.deskclock.AlarmClockFragment
@@ -36,14 +36,14 @@ class UiDataModel private constructor() {
     /** Identifies each of the primary tabs within the application.  */
     enum class Tab(
         fragmentClass: Class<*>,
-        @DrawableRes val iconResId: Int,
+        @IntegerRes val pageResId: Int,
         @StringRes val labelResId: Int
     ) {
-        ALARMS(AlarmClockFragment::class.java, R.drawable.ic_tab_alarm, R.string.menu_alarm),
-        CLOCKS(ClockFragment::class.java, R.drawable.ic_tab_clock, R.string.menu_clock),
-        TIMERS(TimerFragment::class.java, R.drawable.ic_tab_timer, R.string.menu_timer),
+        ALARMS(AlarmClockFragment::class.java, R.id.page_alarm, R.string.menu_alarm),
+        CLOCKS(ClockFragment::class.java, R.id.page_clock, R.string.menu_clock),
+        TIMERS(TimerFragment::class.java, R.id.page_timer, R.string.menu_timer),
         STOPWATCH(StopwatchFragment::class.java,
-                R.drawable.ic_tab_stopwatch, R.string.menu_stopwatch);
+                R.id.page_stopwatch, R.string.menu_stopwatch);
 
         val fragmentClassName: String = fragmentClass.name
     }
