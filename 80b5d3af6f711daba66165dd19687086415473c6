@@ -22,6 +22,30 @@
       "revId": "80b5d3af6f711daba66165dd19687086415473c6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "175008b9_2a84130a",
+        "filename": "src/com/android/deskclock/data/Stopwatch.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-06-11T22:16:39Z",
+      "side": 1,
+      "message": "Fixed this. It seems that ktlint doesn\u0027t enforce the 100 column line length for comments.",
+      "parentUuid": "1487cbba_e9a641c1",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 12
+      },
+      "revId": "80b5d3af6f711daba66165dd19687086415473c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
