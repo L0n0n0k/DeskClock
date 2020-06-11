@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1487cbba_e9a641c1",
+        "filename": "src/com/android/deskclock/data/Stopwatch.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-06-11T20:37:37Z",
+      "side": 1,
+      "message": "nit: 100 characters column length. A bug in ktlint?\n\nhttps://developer.android.com/kotlin/style-guide#line_wrapping",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 12
+      },
+      "revId": "80b5d3af6f711daba66165dd19687086415473c6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
