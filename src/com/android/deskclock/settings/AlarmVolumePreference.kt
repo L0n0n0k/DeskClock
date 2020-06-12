@@ -51,10 +51,10 @@ class AlarmVolumePreference(context: Context?, attrs: AttributeSet?) : Preferenc
 
         // Disable click feedback for this preference.
         holder.itemView.setClickable(false)
-        mSeekbar = holder.findViewById(R.id.alarm_volume_slider) as SeekBar
+        mSeekbar = holder.findViewById(R.id.seekbar) as SeekBar
         mSeekbar.setMax(audioManager.getStreamMaxVolume(STREAM_ALARM))
         mSeekbar.setProgress(audioManager.getStreamVolume(STREAM_ALARM))
-        mAlarmIcon = holder.findViewById(R.id.alarm_icon) as ImageView
+        mAlarmIcon = holder.findViewById(android.R.id.icon) as ImageView
         onSeekbarChanged()
 
         val volumeObserver: ContentObserver = object : ContentObserver(mSeekbar.getHandler()) {
