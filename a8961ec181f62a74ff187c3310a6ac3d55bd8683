@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4643f05d_acd3a15f",
+        "filename": "src/com/android/deskclock/data/SettingsDAO.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-06-12T18:59:12Z",
+      "side": 1,
+      "message": "nit: longer than 100 characters. Consider deleting extra space.",
+      "revId": "a8961ec181f62a74ff187c3310a6ac3d55bd8683",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
