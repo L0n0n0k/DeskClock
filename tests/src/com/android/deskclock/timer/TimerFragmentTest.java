@@ -32,9 +32,11 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.android.deskclock.DeskClock;
+import com.android.deskclock.FragmentUtils;
 import com.android.deskclock.R;
 import com.android.deskclock.data.DataModel;
 import com.android.deskclock.data.Timer;
+import com.android.deskclock.uidata.UiDataModel;
 import com.android.deskclock.widget.MockFabContainer;
 
 import org.junit.After;
@@ -103,10 +105,10 @@ public class TimerFragmentTest {
 
     private void setUpFragment() {
         Runnable setUpFragmentRunnable = () -> {
-            ViewPager deskClockPager =
-                    (ViewPager) rule.getActivity().findViewById(R.id.desk_clock_pager);
-            PagerAdapter tabPagerAdapter = (PagerAdapter) deskClockPager.getAdapter();
-            fragment = (TimerFragment) tabPagerAdapter.instantiateItem(deskClockPager, 2);
+            final FragmentUtils fragmentUtils = new FragmentUtils(rule.getActivity());
+            fragmentUtils.showFragment(UiDataModel.Tab.TIMERS);
+            fragment = (TimerFragment) fragmentUtils.getCurrentFragment();
+            rule.getActivity().getSupportFragmentManager().executePendingTransactions();
             fragment.onStart();
             fragment.selectTab();
             final MockFabContainer fabContainer =

@@ -3,6 +3,9 @@ android_app {
     resource_dirs: ["res"],
     sdk_version: "current",
     overrides: ["AlarmClock"],
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
     srcs: [
         "src/**/*.java",
         "gen/**/*.java",
@@ -82,6 +85,9 @@ android_app {
         "androidx.gridlayout_gridlayout",
         "androidx.recyclerview_recyclerview",
     ],
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
 
     aaptflags: ["--legacy"],
 }

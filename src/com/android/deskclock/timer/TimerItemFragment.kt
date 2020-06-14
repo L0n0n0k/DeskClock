@@ -16,11 +16,11 @@
 
 package com.android.deskclock.timer
 
-import android.app.Fragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 
 import com.android.deskclock.LabelDialogFragment
 import com.android.deskclock.R
@@ -30,7 +30,6 @@ import com.android.deskclock.data.TimerStringFormatter
 import com.android.deskclock.events.Events
 
 /** The public no-arg constructor required by all fragments.  */
-// TODO(b/157255731) Replace deprecated Fragment related calls
 class TimerItemFragment : Fragment() {
     var timerId = 0
         private set
@@ -38,7 +37,8 @@ class TimerItemFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        timerId = arguments.getInt(KEY_TIMER_ID)
+        val args: Bundle = with (getArguments()) { if (this == null) Bundle.EMPTY else this }
+        timerId = args.getInt(KEY_TIMER_ID)
     }
 
     override fun onCreateView(
