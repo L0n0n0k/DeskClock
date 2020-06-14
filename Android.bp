@@ -26,6 +26,9 @@ android_app {
         "androidx.gridlayout_gridlayout",
         "androidx.recyclerview_recyclerview",
     ],
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
 
     aaptflags: ["--legacy"],
 }
@@ -82,6 +85,9 @@ android_app {
         "androidx.gridlayout_gridlayout",
         "androidx.recyclerview_recyclerview",
     ],
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
 
     aaptflags: ["--legacy"],
 }
