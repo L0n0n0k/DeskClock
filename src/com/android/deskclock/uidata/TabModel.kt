@@ -19,6 +19,7 @@ package com.android.deskclock.uidata
 import android.content.SharedPreferences
 import android.text.TextUtils
 import android.view.View
+import androidx.annotation.Keep
 
 import java.util.Locale
 
@@ -79,6 +80,7 @@ internal class TabModel(private val mPrefs: SharedPreferences) {
      * @param position the position of the tab in the user interface
      * @return the tab at the given `ordinal`
      */
+    @Keep
     fun getTabAt(position: Int): UiDataModel.Tab {
         val layoutDirection = TextUtils.getLayoutDirectionFromLocale(Locale.getDefault())
         val ordinal: Int = if (layoutDirection == View.LAYOUT_DIRECTION_RTL) {
