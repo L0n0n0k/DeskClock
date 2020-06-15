@@ -1,0 +1,52 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "917184c9_52a98c07",
+        "filename": "src/com/android/deskclock/data/TimerModel.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 255,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-06-15T22:00:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e7101f36_b649dbc9",
+      "range": {
+        "startLine": 255,
+        "startChar": 15,
+        "endLine": 255,
+        "endChar": 22
+      },
+      "revId": "67ae9d6468cd61fb8f0add5f777b339614e2143f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da877867_cd12aac5",
+        "filename": "src/com/android/deskclock/data/TimerModel.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 563,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-06-15T22:00:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a932c1d_dda3bed0",
+      "range": {
+        "startLine": 563,
+        "startChar": 15,
+        "endLine": 563,
+        "endChar": 22
+      },
+      "revId": "67ae9d6468cd61fb8f0add5f777b339614e2143f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
