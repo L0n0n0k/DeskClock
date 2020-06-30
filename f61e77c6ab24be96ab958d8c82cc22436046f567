@@ -1,0 +1,48 @@
+{
+  "comments": [
+    {
+      "robotId": "ayeaye",
+      "robotRunId": "AR00000000000003692148",
+      "url": "https://android-build.googleplex.com/builds/treetop/android-review/1353802?revision\u003d1",
+      "fixSuggestions": [
+        {
+          "fixId": "c671d571_004afc0e",
+          "description": "Change to \"src/com/android/deskclock/data/DataModel.kt\"",
+          "replacements": [
+            {
+              "path": "src/com/android/deskclock/data/DataModel.kt",
+              "range": {
+                "startLine": 521,
+                "startChar": 15,
+                "endLine": 521,
+                "endChar": 22
+              },
+              "replacement": "the"
+            }
+          ]
+        }
+      ],
+      "key": {
+        "uuid": "407f2e89_1bdf8966",
+        "filename": "src/com/android/deskclock/data/DataModel.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 521,
+      "author": {
+        "id": 1550585
+      },
+      "writtenOn": "2020-06-30T21:50:16Z",
+      "side": 1,
+      "message": "Common typo found: \"the the\" -- should it be \"the\"?\nNote: a line containing \"common_typos_disable\" or \"common_typos_enable\" will turn off or on (respectively) the linter for subsequent lines in the file. Alternatively include the token \"NOTYPO\" within a line to skip typo linting that line.",
+      "range": {
+        "startLine": 521,
+        "startChar": 15,
+        "endLine": 521,
+        "endChar": 22
+      },
+      "revId": "f61e77c6ab24be96ab958d8c82cc22436046f567",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
