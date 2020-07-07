@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4d77a7e9_43720b02",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1112053
+      },
+      "writtenOn": "2020-07-07T23:59:14Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "f0af761cf37b1c14c2cfb059f5fe0026ff114819",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d31ac8f6_17fbd1c6",
+        "filename": "src/com/android/deskclock/timer/TimerPagerAdapter.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 1112053
+      },
+      "writtenOn": "2020-07-07T23:59:14Z",
+      "side": 1,
+      "message": "Is it possible to revert this end of file change? Or is this required by lint or something?",
+      "range": {
+        "startLine": 188,
+        "startChar": 0,
+        "endLine": 188,
+        "endChar": 1
+      },
+      "revId": "f0af761cf37b1c14c2cfb059f5fe0026ff114819",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
