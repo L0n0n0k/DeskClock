@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a3500986_31e8344e",
+        "filename": "src/com/android/deskclock/timer/TimerPagerAdapter.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1112053
+      },
+      "writtenOn": "2020-07-07T22:52:58Z",
+      "side": 1,
+      "message": "This should be nested in the \"mCurrentTransaction !\u003d null\" block.",
+      "range": {
+        "startLine": 141,
+        "startChar": 0,
+        "endLine": 143,
+        "endChar": 9
+      },
+      "revId": "8da1fae3636291318174e52f743cbd374736fa60",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
