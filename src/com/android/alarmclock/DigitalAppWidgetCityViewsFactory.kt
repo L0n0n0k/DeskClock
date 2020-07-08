@@ -93,7 +93,11 @@ class DigitalAppWidgetCityViewsFactory(context: Context, intent: Intent) : Remot
         val homeClockOffset = if (mShowHomeClock) -1 else 0
         val leftIndex = position * 2 + homeClockOffset
         val rightIndex = leftIndex + 1
-        val left = if (leftIndex == -1) mHomeCity else if (leftIndex < mCities!!.size) mCities!![leftIndex] else null
+        val left = when {
+            leftIndex == -1 -> mHomeCity
+            leftIndex < mCities!!.size -> mCities!![leftIndex]
+            else -> null
+        }
         val right = if (rightIndex < mCities!!.size) mCities!![rightIndex] else null
         val rv = RemoteViews(mContext.getPackageName(), R.layout.world_clock_remote_list_item)
 
@@ -144,7 +148,7 @@ class DigitalAppWidgetCityViewsFactory(context: Context, intent: Intent) : Remot
     override fun onDataSetChanged() {
         // Fetch the data on the main Looper.
         val refreshRunnable = RefreshRunnable()
-        DataModel.getDataModel().run(refreshRunnable)
+        DataModel.dataModel.run(refreshRunnable)
 
         // Store the data in local variables.
         mHomeCity = refreshRunnable.mHomeCity
@@ -197,9 +201,9 @@ class DigitalAppWidgetCityViewsFactory(context: Context, intent: Intent) : Remot
         var mShowHomeClock = false
 
         override fun run() {
-            mHomeCity = DataModel.getDataModel().homeCity
-            mCities = ArrayList(DataModel.getDataModel().selectedCities)
-            mShowHomeClock = DataModel.getDataModel().showHomeClock
+            mHomeCity = DataModel.dataModel.homeCity
+            mCities = ArrayList(DataModel.dataModel.selectedCities)
+            mShowHomeClock = DataModel.dataModel.showHomeClock
         }
     }
 
