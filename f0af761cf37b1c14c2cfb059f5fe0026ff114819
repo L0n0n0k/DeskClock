@@ -39,6 +39,30 @@
       "revId": "f0af761cf37b1c14c2cfb059f5fe0026ff114819",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1b0103e6_4da787f2",
+        "filename": "src/com/android/deskclock/timer/TimerPagerAdapter.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-08T00:19:40Z",
+      "side": 1,
+      "message": "Some program was adding it. I have critique\u0027s editor to delete the line.\n\nDone",
+      "parentUuid": "d31ac8f6_17fbd1c6",
+      "range": {
+        "startLine": 188,
+        "startChar": 0,
+        "endLine": 188,
+        "endChar": 1
+      },
+      "revId": "f0af761cf37b1c14c2cfb059f5fe0026ff114819",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
