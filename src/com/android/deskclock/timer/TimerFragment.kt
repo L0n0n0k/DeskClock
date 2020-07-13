@@ -582,6 +582,15 @@ class TimerFragment : DeskClockFragment(UiDataModel.Tab.TIMERS) {
 
     private val timer: Timer?
         get() {
+            if (mAdapter == null) {
+                val adapter = TimerPagerAdapter(fragmentManager!!)
+                return if (adapter.getCount() == 0) {
+                    null
+                } else {
+                    adapter.getTimer(mViewPager.getCurrentItem())
+                }
+            }
+
             if (!::mViewPager.isInitialized) {
                 return null
             }
