@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fd3c5320_4d039d99",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-14T22:11:47Z",
+      "side": 1,
+      "message": "Tests are now building and running successfully on both the Java and Kotlin versions of the DeskClock app. Would appreciate any feedback either of you might have about the tests and the CL as a whole, thanks!",
+      "revId": "ea0ce345006eb96cf2e87a8c430d0e912a0d3e73",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
