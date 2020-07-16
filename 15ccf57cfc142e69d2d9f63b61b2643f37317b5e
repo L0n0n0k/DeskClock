@@ -16,6 +16,98 @@
       "revId": "15ccf57cfc142e69d2d9f63b61b2643f37317b5e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ed213fb0_1c16725a",
+        "filename": "src/com/android/deskclock/ringtone/RingtonePickerActivity.kt",
+        "patchSetId": 8
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2020-07-16T20:41:48Z",
+      "side": 1,
+      "message": "should probably be -1 to conform with the doc above",
+      "range": {
+        "startLine": 97,
+        "startChar": 33,
+        "endLine": 97,
+        "endChar": 34
+      },
+      "revId": "15ccf57cfc142e69d2d9f63b61b2643f37317b5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aa956626_a17d01d9",
+        "filename": "src/com/android/deskclock/ringtone/RingtonePickerActivity.kt",
+        "patchSetId": 8
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2020-07-16T20:41:48Z",
+      "side": 1,
+      "message": "FWIW, Google\u0027s Clock implementation takes a very narrow view of threading w.r.t. alarms. There is a single dedicated thread for accessing alarms. By scheduling all tasks on that thread, the threat of race conditions is reduced. i.e. only one task operating on the live view of Alarm data at a time using the blessed thread to do so.\n\nI have no idea if this concept made it to AOSP before the updates stopped or not.\n\nhttps://source.corp.google.com/piper///depot/google3/third_party/java_src/android_app/deskclock/java/com/android/deskclock/util/AlarmThread.java",
+      "range": {
+        "startLine": 180,
+        "startChar": 25,
+        "endLine": 180,
+        "endChar": 34
+      },
+      "revId": "15ccf57cfc142e69d2d9f63b61b2643f37317b5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "485d38ad_e526909b",
+        "filename": "src/com/android/deskclock/ringtone/RingtonePickerActivity.kt",
+        "patchSetId": 8
+      },
+      "lineNbr": 611,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2020-07-16T20:41:48Z",
+      "side": 1,
+      "message": "is it really possible for this to be null?",
+      "range": {
+        "startLine": 611,
+        "startChar": 60,
+        "endLine": 611,
+        "endChar": 61
+      },
+      "revId": "15ccf57cfc142e69d2d9f63b61b2643f37317b5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6655e535_a5ead6bc",
+        "filename": "src/com/android/deskclock/ringtone/RingtonePickerActivity.kt",
+        "patchSetId": 8
+      },
+      "lineNbr": 626,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2020-07-16T20:41:48Z",
+      "side": 1,
+      "message": "is it really possible for this to be null?",
+      "range": {
+        "startLine": 626,
+        "startChar": 60,
+        "endLine": 626,
+        "endChar": 61
+      },
+      "revId": "15ccf57cfc142e69d2d9f63b61b2643f37317b5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
