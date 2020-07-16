@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "c9356a13_809ab52b",
+        "filename": "tests/Android.bp",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-16T17:03:58Z",
+      "side": 1,
+      "message": "Forgot about *.kt?",
+      "revId": "7cfdb8f51b867668008f062661b1673c50028b21",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "c8502370_dfda6260",
         "filename": "tests/src/com/android/deskclock/ringtone/RingtonePickerActivityTest.java",
         "patchSetId": 6
