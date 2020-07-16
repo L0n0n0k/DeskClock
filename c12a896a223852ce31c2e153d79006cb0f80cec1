@@ -16,6 +16,23 @@
       "revId": "c12a896a223852ce31c2e153d79006cb0f80cec1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1ba691_d8d1d9b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-16T16:55:22Z",
+      "side": 1,
+      "message": "Hi Michael,\n  Thanks for the change. Can you please rebase to fix Merge Conflict?",
+      "revId": "c12a896a223852ce31c2e153d79006cb0f80cec1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
