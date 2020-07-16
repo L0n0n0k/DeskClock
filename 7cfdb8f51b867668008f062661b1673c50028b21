@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "9324d8bf_7913a8ca",
+        "filename": "tests/Android.bp",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-16T19:40:46Z",
+      "side": 1,
+      "message": "Sorry I thought the test was written in kotlin",
+      "parentUuid": "5f04a96e_058f4ef9",
+      "revId": "7cfdb8f51b867668008f062661b1673c50028b21",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c8502370_dfda6260",
         "filename": "tests/src/com/android/deskclock/ringtone/RingtonePickerActivityTest.java",
         "patchSetId": 6
