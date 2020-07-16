@@ -42,6 +42,30 @@
     },
     {
       "key": {
+        "uuid": "babc9f4d_95fd2a36",
+        "filename": "src/com/android/deskclock/ringtone/RingtonePickerActivity.kt",
+        "patchSetId": 8
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-16T20:59:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ed213fb0_1c16725a",
+      "range": {
+        "startLine": 97,
+        "startChar": 33,
+        "endLine": 97,
+        "endChar": 34
+      },
+      "revId": "15ccf57cfc142e69d2d9f63b61b2643f37317b5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aa956626_a17d01d9",
         "filename": "src/com/android/deskclock/ringtone/RingtonePickerActivity.kt",
         "patchSetId": 8
@@ -62,6 +86,30 @@
       "revId": "15ccf57cfc142e69d2d9f63b61b2643f37317b5e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "23e13dce_4f755cde",
+        "filename": "src/com/android/deskclock/ringtone/RingtonePickerActivity.kt",
+        "patchSetId": 8
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-16T20:59:13Z",
+      "side": 1,
+      "message": "This concept appears to not be in AOSP as of yet. I agree this would be good to introduce in the future to get AOSP more caught up to Google Clock, however out of scope for this CL.",
+      "parentUuid": "aa956626_a17d01d9",
+      "range": {
+        "startLine": 180,
+        "startChar": 25,
+        "endLine": 180,
+        "endChar": 34
+      },
+      "revId": "15ccf57cfc142e69d2d9f63b61b2643f37317b5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
@@ -88,6 +136,30 @@
     },
     {
       "key": {
+        "uuid": "6c713edd_9470b59e",
+        "filename": "src/com/android/deskclock/ringtone/RingtonePickerActivity.kt",
+        "patchSetId": 8
+      },
+      "lineNbr": 611,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-16T20:59:13Z",
+      "side": 1,
+      "message": "Thanks for the catch!",
+      "parentUuid": "485d38ad_e526909b",
+      "range": {
+        "startLine": 611,
+        "startChar": 60,
+        "endLine": 611,
+        "endChar": 61
+      },
+      "revId": "15ccf57cfc142e69d2d9f63b61b2643f37317b5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6655e535_a5ead6bc",
         "filename": "src/com/android/deskclock/ringtone/RingtonePickerActivity.kt",
         "patchSetId": 8
@@ -108,6 +180,30 @@
       "revId": "15ccf57cfc142e69d2d9f63b61b2643f37317b5e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b2999fb8_f8bb9991",
+        "filename": "src/com/android/deskclock/ringtone/RingtonePickerActivity.kt",
+        "patchSetId": 8
+      },
+      "lineNbr": 626,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-16T20:59:13Z",
+      "side": 1,
+      "message": "Same here!",
+      "parentUuid": "6655e535_a5ead6bc",
+      "range": {
+        "startLine": 626,
+        "startChar": 60,
+        "endLine": 626,
+        "endChar": 61
+      },
+      "revId": "15ccf57cfc142e69d2d9f63b61b2643f37317b5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
