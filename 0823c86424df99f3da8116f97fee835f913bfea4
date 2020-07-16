@@ -16,6 +16,23 @@
       "revId": "0823c86424df99f3da8116f97fee835f913bfea4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3db19e29_f3586913",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-16T16:56:02Z",
+      "side": 1,
+      "message": "Hi Michael,\n  Can you rebase to fix the merge conflicts? Thanks",
+      "revId": "0823c86424df99f3da8116f97fee835f913bfea4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
