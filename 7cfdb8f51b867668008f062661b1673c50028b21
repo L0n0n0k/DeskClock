@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c8502370_dfda6260",
+        "filename": "tests/src/com/android/deskclock/ringtone/RingtonePickerActivityTest.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-16T16:52:32Z",
+      "side": 1,
+      "message": "Please add copyright notice.",
+      "revId": "7cfdb8f51b867668008f062661b1673c50028b21",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "52bf686e_35e34e79",
+        "filename": "tests/src/com/android/deskclock/ringtone/RingtonePickerActivityTest.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-16T16:52:32Z",
+      "side": 1,
+      "message": "nit: this import is duplicated?",
+      "revId": "7cfdb8f51b867668008f062661b1673c50028b21",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1269ca59_5227f851",
+        "filename": "tests/src/com/android/deskclock/ringtone/RingtonePickerActivityTest.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-16T16:52:32Z",
+      "side": 1,
+      "message": "nit: more than 100 characters. Consider running lint.",
+      "revId": "7cfdb8f51b867668008f062661b1673c50028b21",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "152a2f73_db44849d",
+        "filename": "tests/src/com/android/deskclock/ringtone/RingtonePickerActivityTest.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-16T16:52:32Z",
+      "side": 1,
+      "message": "nit: indentation here and at other places.",
+      "revId": "7cfdb8f51b867668008f062661b1673c50028b21",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9dffce5f_7f5561d3",
+        "filename": "tests/src/com/android/deskclock/ringtone/RingtonePickerActivityTest.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-16T16:52:32Z",
+      "side": 1,
+      "message": "Hi Justin Klaassen,\n  Is it possible to get it from the main class instead of hard coding it here?",
+      "revId": "7cfdb8f51b867668008f062661b1673c50028b21",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
