@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4dca9fc7_78d11650",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-16T19:02:41Z",
+      "side": 1,
+      "message": "The following are the build failures. Please fix Kotllin code also \n\nout/soong/.intermediates/packages/apps/DeskClock/DeskClockKotlin/android_common/kotlinc/classes \u0026\u0026 rm -rf \"out/soong/.intermediates/packages/apps/DeskClock/DeskClockKotlin/android_common/kotlinc/srcJars\"\npackages/apps/DeskClock/src/com/android/deskclock/settings/AlarmVolumePreference.kt:54:45: error: unresolved reference: alarm_volume_slider\n        mSeekbar \u003d holder.findViewById(R.id.alarm_volume_slider) as SeekBar\n                                            ^\npackages/apps/DeskClock/src/com/android/deskclock/settings/AlarmVolumePreference.kt:57:47: error: unresolved reference: alarm_icon\n        mAlarmIcon \u003d holder.findViewById(R.id.alarm_icon) as ImageView\n                                              ^",
+      "revId": "ec8f41659171f156ba4aa824437c8aef31b98f65",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
