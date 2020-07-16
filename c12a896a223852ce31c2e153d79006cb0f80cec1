@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "50d9ff69_1990a685",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-16T16:47:20Z",
+      "side": 1,
+      "message": "Can you take a look?\nAnd make the related kotlin changes if needed @colin\n\nThis fixes many issues as mentioned in the commit message, and makes it on par with GoogleDeskClock",
+      "revId": "c12a896a223852ce31c2e153d79006cb0f80cec1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
