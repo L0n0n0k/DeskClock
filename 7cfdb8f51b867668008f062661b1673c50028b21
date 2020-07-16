@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5f04a96e_058f4ef9",
+        "filename": "tests/Android.bp",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-16T17:57:20Z",
+      "side": 1,
+      "message": "The srcs referenced here are the tests to be run. Since we just have tests in Java so far there is no need to include Kotlin files.",
+      "parentUuid": "c9356a13_809ab52b",
+      "revId": "7cfdb8f51b867668008f062661b1673c50028b21",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c8502370_dfda6260",
         "filename": "tests/src/com/android/deskclock/ringtone/RingtonePickerActivityTest.java",
         "patchSetId": 6
