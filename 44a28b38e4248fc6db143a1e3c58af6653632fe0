@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1f22128a_f4376c4f",
+        "filename": "src/com/android/deskclock/data/DataModel.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 527,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-20T17:25:26Z",
+      "side": 1,
+      "message": "This method appears to not be called in any other places except this test code, so it seems that it is removed by proguard when building just the app. If there might be a better approach to avoid this annotation I\u0027d be happy to make that change.",
+      "parentUuid": "6209e6d8_f6aac75a",
+      "range": {
+        "startLine": 527,
+        "startChar": 4,
+        "endLine": 527,
+        "endChar": 9
+      },
+      "revId": "44a28b38e4248fc6db143a1e3c58af6653632fe0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "5df10309_f6366bff",
         "filename": "src/com/android/deskclock/timer/TimerService.kt",
         "patchSetId": 1
@@ -45,6 +69,30 @@
       "revId": "44a28b38e4248fc6db143a1e3c58af6653632fe0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "773a71ab_48e03750",
+        "filename": "src/com/android/deskclock/timer/TimerService.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-20T17:25:26Z",
+      "side": 1,
+      "message": "Thanks for this feedback on where the code has diverged! I think making these changes might be out of scope for this CL for the time being. I definitely agree that it would be good to make the change in the future!",
+      "parentUuid": "5df10309_f6366bff",
+      "range": {
+        "startLine": 123,
+        "startChar": 8,
+        "endLine": 132,
+        "endChar": 78
+      },
+      "revId": "44a28b38e4248fc6db143a1e3c58af6653632fe0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "ae55c130_53f25905",
+        "filename": "tests/src/com/android/deskclock/timer/TimerSetupViewTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-20T17:25:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "79308996_56135b8e",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 53,
+        "endChar": 42
+      },
+      "revId": "44a28b38e4248fc6db143a1e3c58af6653632fe0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c0cbf469_d354ed76",
         "filename": "tests/src/com/android/deskclock/timer/TimerSetupViewTest.java",
         "patchSetId": 1
@@ -91,6 +163,30 @@
       "revId": "44a28b38e4248fc6db143a1e3c58af6653632fe0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e116f0e4_a2189598",
+        "filename": "tests/src/com/android/deskclock/timer/TimerSetupViewTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 240,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-20T17:25:26Z",
+      "side": 1,
+      "message": "Added a line in setUp() to set the default locale to en_US",
+      "parentUuid": "c0cbf469_d354ed76",
+      "range": {
+        "startLine": 238,
+        "startChar": 0,
+        "endLine": 240,
+        "endChar": 51
+      },
+      "revId": "44a28b38e4248fc6db143a1e3c58af6653632fe0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
