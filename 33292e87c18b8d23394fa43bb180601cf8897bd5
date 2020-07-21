@@ -22,6 +22,30 @@
       "revId": "33292e87c18b8d23394fa43bb180601cf8897bd5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d13d11f3_8b79173e",
+        "filename": "tests/src/com/android/deskclock/timer/TimerSetupViewTest.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-21T16:01:19Z",
+      "side": 1,
+      "message": "I updated this test to reset the default locale to what it was before the setUp() is called as I haven\u0027t seen a better way to handle that in this test configuration. Thanks for bringing this up!",
+      "parentUuid": "eca03bd8_c0ff827d",
+      "range": {
+        "startLine": 72,
+        "startChar": 8,
+        "endLine": 72,
+        "endChar": 50
+      },
+      "revId": "33292e87c18b8d23394fa43bb180601cf8897bd5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
