@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "dac5b7f0_8820bfa5",
+        "filename": "src/com/android/deskclock/data/DataModel.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 527,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-21T19:48:39Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "1f22128a_f4376c4f",
+      "range": {
+        "startLine": 527,
+        "startChar": 4,
+        "endLine": 527,
+        "endChar": 9
+      },
+      "revId": "44a28b38e4248fc6db143a1e3c58af6653632fe0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5df10309_f6366bff",
         "filename": "src/com/android/deskclock/timer/TimerService.kt",
         "patchSetId": 1
