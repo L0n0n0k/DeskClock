@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "992b2dca_486299e0",
+        "filename": "src/com/android/deskclock/timer/TimerCircleView.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-21T21:37:26Z",
+      "side": 1,
+      "message": "nit: import order and extra blank line# 32.",
+      "revId": "cc4e7471ad71d78808eabf096440a89d18a622eb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
