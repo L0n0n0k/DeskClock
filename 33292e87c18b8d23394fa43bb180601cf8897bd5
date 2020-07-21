@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eca03bd8_c0ff827d",
+        "filename": "tests/src/com/android/deskclock/timer/TimerSetupViewTest.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2020-07-21T11:46:45Z",
+      "side": 1,
+      "message": "You may want to consider a scheme for setting this back to the true JVM default after the test. This is stored statically, and technically represents a bleed of state between tests.\n\ni.e. executing this test and another in different orders could result in different behaviors that are hard to diagnose\n\nUnder Robolectric, we are able to control this state in a more central location without resorting to setUp() and tearDown() symmetries throughout our tests. I\u0027m unsure what is at your disposal with AndroidJUnit4ClassRunner.",
+      "range": {
+        "startLine": 72,
+        "startChar": 8,
+        "endLine": 72,
+        "endChar": 50
+      },
+      "revId": "33292e87c18b8d23394fa43bb180601cf8897bd5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
