@@ -710,7 +710,6 @@ internal class TimerModel(
         val notification: Notification =
                 mNotificationBuilder.build(mContext, mNotificationModel, unexpired)
         val notificationId = mNotificationModel.unexpiredTimerNotificationId
-        mNotificationBuilder.buildChannel(mContext, mNotificationManager)
         mNotificationManager.notify(notificationId, notification)
     }
 
