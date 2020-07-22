@@ -38,6 +38,8 @@ import androidx.core.app.NotificationCompat.Builder
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 
+import com.android.deskclock.NotificationUtils.*
+import com.android.deskclock.NotificationUtils
 import com.android.deskclock.AlarmUtils
 import com.android.deskclock.R
 import com.android.deskclock.Utils
@@ -49,16 +51,6 @@ import com.android.deskclock.timer.TimerService
  * Builds notifications to reflect the latest state of the timers.
  */
 internal class TimerNotificationBuilder {
-
-    fun buildChannel(context: Context, notificationManager: NotificationManagerCompat) {
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            val channel = NotificationChannel(
-                    TIMER_MODEL_NOTIFICATION_CHANNEL_ID,
-                    context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT)
-            notificationManager.createNotificationChannel(channel)
-        }
-    }
 
     fun build(context: Context, nm: NotificationModel, unexpired: List<Timer>): Notification {
         val timer = unexpired[0]
@@ -160,7 +152,7 @@ internal class TimerNotificationBuilder {
                 .setShowWhen(false)
                 .setAutoCancel(false)
                 .setContentIntent(pendingShowApp)
-                .setPriority(NotificationManager.IMPORTANCE_HIGH)
+                .setPriority(Notification.PRIORITY_LOW)
                 .setCategory(NotificationCompat.CATEGORY_ALARM)
                 .setSmallIcon(R.drawable.stat_notify_timer)
                 .setSortKey(nm.timerNotificationSortKey)
@@ -213,6 +205,7 @@ internal class TimerNotificationBuilder {
                 }
             }
         }
+        NotificationUtils.createChannel(context, TIMER_MODEL_NOTIFICATION_CHANNEL_ID)
         return notification.build()
     }
 
@@ -268,7 +261,7 @@ internal class TimerNotificationBuilder {
         val pendingFullScreen: PendingIntent = Utils.pendingActivityIntent(context, fullScreen)
 
         val notification: Builder = Builder(
-                context, TIMER_MODEL_NOTIFICATION_CHANNEL_ID)
+                context, FIRING_NOTIFICATION_CHANNEL_ID)
                 .setOngoing(true)
                 .setLocalOnly(true)
                 .setShowWhen(false)
@@ -296,6 +289,7 @@ internal class TimerNotificationBuilder {
             notification.setContentTitle(stateText).setContentText(contentTextPreN)
         }
 
+        NotificationUtils.createChannel(context, FIRING_NOTIFICATION_CHANNEL_ID)
         return notification.build()
     }
 
@@ -379,6 +373,7 @@ internal class TimerNotificationBuilder {
             notification.setContentText(contentText).setContentTitle(stateText)
         }
 
+        NotificationUtils.createChannel(context, TIMER_MODEL_NOTIFICATION_CHANNEL_ID)
         return notification.build()
     }
 
@@ -397,11 +392,6 @@ internal class TimerNotificationBuilder {
     }
 
     companion object {
-        /**
-         * Notification channel containing all TimerModel notifications.
-         */
-        private const val TIMER_MODEL_NOTIFICATION_CHANNEL_ID = "TimerModelNotification"
-
         private const val REQUEST_CODE_UPCOMING = 0
         private const val REQUEST_CODE_MISSING = 1
 

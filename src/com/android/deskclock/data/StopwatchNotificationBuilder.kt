@@ -34,6 +34,8 @@ import androidx.core.app.NotificationCompat.Builder
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 
+import com.android.deskclock.NotificationUtils
+import com.android.deskclock.NotificationUtils.*
 import com.android.deskclock.R
 import com.android.deskclock.Utils
 import com.android.deskclock.events.Events
@@ -43,16 +45,6 @@ import com.android.deskclock.stopwatch.StopwatchService
  * Builds notification to reflect the latest state of the stopwatch and recorded laps.
  */
 internal class StopwatchNotificationBuilder {
-    fun buildChannel(context: Context, notificationManager: NotificationManagerCompat) {
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            val channel = NotificationChannel(
-                    STOPWATCH_NOTIFICATION_CHANNEL_ID,
-                    context.getString(R.string.default_label),
-                    NotificationManagerCompat.IMPORTANCE_DEFAULT)
-            notificationManager.createNotificationChannel(channel)
-        }
-    }
-
     fun build(context: Context, nm: NotificationModel, stopwatch: Stopwatch?): Notification {
         @StringRes val eventLabel: Int = R.string.label_notification
 
@@ -140,7 +132,7 @@ internal class StopwatchNotificationBuilder {
                 .setCustomContentView(content)
                 .setContentIntent(pendingShowApp)
                 .setAutoCancel(stopwatch.isPaused)
-                .setPriority(NotificationManagerCompat.IMPORTANCE_HIGH)
+                .setPriority(Notification.PRIORITY_LOW)
                 .setSmallIcon(R.drawable.stat_notify_stopwatch)
                 .setStyle(NotificationCompat.DecoratedCustomViewStyle())
                 .setColor(ContextCompat.getColor(context, R.color.default_background))
@@ -153,6 +145,7 @@ internal class StopwatchNotificationBuilder {
             notification.addAction(action)
         }
 
+        NotificationUtils.createChannel(context, STOPWATCH_NOTIFICATION_CHANNEL_ID)
         return notification.build()
     }
 
