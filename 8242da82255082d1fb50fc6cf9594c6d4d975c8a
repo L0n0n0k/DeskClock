@@ -68,6 +68,108 @@
       "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "095c8e0e_eb1cb452",
+        "filename": "src/com/android/deskclock/alarms/AlarmNotifications.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-22T18:45:07Z",
+      "side": 1,
+      "message": "No wildcard imports per https://developer.android.com/kotlin/style-guide#import_statements",
+      "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1001328b_5730e467",
+        "filename": "src/com/android/deskclock/data/StopwatchNotificationBuilder.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-22T18:45:07Z",
+      "side": 1,
+      "message": "No wildcard imports per https://developer.android.com/kotlin/style-guide#import_statements",
+      "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c3c4d0a9_5fc50721",
+        "filename": "src/com/android/deskclock/data/TimerNotificationBuilder.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-22T18:45:07Z",
+      "side": 1,
+      "message": "No wildcard imports per https://developer.android.com/kotlin/style-guide#import_statements",
+      "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0f4d7741_0cc5e0bd",
+        "filename": "src/com/android/deskclock/provider/Alarm.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-22T18:45:07Z",
+      "side": 1,
+      "message": "nit: unnecessary blank line",
+      "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ba9ca73a_08f3a8da",
+        "filename": "src/com/android/deskclock/timer/TimerItemFragment.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-22T18:45:07Z",
+      "side": 1,
+      "message": "This might be able to be removed here now",
+      "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "09e5c43b_230a16e0",
+        "filename": "src/com/android/deskclock/timer/TimerPagerAdapter.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-22T18:45:07Z",
+      "side": 1,
+      "message": "Same with this TODO",
+      "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
