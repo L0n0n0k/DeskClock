@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6db7b1d2_aa001a75",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-22T22:41:57Z",
+      "side": 1,
+      "message": "The test file in this CL is still a work in progress, I just wanted to get this up in case you might have any ideas about an error I\u0027m having. \n\nI\u0027m running into a NullPointerException in all the tests where something like \"final TimerItem timerItem \u003d (TimerItem) viewPager.getChildAt(1);\" is done (the timerItem returned is null). From my debugging it seems that the viewPager is empty, even though the corresponding adapter is not empty (alarms have been created). As well, from watching the UI on the device while the test runs it doesn\u0027t leave the timer setup view to display the timer list that the viewPager represents, which I believe is causing this issue.\n\nThanks in advance if you might have any ideas of what could be done to fix this issue!",
+      "revId": "e5583454db072fa746e97fadf4e1b882980d332a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
