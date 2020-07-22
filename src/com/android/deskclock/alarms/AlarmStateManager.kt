@@ -436,7 +436,7 @@ class AlarmStateManager : BroadcastReceiver() {
             AlarmInstance.updateInstance(contentResolver, instance)
 
             // Setup instance notification and scheduling timers
-            AlarmNotifications.showLowPriorityNotification(context, instance)
+            AlarmNotifications.showUpcomingNotification(context, instance, true)
             scheduleInstanceStateChange(context, instance.highNotificationTime,
                     instance, InstancesColumns.HIGH_NOTIFICATION_STATE)
         }
@@ -480,7 +480,7 @@ class AlarmStateManager : BroadcastReceiver() {
             AlarmInstance.updateInstance(contentResolver, instance)
 
             // Setup instance notification and scheduling timers
-            AlarmNotifications.showHighPriorityNotification(context, instance)
+            AlarmNotifications.showUpcomingNotification(context, instance, false)
             scheduleInstanceStateChange(context, instance.alarmTime,
                     instance, InstancesColumns.FIRED_STATE)
         }

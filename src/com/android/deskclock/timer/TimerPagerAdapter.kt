@@ -17,14 +17,13 @@
 package com.android.deskclock.timer
 
 import android.annotation.SuppressLint
-import android.app.Fragment
-import android.app.FragmentManager
-import android.app.FragmentTransaction
 import android.util.ArrayMap
 import android.view.View
 import android.view.ViewGroup
-import androidx.legacy.app.FragmentCompat
-import androidx.viewpager.widget.PagerAdapter
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.PagerAdapter;
 
 import com.android.deskclock.data.DataModel
 import com.android.deskclock.data.Timer
@@ -105,16 +104,17 @@ internal class TimerPagerAdapter(
 
     override fun setPrimaryItem(container: ViewGroup, position: Int, any: Any) {
         val fragment = any as Fragment
-        if (fragment !== mCurrentPrimaryItem) {
-            if (mCurrentPrimaryItem != null) {
-                setItemVisible(mCurrentPrimaryItem, false)
+        val currentPrimaryItem = mCurrentPrimaryItem
+        if (fragment !== currentPrimaryItem) {
+            if (currentPrimaryItem != null) {
+                setItemVisible(currentPrimaryItem, false)
+            }
+
+            if (fragment != null) {
+                setItemVisible(fragment, true)
             }
 
             mCurrentPrimaryItem = fragment
-
-            if (mCurrentPrimaryItem != null) {
-                setItemVisible(mCurrentPrimaryItem, true)
-            }
         }
     }
 
@@ -161,9 +161,9 @@ internal class TimerPagerAdapter(
         get() = DataModel.dataModel.timers
 
     companion object {
-        private fun setItemVisible(item: Fragment?, visible: Boolean) {
-            FragmentCompat.setMenuVisibility(item, visible)
-            FragmentCompat.setUserVisibleHint(item, visible)
+        private fun setItemVisible(item: Fragment, visible: Boolean) {
+            item.setMenuVisibility(visible);
+            item.setUserVisibleHint(visible);
         }
     }
 }
