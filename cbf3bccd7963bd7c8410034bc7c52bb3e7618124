@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e1b70547_5a6460b2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-22T17:41:42Z",
+      "side": 1,
+      "message": "So a little TL; DR\nMoves away from the deprecated Fragment to AndroidX\nAdds a dark theme\nMoves the navigation bar to the bottom ( like GoogleDeskClock )\nAnd after all the java changes, I applied all of them on top of kotlin ( +colin )",
+      "revId": "cbf3bccd7963bd7c8410034bc7c52bb3e7618124",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
