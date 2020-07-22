@@ -116,9 +116,9 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
         container: ViewGroup?,
         state: Bundle?
     ): View {
-        mLapsAdapter = LapsAdapter(getActivity())
+        mLapsAdapter = LapsAdapter(requireActivity())
         mLapsLayoutManager = LinearLayoutManager(getActivity())
-        mGradientItemDecoration = GradientItemDecoration(getActivity())
+        mGradientItemDecoration = GradientItemDecoration(requireActivity())
 
         val v: View = inflater.inflate(R.layout.stopwatch_fragment, container, false)
         mTime = v.findViewById(R.id.stopwatch_circle)
@@ -168,7 +168,7 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
     override fun onStart() {
         super.onStart()
 
-        val activity: Activity = getActivity()
+        val activity: Activity = requireActivity()
         val intent: Intent? = activity.getIntent()
         if (intent != null) {
             val action: String? = intent.getAction()
@@ -231,38 +231,30 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
         }
     }
 
-    private fun updateFab(fab: ImageView, animate: Boolean) {
+    private fun updateFab(fab: ImageView) {
         if (stopwatch.isRunning) {
-            if (animate) {
-                fab.setImageResource(R.drawable.ic_play_pause_animation)
-            } else {
-                fab.setImageResource(R.drawable.ic_play_pause)
-            }
+            fab.setImageResource(R.drawable.ic_pause_24dp)
             fab.setContentDescription(fab.getResources().getString(R.string.sw_pause_button))
         } else {
-            if (animate) {
-                fab.setImageResource(R.drawable.ic_pause_play_animation)
-            } else {
-                fab.setImageResource(R.drawable.ic_pause_play)
-            }
+            fab.setImageResource(R.drawable.ic_start_24dp)
             fab.setContentDescription(fab.getResources().getString(R.string.sw_start_button))
         }
         fab.setVisibility(VISIBLE)
     }
 
     override fun onUpdateFab(fab: ImageView) {
-        updateFab(fab, false)
+        updateFab(fab)
     }
 
     override fun onMorphFab(fab: ImageView) {
         // Update the fab's drawable to match the current timer state.
-        updateFab(fab, Utils.isNOrLater())
+        updateFab(fab)
         // Animate the drawable.
         AnimatorUtils.startDrawableAnimation(fab)
     }
 
     override fun onUpdateFabButtons(left: Button, right: Button) {
-        val resources: Resources = getResources()
+        val resources: Resources = left.context.getResources()
         left.setClickable(true)
         left.setText(R.string.sw_reset_button)
         left.setContentDescription(resources.getString(R.string.sw_reset_button))
@@ -291,6 +283,10 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
             null -> {
             }
         }
+    }
+
+    override fun getFabTargetVisibility(): Int {
+        return View.VISIBLE;
     }
 
     /**
@@ -353,7 +349,7 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
                 .putExtra(Intent.EXTRA_TEXT, text)
                 .setType("text/plain")
 
-        val context: Context = getActivity()
+        val context: Context = requireActivity()
         val title: String = context.getString(R.string.sw_share_button)
         val shareChooserIntent: Intent = Intent.createChooser(shareIntent, title)
         try {
@@ -423,14 +419,14 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
     private fun adjustWakeLock() {
         val appInForeground = DataModel.dataModel.isApplicationInForeground
         if (stopwatch.isRunning && isTabSelected && appInForeground) {
-            getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+            requireActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         } else {
             releaseWakeLock()
         }
     }
 
     private fun releaseWakeLock() {
-        getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        requireActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
     }
 
     /**
