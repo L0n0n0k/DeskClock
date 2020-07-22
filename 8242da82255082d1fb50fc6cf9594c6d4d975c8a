@@ -88,6 +88,24 @@
     },
     {
       "key": {
+        "uuid": "1c45df63_8b6a244d",
+        "filename": "src/com/android/deskclock/alarms/AlarmNotifications.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-22T19:05:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "095c8e0e_eb1cb452",
+      "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1001328b_5730e467",
         "filename": "src/com/android/deskclock/data/StopwatchNotificationBuilder.kt",
         "patchSetId": 4
@@ -105,6 +123,24 @@
     },
     {
       "key": {
+        "uuid": "8cc6f980_033b1cb3",
+        "filename": "src/com/android/deskclock/data/StopwatchNotificationBuilder.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-22T19:05:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1001328b_5730e467",
+      "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c3c4d0a9_5fc50721",
         "filename": "src/com/android/deskclock/data/TimerNotificationBuilder.kt",
         "patchSetId": 4
@@ -119,6 +155,24 @@
       "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "735f6b02_4af2d10d",
+        "filename": "src/com/android/deskclock/data/TimerNotificationBuilder.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-22T19:05:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c3c4d0a9_5fc50721",
+      "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
