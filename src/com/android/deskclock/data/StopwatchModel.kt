@@ -220,7 +220,6 @@ internal class StopwatchModel(
         // Otherwise build and post a notification reflecting the latest stopwatch state.
         val notification: Notification =
                 mNotificationBuilder.build(mContext, mNotificationModel, stopwatch)
-        mNotificationBuilder.buildChannel(mContext, mNotificationManager)
         mNotificationManager.notify(mNotificationModel.stopwatchNotificationId, notification)
     }
 
