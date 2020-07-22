@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d41b4f01_6af71203",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-22T18:59:32Z",
+      "side": 1,
+      "message": "The wildcards import are left, thanks for the review\n\nThe kotlin changes are now squashed in each corresponding change",
+      "revId": "56801bbb4edbbc000cc57d184d83c1bf60cbebaf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}

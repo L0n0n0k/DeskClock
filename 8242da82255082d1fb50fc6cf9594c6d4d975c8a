@@ -139,6 +139,24 @@
     },
     {
       "key": {
+        "uuid": "f2fc3130_ea43cb79",
+        "filename": "src/com/android/deskclock/provider/Alarm.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-22T18:59:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0f4d7741_0cc5e0bd",
+      "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba9ca73a_08f3a8da",
         "filename": "src/com/android/deskclock/timer/TimerItemFragment.kt",
         "patchSetId": 4
@@ -156,6 +174,24 @@
     },
     {
       "key": {
+        "uuid": "f4ec390f_69cde526",
+        "filename": "src/com/android/deskclock/timer/TimerItemFragment.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-22T18:59:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ba9ca73a_08f3a8da",
+      "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "09e5c43b_230a16e0",
         "filename": "src/com/android/deskclock/timer/TimerPagerAdapter.kt",
         "patchSetId": 4
@@ -170,6 +206,24 @@
       "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2ec41553_49fbdeb6",
+        "filename": "src/com/android/deskclock/timer/TimerPagerAdapter.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-22T18:59:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "09e5c43b_230a16e0",
+      "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
