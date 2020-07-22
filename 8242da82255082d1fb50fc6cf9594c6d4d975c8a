@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "09b49257_7605faac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-22T18:15:48Z",
+      "side": 1,
+      "message": "A few more info, the java changes have been in our codebase for a while now so are safe to review/merge\nKotlin was just test-compiled by me",
+      "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
