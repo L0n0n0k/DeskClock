@@ -33,6 +33,23 @@
       "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c9a0cef4_801b8e69",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-22T18:39:54Z",
+      "side": 1,
+      "message": "(SIAK) You can use topic to submit multiple  changes (java and Kotlin change lists)",
+      "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
