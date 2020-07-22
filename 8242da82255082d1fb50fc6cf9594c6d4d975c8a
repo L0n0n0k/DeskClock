@@ -50,6 +50,24 @@
       "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e7e1f053_d9e8cc6c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-22T18:41:21Z",
+      "side": 1,
+      "message": "You mean to apply the corresponding kotlin changes to each patch?\nIf so I\u0027ll do that, I just wanted a quick review for now",
+      "parentUuid": "987fb826_5db749de",
+      "revId": "8242da82255082d1fb50fc6cf9594c6d4d975c8a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
