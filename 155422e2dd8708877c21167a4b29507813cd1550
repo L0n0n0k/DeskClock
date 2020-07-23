@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fd743848_ca397407",
+        "filename": "src/com/android/deskclock/uidata/PeriodicCallbackModel.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2020-07-23T23:03:57Z",
+      "side": 1,
+      "message": "Just a note here to say this:\nsurprisingly, Android can execute a scheduled task EARLIER than expected. That is, if the task is scheduled for midnight, it *can* actually execute at midnight - 1ms. Ensure all callers of these APIs are actually supplying a non-zero offset (if they are sensitive to time of day) or you *will* encounter bugs.\n\ne.g. time is supposed to update every minute, but draws the same hour:minute value 2 consecutive minutes and then appears to \"jump 2 minutes ahead\" on the 3rd minute.",
+      "range": {
+        "startLine": 62,
+        "startChar": 46,
+        "endLine": 62,
+        "endChar": 58
+      },
+      "revId": "155422e2dd8708877c21167a4b29507813cd1550",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
