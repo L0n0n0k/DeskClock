@@ -52,6 +52,24 @@
       "revId": "e5583454db072fa746e97fadf4e1b882980d332a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "74a63325_e04bf03e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2020-07-23T22:32:55Z",
+      "side": 1,
+      "message": "RecyclerView frequently has this issue under Robolectric. We typically worked around the problem by forcing measurement and layout to occur with some arbitrary size chosen by the test (which wasn\u0027t a big deal because the test wasn\u0027t attempting to verify anything layout-related).\nhttps://source.corp.google.com/piper///depot/google3/third_party/java_src/android_app/deskclock/javatests/com/android/deskclock/alarms/AlarmFragmentTest.java;l\u003d441",
+      "parentUuid": "e980a4ee_1e7f2f00",
+      "revId": "e5583454db072fa746e97fadf4e1b882980d332a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
