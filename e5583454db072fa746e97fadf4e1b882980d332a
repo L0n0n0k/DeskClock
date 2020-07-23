@@ -16,6 +16,24 @@
       "revId": "e5583454db072fa746e97fadf4e1b882980d332a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ce10f2a_418151be",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2020-07-23T05:18:00Z",
+      "side": 1,
+      "message": "I don\u0027t use this testing framework so I\u0027m guessing here.\n\nUnder robolectric, sometimes ViewPager didn\u0027t have a size (i.e. width \u003d 0, height \u003d 0) so it wouldn\u0027t bother creating and laying out child Fragments for data in the adapter. Check if that is your case as well.",
+      "parentUuid": "6db7b1d2_aa001a75",
+      "revId": "e5583454db072fa746e97fadf4e1b882980d332a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
