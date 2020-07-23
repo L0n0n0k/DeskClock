@@ -34,6 +34,24 @@
       "revId": "e5583454db072fa746e97fadf4e1b882980d332a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e980a4ee_1e7f2f00",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-23T16:34:11Z",
+      "side": 1,
+      "message": "I just checked this and I am seeing the ViewPager have 0 width and height after the fragment is setup in the setUpFragment() function. What approach was taken under robolectric to address this issue? I\u0027m currently looking into possibly instantiating the ViewPager item by calling adapter.instantiateItem(viewPager, 0) directly and accessing the view from that returned Fragment, however its view seems to be null as well.",
+      "parentUuid": "9ce10f2a_418151be",
+      "revId": "e5583454db072fa746e97fadf4e1b882980d332a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
