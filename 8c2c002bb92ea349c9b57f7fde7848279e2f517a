@@ -33,6 +33,24 @@
       "revId": "8c2c002bb92ea349c9b57f7fde7848279e2f517a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e0cf9a77_5b2826bb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-23T20:25:29Z",
+      "side": 1,
+      "message": "Each change should work as is, but I\u0027d like to submit them as a chain\nThere are no dependencies",
+      "parentUuid": "fafe8445_bf7de22b",
+      "revId": "8c2c002bb92ea349c9b57f7fde7848279e2f517a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
