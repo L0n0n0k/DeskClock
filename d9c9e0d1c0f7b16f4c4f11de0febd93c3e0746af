@@ -16,6 +16,23 @@
       "revId": "d9c9e0d1c0f7b16f4c4f11de0febd93c3e0746af",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3df39e05_dd7d95a6",
+        "filename": "src/com/android/deskclock/timer/TimerFragment.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-24T16:00:20Z",
+      "side": 1,
+      "message": "nit: blank line?",
+      "revId": "d9c9e0d1c0f7b16f4c4f11de0febd93c3e0746af",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
