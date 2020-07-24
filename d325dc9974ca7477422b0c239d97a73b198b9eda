@@ -16,6 +16,24 @@
       "revId": "d325dc9974ca7477422b0c239d97a73b198b9eda",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fceb9058_5dfd761b",
+        "filename": "src/com/android/deskclock/timer/TimerPagerAdapter.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-24T18:12:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "41e54d09_3c5a1471",
+      "revId": "d325dc9974ca7477422b0c239d97a73b198b9eda",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
