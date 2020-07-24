@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "41e54d09_3c5a1471",
+        "filename": "src/com/android/deskclock/timer/TimerPagerAdapter.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-24T17:45:57Z",
+      "side": 1,
+      "message": "No semicolons needed in Kotlin per https://developer.android.com/kotlin/style-guide#one_statement_per_line (also occurs on lines #164 and #165 in this file).",
+      "revId": "d325dc9974ca7477422b0c239d97a73b198b9eda",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
