@@ -16,6 +16,24 @@
       "revId": "50ac43c0ddd36476182f53249853e4724773c160",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "172fb9a6_d9562b1d",
+        "filename": "tests/src/com/android/deskclock/uidata/PeriodicCallbackModelTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-24T18:12:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3868628b_81cdb853",
+      "revId": "50ac43c0ddd36476182f53249853e4724773c160",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
