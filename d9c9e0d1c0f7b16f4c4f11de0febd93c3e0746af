@@ -1,0 +1,12 @@
+Open-Source-Licensing+1: Lint 🤖 <android-build-prod-ayeaye@system.gserviceaccount.com>
+Code-Review+2: jplemieux <jplemieux@google.com>
+Code-Review+2: Raman Tenneti <rtenneti@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Lint+1: Lint 🤖 <android-build-prod-ayeaye@system.gserviceaccount.com>
+Presubmit-Verified-Together+1: Treehugger Robot <treehugger-gerrit@google.com>
+Autosubmit+1: Raman Tenneti <rtenneti@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Fri, 24 Jul 2020 15:59:19 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/packages/apps/DeskClock/+/1371044
+Project: platform/packages/apps/DeskClock
+Branch: refs/heads/master
