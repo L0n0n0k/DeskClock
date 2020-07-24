@@ -22,6 +22,30 @@
       "revId": "155422e2dd8708877c21167a4b29507813cd1550",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "80acad19_c51d044d",
+        "filename": "src/com/android/deskclock/uidata/PeriodicCallbackModel.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-24T17:19:00Z",
+      "side": 1,
+      "message": "I updated this APIs to reflect how it is handled in the Google Clock version of this file to set the offset here instead of when it is called in all cases except the minute callback. I\u0027d appreciate a look over these new changes to ensure it still looks good! Thanks for this suggestion!",
+      "parentUuid": "fd743848_ca397407",
+      "range": {
+        "startLine": 62,
+        "startChar": 46,
+        "endLine": 62,
+        "endChar": 58
+      },
+      "revId": "155422e2dd8708877c21167a4b29507813cd1550",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
