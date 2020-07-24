@@ -16,6 +16,24 @@
       "revId": "18e6b1dd7960d7eadeca3b33979383667c8dddd6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "981d32f0_0aa41514",
+        "filename": "tests/src/com/android/deskclock/uidata/TabModelTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-24T20:46:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b53fcf17_a52aad0d",
+      "revId": "18e6b1dd7960d7eadeca3b33979383667c8dddd6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
