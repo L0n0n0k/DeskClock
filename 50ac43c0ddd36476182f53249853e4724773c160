@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3868628b_81cdb853",
+        "filename": "tests/src/com/android/deskclock/uidata/PeriodicCallbackModelTest.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-24T18:07:27Z",
+      "side": 1,
+      "message": "nit: import statements (each block separated by a blank line),\n  https://source.android.com/setup/contribute/code-style#use-javadoc-standard-comments",
+      "revId": "50ac43c0ddd36476182f53249853e4724773c160",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
