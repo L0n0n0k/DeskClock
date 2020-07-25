@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9acc8827_57461445",
+        "filename": "src/com/android/deskclock/uidata/TabScrollListener.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-25T16:30:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "979144be_37e749bd",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 88
+      },
+      "revId": "3f7295b8d6aaae7b46d7f2649ba8d0dc2943b6fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "866bd046_84021511",
         "filename": "src/com/android/deskclock/uidata/TabScrollListener.kt",
         "patchSetId": 2
@@ -45,6 +69,30 @@
       "revId": "3f7295b8d6aaae7b46d7f2649ba8d0dc2943b6fb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "78c2f897_39f01b81",
+        "filename": "src/com/android/deskclock/uidata/TabScrollListener.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-25T16:30:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "866bd046_84021511",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 3
+      },
+      "revId": "3f7295b8d6aaae7b46d7f2649ba8d0dc2943b6fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
