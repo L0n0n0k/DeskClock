@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8a239377_7f5d147f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-25T18:45:48Z",
+      "side": 1,
+      "message": "Can this get in before any more kotlin changes are made?\nSo I can avoid refactoring for the nth time...",
+      "revId": "ca6980f4eed552241a277412d563e7bd6a0b1d58",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
