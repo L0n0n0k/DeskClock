@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b150e8db_2466f853",
+        "filename": "src/com/android/deskclock/uidata/UiDataModel.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2020-07-25T10:01:19Z",
+      "side": 1,
+      "message": "remove these spaces",
+      "range": {
+        "startLine": 68,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 12
+      },
+      "revId": "c6a90fa3b2d0c024a8b29d7b3b843a1967fa1228",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
