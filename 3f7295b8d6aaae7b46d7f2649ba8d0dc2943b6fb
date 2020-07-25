@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "979144be_37e749bd",
+        "filename": "src/com/android/deskclock/uidata/TabScrollListener.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2020-07-25T09:49:56Z",
+      "side": 1,
+      "message": "maybe format with html:\n\n * \u003cul\u003e\n *   \u003cli\u003ethe vertical scroll position of the selected tab is now scrolled to the top\n *   \u003cli\u003ethe vertical scroll position of the selected tab is no longer scrolled to the top\n *   \u003cli\u003ethe selected tab changed and the new tab scroll state does not match the prior tab\n * \u003c/ul\u003e",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 88
+      },
+      "revId": "3f7295b8d6aaae7b46d7f2649ba8d0dc2943b6fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "866bd046_84021511",
+        "filename": "src/com/android/deskclock/uidata/TabScrollListener.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2020-07-25T09:49:56Z",
+      "side": 1,
+      "message": "remove line above",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 3
+      },
+      "revId": "3f7295b8d6aaae7b46d7f2649ba8d0dc2943b6fb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
