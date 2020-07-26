@@ -16,6 +16,23 @@
       "revId": "ca6980f4eed552241a277412d563e7bd6a0b1d58",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b57137e2_ede35b05",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-26T22:27:06Z",
+      "side": 1,
+      "message": "Hi Xin,\n  Luca has created a topic and added all the CLs. I would like to make sure Presubmit passes. It looks like \n\nWARN: Found unapproved submitted together changes: Change 1370169, Change 1370167, Change 1370166, Change 1370165, Change 1370164, Change 1370163, Change 1370161, Change 1370160.\nPlease make sure these changes are owned by authorized users or have a Code-Review+2 vote. go/treehugger-unauthorized-change",
+      "revId": "ca6980f4eed552241a277412d563e7bd6a0b1d58",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
