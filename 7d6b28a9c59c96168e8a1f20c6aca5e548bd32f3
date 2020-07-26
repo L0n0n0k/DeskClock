@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9927ece7_282bb744",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-26T22:14:39Z",
+      "side": 1,
+      "message": "Hi Xin,\n  It looks like ",
+      "revId": "7d6b28a9c59c96168e8a1f20c6aca5e548bd32f3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
