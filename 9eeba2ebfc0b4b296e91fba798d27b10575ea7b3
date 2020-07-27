@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "06fd8d9b_a2efdbe8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-27T02:40:27Z",
+      "side": 1,
+      "message": "The following are the build failures.\n\nout/soong/.intermediates/packages/apps/DeskClock/DeskClockKotlin/android_common/errorprone/classes \u0026\u0026 rm -rf \"out/soong/.intermediates/packages/apps/DeskClock/DeskClockKotlin/android_common/errorprone/srcjars\"\npackages/apps/DeskClock/src/com/android/deskclock/DeskClock.java:435: error: cannot find symbol\n        mBottomNavigation.setSelectedItemId(selectedTab.getPageResId());\n                                                       ^\n  symbol:   method getPageResId()\n  location: variable selectedTab of type Tab\n1 error\n\nout/soong/.intermediates/packages/apps/DeskClock/tests/DeskClockTests/android_common/javac/classes \u0026\u0026 rm -rf \"out/soong/.intermediates/packages/apps/DeskClock/tests/DeskClockTests/android_common/javac/srcjars\"\npackages/apps/DeskClock/tests/src/com/android/deskclock/timer/TimerFragmentTest.java:107: error: cannot find symbol\n                    (ViewPager) rule.getActivity().findViewById(R.id.desk_clock_pager);\n                                                                    ^\n  symbol:   variable desk_clock_pager\n  location: class id\npackages/apps/DeskClock/tests/src/com/android/deskclock/timer/TimerItemFragmentTest.java:54: error: no suitable method found for add(TimerFragment,\u003cnull\u003e)\n                .beginTransaction().add(timerFragment, null).commit();\n                                   ^\n    method FragmentTransaction.add(Fragment,String) is not applicable\n      (argument mismatch; TimerFragment cannot be converted to Fragment)\n    method FragmentTransaction.add(int,Fragment) is not applicable\n      (argument mismatch; TimerFragment cannot be converted to int)\npackages/apps/DeskClock/tests/src/com/android/deskclock/timer/TimerSetupViewTest.java:78: error: no suitable method found for add(TimerFragment,\u003cnull\u003e)\n        rule.getActivity().getFragmentManager().beginTransaction().add(fragment, null).commit();\n                                                                  ^\n    method FragmentTransaction.add(Fragment,String) is not applicable\n      (argument mismatch; TimerFragment cannot be converted to Fragment)\n    method FragmentTransaction.add(int,Fragment) is not applicable\n      (argument mismatch; TimerFragment cannot be converted to int)\nNote: Some messages have been simplified; recompile with -Xdiags:verbose to get full output\n3 errors\n",
+      "revId": "9eeba2ebfc0b4b296e91fba798d27b10575ea7b3",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
