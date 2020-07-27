@@ -16,6 +16,24 @@
       "revId": "05d6dc757b7dba2a9e824d77c302d8992d2c08ef",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4fcba191_9606ca5b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-27T19:14:28Z",
+      "side": 1,
+      "message": "Sad!\nI\u0027m currently unable to run tests ( somehow emulator doesn\u0027t fire up :/ ), can you please post the error there?\nI just made sure it built and made sense code wise...\n\nAnyways, you can also do `atest DeskClockTests`",
+      "parentUuid": "8cd7a9a8_30f977a0",
+      "revId": "05d6dc757b7dba2a9e824d77c302d8992d2c08ef",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
