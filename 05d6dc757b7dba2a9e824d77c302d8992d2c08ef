@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8cd7a9a8_30f977a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-27T17:00:09Z",
+      "side": 1,
+      "message": "Hi Luca,\n\nI\u0027m seeing some test failures here when I run the following to run the DeskClockTests target:\n$ source build/envsetup.sh\n$ lunch aosp_sargo-userdebug\n$ make DeskClockKotlin\n$ adb install out/target/product/sargo/product/app/DeskClockKotlin/DeskClockKotlin.apk\n$ make DeskClockTests\n$ adb install out/target/product/sargo/testcases/DeskClockTests/arm64/DeskClockTests.apk\n$ adb shell am instrument -w com.android.deskclock.tests\n\nIf you could run these tests and fix the errors that would be much appreciated! I\u0027m happy to provide any additional info that might help!",
+      "revId": "05d6dc757b7dba2a9e824d77c302d8992d2c08ef",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
