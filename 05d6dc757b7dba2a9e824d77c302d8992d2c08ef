@@ -52,6 +52,24 @@
       "revId": "05d6dc757b7dba2a9e824d77c302d8992d2c08ef",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a2df4e1c_65f0151f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-27T19:44:50Z",
+      "side": 1,
+      "message": "Fixed the latter here https://android-review.googlesource.com/c/platform/packages/apps/DeskClock/+/1370168\nThe other 2 aren\u0027t related to my changes, TabModel and UiDataModel aren\u0027t touched in any of my CL",
+      "parentUuid": "7877e11a_da3df8d5",
+      "revId": "05d6dc757b7dba2a9e824d77c302d8992d2c08ef",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
