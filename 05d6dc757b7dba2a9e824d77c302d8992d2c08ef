@@ -88,6 +88,29 @@
       "revId": "05d6dc757b7dba2a9e824d77c302d8992d2c08ef",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "68944324_3970f1fc",
+        "filename": "src/com/android/deskclock/AlarmClockFragment.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-27T20:18:05Z",
+      "side": 1,
+      "message": "nit: The following code is adding a blank line. Blank line before line#51.\n\nhttps://cs.android.com/android/platform/superproject/+/master:packages/apps/DocumentsUI/src/com/android/documentsui/dirlist/RenameDocumentFragment.java;drc\u003d03ef741d82978285d200692fb035b04837e1939f;l\u003d48",
+      "range": {
+        "startLine": 51,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 53
+      },
+      "revId": "05d6dc757b7dba2a9e824d77c302d8992d2c08ef",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
