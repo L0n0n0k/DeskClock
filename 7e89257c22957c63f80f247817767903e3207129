@@ -52,6 +52,24 @@
       "revId": "7e89257c22957c63f80f247817767903e3207129",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2a8685fc_e1acf371",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-28T17:21:05Z",
+      "side": 1,
+      "message": "Unfortunately, disabling all the proguard optimizations on the app is not an ideal solution to fix these test failures. It is just a few functions that appear to be affected (the ones used in the tests that show up in the errors).",
+      "parentUuid": "4633735c_d27f0b37",
+      "revId": "7e89257c22957c63f80f247817767903e3207129",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
