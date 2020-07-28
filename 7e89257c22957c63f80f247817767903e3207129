@@ -34,6 +34,24 @@
       "revId": "7e89257c22957c63f80f247817767903e3207129",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4633735c_d27f0b37",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-28T15:46:47Z",
+      "side": 1,
+      "message": "You have to add it to the application, not the tests",
+      "parentUuid": "4ac7b596_45451fb0",
+      "revId": "7e89257c22957c63f80f247817767903e3207129",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
