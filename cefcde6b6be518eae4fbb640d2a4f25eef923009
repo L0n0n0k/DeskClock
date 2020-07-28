@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "32982a7f_1cece27b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-28T08:21:28Z",
+      "side": 1,
+      "message": "The size isn\u0027t fixed, so we can\u0027t properly test it",
+      "revId": "cefcde6b6be518eae4fbb640d2a4f25eef923009",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
