@@ -16,6 +16,24 @@
       "revId": "7e89257c22957c63f80f247817767903e3207129",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ac7b596_45451fb0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-28T15:45:33Z",
+      "side": 1,
+      "message": "Hi Luca,\n\nI just tried adding this to the DeskClockTests target and I\u0027m still seeing test failures relating to the missing selectTab(), getAdapter() and getTabAt() functions. Perhaps I was putting it in the wrong place, would you be able to make this change as a part of this CL?",
+      "parentUuid": "89d2c964_51f607cb",
+      "revId": "7e89257c22957c63f80f247817767903e3207129",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
