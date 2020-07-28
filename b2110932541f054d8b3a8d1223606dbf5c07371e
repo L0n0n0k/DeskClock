@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "060656bc_014803ba",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-28T09:26:16Z",
+      "side": 1,
+      "message": "This solver 90% of the issue related to the ViewPager removal, and it\u0027s still a good change",
+      "revId": "b2110932541f054d8b3a8d1223606dbf5c07371e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
