@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "89d2c964_51f607cb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-28T10:19:33Z",
+      "side": 1,
+      "message": "All you need now is\n    optimize: {\n        enabled: false,\n    },\nTo disable r8",
+      "revId": "7e89257c22957c63f80f247817767903e3207129",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
