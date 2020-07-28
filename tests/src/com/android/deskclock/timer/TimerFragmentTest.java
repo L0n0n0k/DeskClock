@@ -102,11 +102,11 @@ public class TimerFragmentTest {
     }
 
     private void setUpFragment() {
-        Runnable setUpFragmentRunnable = () -> {
-            ViewPager deskClockPager =
-                    (ViewPager) rule.getActivity().findViewById(R.id.desk_clock_pager);
-            PagerAdapter tabPagerAdapter = (PagerAdapter) deskClockPager.getAdapter();
-            fragment = (TimerFragment) tabPagerAdapter.instantiateItem(deskClockPager, 2);
+        ViewPager deskClockPager =
+                (ViewPager) rule.getActivity().findViewById(R.id.desk_clock_pager);
+        PagerAdapter tabPagerAdapter = (PagerAdapter) deskClockPager.getAdapter();
+        fragment = (TimerFragment) tabPagerAdapter.instantiateItem(deskClockPager, 2);
+        Runnable selectTabRunnable = () -> {
             fragment.onStart();
             fragment.selectTab();
             final MockFabContainer fabContainer =
@@ -125,7 +125,7 @@ public class TimerFragmentTest {
             leftButton = fabContainer.getLeftButton();
             rightButton = fabContainer.getRightButton();
         };
-        InstrumentationRegistry.getInstrumentation().runOnMainSync(setUpFragmentRunnable);
+        InstrumentationRegistry.getInstrumentation().runOnMainSync(selectTabRunnable);
     }
 
     @After
