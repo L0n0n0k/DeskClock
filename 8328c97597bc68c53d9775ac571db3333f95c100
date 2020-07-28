@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ce79f6f_efbd6bf8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-28T23:33:11Z",
+      "side": 1,
+      "message": "Going to do CR+2 for Presubmit verification.",
+      "revId": "8328c97597bc68c53d9775ac571db3333f95c100",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
