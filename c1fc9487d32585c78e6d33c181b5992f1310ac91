@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0212d50e_cfaa3aa2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-28T17:55:36Z",
+      "side": 1,
+      "message": "Please check now, I fixed tests with proguard",
+      "revId": "c1fc9487d32585c78e6d33c181b5992f1310ac91",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
