@@ -22,6 +22,30 @@
       "revId": "4991b83bc1d07a05dbf5786103f25a9c37e7e245",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a1b3249f_60c04306",
+        "filename": "src/com/android/deskclock/widget/selector/AlarmSelectionAdapter.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-28T15:49:08Z",
+      "side": 1,
+      "message": "I see, thanks for pointing this out. Since the cost of this change is high as you say, I think leaving it as is will have to be the current approach for the time being. I am curious however as to what deficiencies you mention that this might cause?",
+      "parentUuid": "08d403d1_d7a7e032",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 43
+      },
+      "revId": "4991b83bc1d07a05dbf5786103f25a9c37e7e245",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
