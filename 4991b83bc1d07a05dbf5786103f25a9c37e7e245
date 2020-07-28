@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "08d403d1_d7a7e032",
+        "filename": "src/com/android/deskclock/widget/selector/AlarmSelectionAdapter.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2020-07-28T09:50:04Z",
+      "side": 1,
+      "message": "This is regrettable. Clock switched to all immutable types years ago. This is the old skool Alarm, which is still mutable. The cost of making that update will be extremely high though (it cuts many places in code... it\u0027s a Clock app after all!). I guess you\u0027re just stuck doing things the old way. It is going to have many deficiencies though.\n\nThis is why I suggested early on that you might have wanted to start with tip-of-tree Clock and then pull out the parts that are Google-specific.",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 43
+      },
+      "revId": "4991b83bc1d07a05dbf5786103f25a9c37e7e245",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
