@@ -16,6 +16,23 @@
       "revId": "c1fc9487d32585c78e6d33c181b5992f1310ac91",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b20a9633_ea083e94",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-28T23:32:32Z",
+      "side": 1,
+      "message": "Going to do CR+2 for Presubmit verification.",
+      "revId": "c1fc9487d32585c78e6d33c181b5992f1310ac91",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
