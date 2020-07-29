@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "f8cd45c7_a06ccf6c",
+        "filename": "src/com/android/deskclock/worldclock/CitySelectionActivity.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-29T22:52:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8118930b_5ab52f9a",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 2
+      },
+      "revId": "2f4ae1f703bb68faa918b076bc100c9e29d5981e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "03ea2ea2_8820548d",
         "filename": "src/com/android/deskclock/worldclock/CitySelectionActivity.kt",
         "patchSetId": 1
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "e0d73783_10d07afd",
+        "filename": "src/com/android/deskclock/worldclock/CitySelectionActivity.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-29T22:52:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "03ea2ea2_8820548d",
+      "range": {
+        "startLine": 63,
+        "startChar": 0,
+        "endLine": 64,
+        "endChar": 42
+      },
+      "revId": "2f4ae1f703bb68faa918b076bc100c9e29d5981e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "427d6093_ec29cc0e",
         "filename": "tests/src/com/android/deskclock/worldclock/CitySelectionActivityTest.java",
         "patchSetId": 1
@@ -68,6 +116,30 @@
       "revId": "2f4ae1f703bb68faa918b076bc100c9e29d5981e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "438c738b_0e5d0fa9",
+        "filename": "tests/src/com/android/deskclock/worldclock/CitySelectionActivityTest.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-29T22:52:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "427d6093_ec29cc0e",
+      "range": {
+        "startLine": 92,
+        "startChar": 0,
+        "endLine": 95,
+        "endChar": 43
+      },
+      "revId": "2f4ae1f703bb68faa918b076bc100c9e29d5981e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
