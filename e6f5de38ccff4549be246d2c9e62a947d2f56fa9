@@ -33,6 +33,24 @@
       "revId": "e6f5de38ccff4549be246d2c9e62a947d2f56fa9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0279ec81_be8b1184",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-07-29T09:33:07Z",
+      "side": 1,
+      "message": "I rebased on top of `master`, it merges cleanly.\nIf that\u0027s not the case then internal has changes",
+      "parentUuid": "44a0d0d7_fa5a42c1",
+      "revId": "e6f5de38ccff4549be246d2c9e62a947d2f56fa9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
