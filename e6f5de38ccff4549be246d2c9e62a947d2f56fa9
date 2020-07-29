@@ -16,6 +16,23 @@
       "revId": "e6f5de38ccff4549be246d2c9e62a947d2f56fa9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "44a0d0d7_fa5a42c1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-29T01:58:48Z",
+      "side": 1,
+      "message": "Auto-merging Android.bp\nCONFLICT (content): Merge conflict in Android.bp\nAutomatic merge failed; fix conflicts and then commit the result.",
+      "revId": "e6f5de38ccff4549be246d2c9e62a947d2f56fa9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
