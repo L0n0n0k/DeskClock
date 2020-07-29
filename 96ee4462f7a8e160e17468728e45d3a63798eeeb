@@ -16,6 +16,24 @@
       "revId": "96ee4462f7a8e160e17468728e45d3a63798eeeb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e1c2bcc_65407088",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-29T14:57:36Z",
+      "side": 1,
+      "message": "I wasn\u0027t seeing this build error locally unfortunately, so not completely sure my latest change fixes it. However, I did update the signature of this method to take a Uri? param instead of the Uri, after looking more closely at the superclass\u0027 declaration.",
+      "parentUuid": "063f61d5_1e2b2463",
+      "revId": "96ee4462f7a8e160e17468728e45d3a63798eeeb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
