@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "063f61d5_1e2b2463",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-07-29T01:47:40Z",
+      "side": 1,
+      "message": "Hi Colin,\n  We are getting the following build error on internal master.\n\n\"out/soong/.intermediates/packages/apps/DeskClock/DeskClockKotlin/android_common/kotlinc/srcJars\"\npackages/apps/DeskClock/src/com/android/deskclock/widget/TextTime.kt:59:9: error: \u0027onChange\u0027 overrides nothing\n        override fun onChange(selfChange: Boolean, uri: Uri) {\n        ^",
+      "revId": "96ee4462f7a8e160e17468728e45d3a63798eeeb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
