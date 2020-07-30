@@ -77,7 +77,7 @@ class AlarmUpdateHandler(
 
             override fun onPostExecute(instance: AlarmInstance?) {
                 if (instance != null) {
-                    AlarmUtils.popAlarmSetSnackbar(mSnackbarAnchor, instance.alarmTime.timeInMillis)
+                    AlarmUtils.popAlarmSetSnackbar(mSnackbarAnchor!!, instance.alarmTime.timeInMillis)
                 }
             }
         }
@@ -132,7 +132,7 @@ class AlarmUpdateHandler(
             override fun onPostExecute(instance: AlarmInstance?) {
                 if (popToast && instance != null) {
                     AlarmUtils.popAlarmSetSnackbar(
-                            mSnackbarAnchor, instance.alarmTime.timeInMillis)
+                            mSnackbarAnchor!!, instance.alarmTime.timeInMillis)
                 }
             }
         }
