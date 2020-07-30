@@ -16,6 +16,24 @@
       "revId": "d165cdb1f3923f9f2b46607b602a4301ccbcf0e9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ffed8969_7475cf46",
+        "filename": "src/com/android/deskclock/alarms/AlarmUpdateHandler.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-07-30T21:51:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2245efeb_a0092c9b",
+      "revId": "d165cdb1f3923f9f2b46607b602a4301ccbcf0e9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
