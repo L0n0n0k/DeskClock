@@ -16,6 +16,24 @@
       "revId": "9021a3fb51e9306af4a5fe36de3a4758a9ffa0a5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f266eecb_a50feebe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-04T04:32:58Z",
+      "side": 1,
+      "message": "Added an import for LayerDrawable that should resolve this. Strangely, this failure was not showing up locally when I tried rebuilding without the import.",
+      "parentUuid": "5df71fee_8cc666e8",
+      "revId": "9021a3fb51e9306af4a5fe36de3a4758a9ffa0a5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
