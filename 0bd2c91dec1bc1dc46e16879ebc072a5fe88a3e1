@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "01bdc1f4_33e32efe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 16
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1081223
+      },
+      "writtenOn": "2020-08-04T07:42:15Z",
+      "side": 1,
+      "message": "Can you re-run the tests? and in case merge them internally first to fix the conflicts?",
+      "revId": "0bd2c91dec1bc1dc46e16879ebc072a5fe88a3e1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
