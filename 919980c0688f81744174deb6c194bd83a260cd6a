@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2d5d42d0_4b9bc3b5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-08-05T15:39:51Z",
+      "side": 1,
+      "message": "Autosubmit+1 because jplemieux@ has CR+2\u0027ed it the previous patch.",
+      "revId": "919980c0688f81744174deb6c194bd83a260cd6a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
