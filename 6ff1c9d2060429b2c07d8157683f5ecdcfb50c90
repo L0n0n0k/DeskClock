@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1ae324c2_503a4a09",
+        "filename": "src/com/android/deskclock/AsyncRingtonePlayer.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2020-08-05T10:24:58Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 48,
+        "startChar": 3,
+        "endLine": 48,
+        "endChar": 6
+      },
+      "revId": "6ff1c9d2060429b2c07d8157683f5ecdcfb50c90",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8c3dc55d_08c570bd",
+        "filename": "src/com/android/deskclock/AsyncRingtonePlayer.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2020-08-05T10:24:58Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 53,
+        "startChar": 3,
+        "endLine": 53,
+        "endChar": 6
+      },
+      "revId": "6ff1c9d2060429b2c07d8157683f5ecdcfb50c90",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
