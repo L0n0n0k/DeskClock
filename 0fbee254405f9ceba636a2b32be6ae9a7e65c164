@@ -16,6 +16,23 @@
       "revId": "0fbee254405f9ceba636a2b32be6ae9a7e65c164",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0746fe89_850f3c33",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-08-06T00:08:12Z",
+      "side": 1,
+      "message": "I wasn\u0027t able to apply this patch and the following files got rejected (I have applied this patch first. I am wondering if there is an order in which the files in topic have to be merged).\n\nI am going to edit the Android.bp in this CL and try again.\n\n./res/layout/desk_clock.xml.rej\n./Android.bp.rej\n./src/com/android/deskclock/timer/TimerFragment.kt.rej\n./src/com/android/deskclock/timer/TimerFragment.java.rej\n./src/com/android/deskclock/DeskClock.java.rej",
+      "revId": "0fbee254405f9ceba636a2b32be6ae9a7e65c164",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
