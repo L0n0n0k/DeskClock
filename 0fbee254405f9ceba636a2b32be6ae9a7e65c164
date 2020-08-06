@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "230c1866_0a400dee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-08-06T00:00:56Z",
+      "side": 1,
+      "message": "Android.bp is changing because Colin is adding Kotlin files are being added. Make the changes at the beginning of the file like at line#30.",
+      "revId": "0fbee254405f9ceba636a2b32be6ae9a7e65c164",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
