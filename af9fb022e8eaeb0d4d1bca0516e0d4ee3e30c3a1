@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "60a93e78_6d45239b",
+        "filename": "src/com/android/deskclock/CircleButtonsLayout.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2020-08-06T08:40:55Z",
+      "side": 1,
+      "message": "child",
+      "range": {
+        "startLine": 30,
+        "startChar": 39,
+        "endLine": 30,
+        "endChar": 47
+      },
+      "revId": "af9fb022e8eaeb0d4d1bca0516e0d4ee3e30c3a1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
