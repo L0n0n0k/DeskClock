@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b587878a_448f17f7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-07T19:35:12Z",
+      "side": 1,
+      "message": "CL was updated to add a previous file rename commit before doing the Kotlin conversion, in order to maintain git history of the converted Kotlin files.",
+      "revId": "6417216a6c2fe6362f072735d3e440e9f677a158",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
