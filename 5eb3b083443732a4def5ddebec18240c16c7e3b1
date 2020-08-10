@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "20a0dd25_f21050d0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-08-10T17:41:20Z",
+      "side": 1,
+      "message": "CherryPickError: Changes failed to apply, merge conflict detected. See git.log here https://android-build.googleplex.com/builds/pending/P16152726/cf_x86_phone-userdebug/latest\n,\n error: Changes failed to apply, merge conflict detected. See git.log here https://android-build.googleplex.com/builds/pending/P16152726/cf_x86_phone-userdebug/latest\n  ",
+      "revId": "5eb3b083443732a4def5ddebec18240c16c7e3b1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
