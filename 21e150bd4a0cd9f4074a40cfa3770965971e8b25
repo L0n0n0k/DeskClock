@@ -16,6 +16,24 @@
       "revId": "21e150bd4a0cd9f4074a40cfa3770965971e8b25",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fd0adeec_081c0f25",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-10T01:23:32Z",
+      "side": 1,
+      "message": "I believe this CL on it\u0027s own may be unable to build and that it would need to be merged along with https://android-review.googlesource.com/c/platform/packages/apps/DeskClock/+/1393484. I\u0027ll create a topic for both of these CLs.",
+      "parentUuid": "08759c6d_848a1cd2",
+      "revId": "21e150bd4a0cd9f4074a40cfa3770965971e8b25",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
