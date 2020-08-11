@@ -34,6 +34,29 @@
       "revId": "21e150bd4a0cd9f4074a40cfa3770965971e8b25",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "34f84565_e06ad1a9",
+        "filename": "src/com/android/deskclock/DeskClockBackupAgent.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2020-08-11T22:36:28Z",
+      "side": 1,
+      "message": "for the record, this file-based version of the backup agent never shipped (was disabled last minute) and basically sucked for a lot of complicated reasons. Google Clock uses a key/value backup now. You could consider removing this BackupAgent from AOSP.",
+      "range": {
+        "startLine": 41,
+        "startChar": 13,
+        "endLine": 41,
+        "endChar": 33
+      },
+      "revId": "21e150bd4a0cd9f4074a40cfa3770965971e8b25",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
