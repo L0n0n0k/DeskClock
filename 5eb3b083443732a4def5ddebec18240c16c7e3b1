@@ -16,6 +16,23 @@
       "revId": "5eb3b083443732a4def5ddebec18240c16c7e3b1",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "179f3dd9_4a8d6704",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-08-11T19:04:50Z",
+      "side": 1,
+      "message": "I was able to patch this CL into git_master without getting any conflict errors. I am running Presubmit-Ready again to see if works this time.",
+      "revId": "5eb3b083443732a4def5ddebec18240c16c7e3b1",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
