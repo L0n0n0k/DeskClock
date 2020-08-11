@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c4cebeab_faaf5b4d",
+        "filename": "src/com/android/deskclock/FragmentTabPagerAdapter.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-08-11T00:26:27Z",
+      "side": 1,
+      "message": "nit: Blank line?",
+      "revId": "8751c0e3e2e3bf54354e08f6211684ea50bccf6b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
