@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1af8c5f2_66b19027",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-08-12T21:39:25Z",
+      "side": 1,
+      "message": "I am doing CP to rvc-dev-plus-aosp branches in the CL: ag/12363250. I will add the Merged-In: tag from that CL to this CL and will try the presubmit again.",
+      "revId": "91a97ade10326137cb37b6a78bd4d9a25d27f8b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
