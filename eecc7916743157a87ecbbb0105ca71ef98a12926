@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "39004065_2045a2fd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-12T20:42:25Z",
+      "side": 1,
+      "message": "Just noticed I missed the Android.bp change, I will upload a second patchset with that change.",
+      "revId": "eecc7916743157a87ecbbb0105ca71ef98a12926",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
