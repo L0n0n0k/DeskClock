@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c2dc3b4e_dae5cb35",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-08-12T23:27:19Z",
+      "side": 1,
+      "message": "Hi Luca,\n  We may have to merge this change manually into the internal branches to avoid the merge conflicts (similar to Colin\u0027s change to make Kotlin the default app). I will work on it next.",
+      "revId": "146921c3965d0b286dd43871231b893d5abea30f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
