@@ -16,6 +16,23 @@
       "revId": "91a97ade10326137cb37b6a78bd4d9a25d27f8b7",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b98515c4_dfe0c698",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-08-12T22:18:04Z",
+      "side": 1,
+      "message": "CP this change to rvc-dev-plus-aosp.",
+      "revId": "91a97ade10326137cb37b6a78bd4d9a25d27f8b7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
