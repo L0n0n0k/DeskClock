@@ -16,6 +16,24 @@
       "revId": "a9b5bfa36c972efbeb2cf3b25d97e1a518dab09a",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "06cc5f24_afef429e",
+        "filename": "src/com/android/deskclock/ThemeUtils.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-13T21:29:52Z",
+      "side": 1,
+      "message": "This is removed in the subsequent commit to convert the Java code to Kotlin, so I\u0027m inclined to leave this as is. Happy to change it if you think it would be best though!",
+      "parentUuid": "aea41e03_25d95d38",
+      "revId": "a9b5bfa36c972efbeb2cf3b25d97e1a518dab09a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
