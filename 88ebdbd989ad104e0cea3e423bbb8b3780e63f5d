@@ -16,6 +16,24 @@
       "revId": "88ebdbd989ad104e0cea3e423bbb8b3780e63f5d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f1bc926a_2642a7ca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-13T15:28:25Z",
+      "side": 1,
+      "message": "This CL is based off of the ItemAdapter/ItemAnimator conversion CLs and it looks like its rebased correctly in the chain with them. The ItemAdapter/ItemAnimator topic is rebased on aosp-master.",
+      "parentUuid": "8e1e7bbe_4585c14d",
+      "revId": "88ebdbd989ad104e0cea3e423bbb8b3780e63f5d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
