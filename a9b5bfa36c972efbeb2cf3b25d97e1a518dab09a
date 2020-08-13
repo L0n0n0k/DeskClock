@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aea41e03_25d95d38",
+        "filename": "src/com/android/deskclock/ThemeUtils.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-08-13T21:00:59Z",
+      "side": 1,
+      "message": "nit: extra blank lines.",
+      "revId": "a9b5bfa36c972efbeb2cf3b25d97e1a518dab09a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
