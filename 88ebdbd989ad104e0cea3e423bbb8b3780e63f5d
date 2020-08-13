@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e1e7bbe_4585c14d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-08-13T15:14:12Z",
+      "side": 1,
+      "message": "Hi COlin,\n  Can you rebase? There was a conflict when I tried to rebase. Thanks",
+      "revId": "88ebdbd989ad104e0cea3e423bbb8b3780e63f5d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
