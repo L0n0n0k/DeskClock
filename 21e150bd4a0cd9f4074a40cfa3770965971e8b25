@@ -57,6 +57,30 @@
       "revId": "21e150bd4a0cd9f4074a40cfa3770965971e8b25",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7261f0f3_694a32b4",
+        "filename": "src/com/android/deskclock/DeskClockBackupAgent.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-13T18:51:50Z",
+      "side": 1,
+      "message": "Thanks for bringing this up! A tracking bug for this has been created at b/164118489",
+      "parentUuid": "34f84565_e06ad1a9",
+      "range": {
+        "startLine": 41,
+        "startChar": 13,
+        "endLine": 41,
+        "endChar": 33
+      },
+      "revId": "21e150bd4a0cd9f4074a40cfa3770965971e8b25",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
