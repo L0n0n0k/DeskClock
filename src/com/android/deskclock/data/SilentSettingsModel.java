@@ -30,6 +30,8 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Handler;
+import android.os.Looper;
+
 import androidx.core.app.NotificationManagerCompat;
 
 import com.android.deskclock.Utils;
@@ -225,7 +227,7 @@ final class SilentSettingsModel {
      */
     private final class ContentChangeWatcher extends ContentObserver {
         private ContentChangeWatcher() {
-            super(new Handler());
+            super(new Handler(Looper.myLooper()));
         }
 
         @Override
