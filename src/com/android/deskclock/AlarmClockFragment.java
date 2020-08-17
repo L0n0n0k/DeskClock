@@ -16,10 +16,10 @@
 
 package com.android.deskclock;
 
-import android.app.LoaderManager;
+import androidx.loader.app.LoaderManager;
 import android.content.Context;
 import android.content.Intent;
-import android.content.Loader;
+import androidx.loader.content.Loader;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -102,7 +102,7 @@ public final class AlarmClockFragment extends DeskClockFragment implements
     @Override
     public void onCreate(Bundle savedState) {
         super.onCreate(savedState);
-        mCursorLoader = getLoaderManager().initLoader(0, null, this);
+        mCursorLoader = LoaderManager.getInstance(this).initLoader(0, null, this);
         if (savedState != null) {
             mExpandedAlarmId = savedState.getLong(KEY_EXPANDED_ID, Alarm.INVALID_ID);
         }
@@ -186,7 +186,7 @@ public final class AlarmClockFragment extends DeskClockFragment implements
         super.onStart();
 
         if (!isTabSelected()) {
-            TimePickerDialogFragment.removeTimeEditDialog(getFragmentManager());
+            TimePickerDialogFragment.removeTimeEditDialog(getParentFragmentManager());
         }
     }
 

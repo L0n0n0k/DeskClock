@@ -16,7 +16,7 @@
 
 package com.android.deskclock.alarms;
 
-import android.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -182,7 +182,7 @@ public final class AlarmTimeClickHandler {
         Events.sendAlarmEvent(R.string.action_set_label, R.string.label_deskclock);
         final LabelDialogFragment fragment =
                 LabelDialogFragment.newInstance(alarm, alarm.label, mFragment.getTag());
-        LabelDialogFragment.show(mFragment.getFragmentManager(), fragment);
+        LabelDialogFragment.show(mFragment.getParentFragmentManager(), fragment);
     }
 
     public void onTimeSet(int hourOfDay, int minute) {

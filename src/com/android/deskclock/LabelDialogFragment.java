@@ -17,10 +17,6 @@
 package com.android.deskclock;
 
 import android.app.Dialog;
-import android.app.DialogFragment;
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.ColorStateList;
@@ -29,6 +25,10 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatEditText;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextUtils;
