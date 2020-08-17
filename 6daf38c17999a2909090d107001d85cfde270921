@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9c671a58_154f21b2",
+        "filename": "src/com/android/deskclock/AlarmClockFragment.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-17T19:48:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "424d1fcd_feaaf656",
+      "revId": "6daf38c17999a2909090d107001d85cfde270921",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c2026a25_57a55d13",
         "filename": "src/com/android/deskclock/DeskClock.java",
         "patchSetId": 2
@@ -33,6 +51,24 @@
       "revId": "6daf38c17999a2909090d107001d85cfde270921",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1cfa0cb3_16481bab",
+        "filename": "src/com/android/deskclock/DeskClock.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-17T19:48:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c2026a25_57a55d13",
+      "revId": "6daf38c17999a2909090d107001d85cfde270921",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "bf60dba0_66866a35",
+        "filename": "src/com/android/deskclock/DeskClock.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-17T19:48:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a2a8fee_dcfc939f",
+      "revId": "6daf38c17999a2909090d107001d85cfde270921",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c0a60a27_864cc389",
         "filename": "src/com/android/deskclock/DeskClock.java",
         "patchSetId": 2
@@ -67,6 +121,24 @@
       "revId": "6daf38c17999a2909090d107001d85cfde270921",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3bd94a44_bd51dfe4",
+        "filename": "src/com/android/deskclock/DeskClock.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-17T19:48:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c0a60a27_864cc389",
+      "revId": "6daf38c17999a2909090d107001d85cfde270921",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "054b801e_e21fc656",
+        "filename": "src/com/android/deskclock/DeskClockFragment.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-17T19:48:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6bda0968_151ea16f",
+      "revId": "6daf38c17999a2909090d107001d85cfde270921",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "30aae646_6831266b",
         "filename": "src/com/android/deskclock/FragmentTabPagerAdapter.java",
         "patchSetId": 2
@@ -101,6 +191,24 @@
       "revId": "6daf38c17999a2909090d107001d85cfde270921",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d68f5305_83fc0d45",
+        "filename": "src/com/android/deskclock/FragmentTabPagerAdapter.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-17T19:48:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "30aae646_6831266b",
+      "revId": "6daf38c17999a2909090d107001d85cfde270921",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "80ede2fe_0927fb34",
+        "filename": "src/com/android/deskclock/LabelDialogFragment.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-17T19:48:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d1958e9e_6897e600",
+      "revId": "6daf38c17999a2909090d107001d85cfde270921",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c1e750f1_f5ad1c87",
         "filename": "src/com/android/deskclock/alarms/AlarmTimeClickHandler.java",
         "patchSetId": 2
@@ -135,6 +261,24 @@
       "revId": "6daf38c17999a2909090d107001d85cfde270921",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e4bbad40_0c2f1e63",
+        "filename": "src/com/android/deskclock/alarms/AlarmTimeClickHandler.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-17T19:48:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c1e750f1_f5ad1c87",
+      "revId": "6daf38c17999a2909090d107001d85cfde270921",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
@@ -155,6 +299,24 @@
     },
     {
       "key": {
+        "uuid": "4f68b048_6bbf66e0",
+        "filename": "src/com/android/deskclock/alarms/TimePickerDialogFragment.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-17T19:48:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9d43a4a3_19e0ad65",
+      "revId": "6daf38c17999a2909090d107001d85cfde270921",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ddeb25b_87bda4f3",
         "filename": "src/com/android/deskclock/provider/Alarm.java",
         "patchSetId": 2
@@ -169,6 +331,24 @@
       "revId": "6daf38c17999a2909090d107001d85cfde270921",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dba09e7b_fc936c75",
+        "filename": "src/com/android/deskclock/provider/Alarm.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-17T19:48:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ddeb25b_87bda4f3",
+      "revId": "6daf38c17999a2909090d107001d85cfde270921",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     },
     {
       "key": {
@@ -189,6 +369,24 @@
     },
     {
       "key": {
+        "uuid": "f03232c3_aafe3780",
+        "filename": "src/com/android/deskclock/timer/TimerItemFragment.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-17T19:48:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cc682dba_284736cb",
+      "revId": "6daf38c17999a2909090d107001d85cfde270921",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "399704cd_19af807c",
         "filename": "src/com/android/deskclock/timer/TimerPagerAdapter.java",
         "patchSetId": 2
@@ -203,6 +401,24 @@
       "revId": "6daf38c17999a2909090d107001d85cfde270921",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "062ef53e_112c5218",
+        "filename": "src/com/android/deskclock/timer/TimerPagerAdapter.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-17T19:48:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "399704cd_19af807c",
+      "revId": "6daf38c17999a2909090d107001d85cfde270921",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
