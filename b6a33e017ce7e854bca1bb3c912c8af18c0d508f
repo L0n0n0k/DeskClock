@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "395cd428_87ae2d9e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-08-17T15:44:45Z",
+      "side": 1,
+      "message": "Great work Colin. Thanks for converting all the Java files into Kotlin.",
+      "revId": "b6a33e017ce7e854bca1bb3c912c8af18c0d508f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
