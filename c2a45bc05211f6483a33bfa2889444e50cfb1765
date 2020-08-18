@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "55023f8c_c95107c3",
+        "filename": "src/com/android/deskclock/data/DataModel.kt",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1691576
+      },
+      "writtenOn": "2020-08-18T21:58:59Z",
+      "side": 0,
+      "message": "This TODO was removed due to DataModel being used in the test code, which is in Java. Therefore, this change can\u0027t be made at this time.",
+      "revId": "c2a45bc05211f6483a33bfa2889444e50cfb1765",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
