@@ -148,12 +148,11 @@ class AlarmActivity : BaseActivity(), View.OnClickListener, View.OnTouchListener
         // Get the volume/camera button behavior setting
         mVolumeBehavior = DataModel.dataModel.alarmVolumeButtonBehavior
 
-        // TODO(b/157255731) Replace deprecated LayoutParams flags on Android versions above O
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
-                or WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
-                or WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
-                or WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
                 or WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON)
+
+        setShowWhenLocked(true)
+        setTurnScreenOn(true)
 
         // Hide navigation bar to minimize accidental tap on Home key
         hideNavigationBar()
