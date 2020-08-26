@@ -57,8 +57,7 @@ class SettingsActivity : BaseActivity() {
         setContentView(R.layout.settings)
 
         mOptionsMenuManager.addMenuItemController(NavUpMenuItemController(this))
-                .addMenuItemController(*MenuItemControllerFactory.getInstance()
-                        .buildMenuItemControllers(this))
+                .addMenuItemController(*MenuItemControllerFactory.buildMenuItemControllers(this))
 
         // Create the prefs fragment in code to ensure it's created before PreferenceDialogFragment
         if (savedInstanceState == null) {
@@ -139,7 +138,7 @@ class SettingsActivity : BaseActivity() {
                     pref.setSummary(simpleMenuPreference.getEntries().get(i))
                 }
                 KEY_CLOCK_DISPLAY_SECONDS -> {
-                    DataModel.getDataModel().displayClockSeconds = newValue as Boolean
+                    DataModel.dataModel.displayClockSeconds = newValue as Boolean
                 }
                 KEY_AUTO_SILENCE -> {
                     val delay = newValue as String
@@ -152,9 +151,9 @@ class SettingsActivity : BaseActivity() {
                 }
                 KEY_TIMER_VIBRATE -> {
                     val timerVibratePref: TwoStatePreference = pref as TwoStatePreference
-                    DataModel.getDataModel().timerVibrate = timerVibratePref.isChecked()
+                    DataModel.dataModel.timerVibrate = timerVibratePref.isChecked()
                 }
-                KEY_TIMER_RINGTONE -> pref.setSummary(DataModel.getDataModel().timerRingtoneTitle)
+                KEY_TIMER_RINGTONE -> pref.setSummary(DataModel.dataModel.timerRingtoneTitle)
             }
 
             // Set result so DeskClock knows to refresh itself
@@ -192,9 +191,8 @@ class SettingsActivity : BaseActivity() {
         }
 
         private fun showDialog(fragment: PreferenceDialogFragmentCompat) {
-            // TODO(colinmarsch) Replace deprecated getFragmentManager with AndroidX equivalent
             // Don't show dialog if one is already shown.
-            if (getFragmentManager()?.findFragmentByTag(PREFERENCE_DIALOG_FRAGMENT_TAG) != null) {
+            if (parentFragmentManager.findFragmentByTag(PREFERENCE_DIALOG_FRAGMENT_TAG) != null) {
                 return
             }
             // Always set the target fragment, this is required by PreferenceDialogFragment
@@ -202,14 +200,14 @@ class SettingsActivity : BaseActivity() {
             fragment.setTargetFragment(this, 0)
             // Don't use getChildFragmentManager(), it causes issues on older platforms when the
             // target fragment is being restored after an orientation change.
-            fragment.show(getFragmentManager()!!, PREFERENCE_DIALOG_FRAGMENT_TAG)
+            fragment.show(parentFragmentManager, PREFERENCE_DIALOG_FRAGMENT_TAG)
         }
 
         /**
          * Reconstruct the timezone list.
          */
         private fun loadTimeZoneList() {
-            val timezones = DataModel.getDataModel().timeZones
+            val timezones = DataModel.dataModel.timeZones
             val homeTimezonePref: ListPreference? = findPreference(KEY_HOME_TZ)
             homeTimezonePref?.let {
                 it.setEntryValues(timezones.timeZoneIds)
@@ -260,7 +258,7 @@ class SettingsActivity : BaseActivity() {
 
             val weekStartPref: SimpleMenuPreference? = findPreference(KEY_WEEK_START)
             // Set the default value programmatically
-            val weekdayOrder = DataModel.getDataModel().weekdayOrder
+            val weekdayOrder = DataModel.dataModel.weekdayOrder
             val firstDay = weekdayOrder.calendarDays[0]
             val value = firstDay.toString()
             weekStartPref?.let {
@@ -273,7 +271,7 @@ class SettingsActivity : BaseActivity() {
             val timerRingtonePref: Preference? = findPreference(KEY_TIMER_RINGTONE)
             timerRingtonePref?.let {
                 it.setOnPreferenceClickListener(this)
-                it.setSummary(DataModel.getDataModel().timerRingtoneTitle)
+                it.setSummary(DataModel.dataModel.timerRingtoneTitle)
             }
         }
 
@@ -287,7 +285,7 @@ class SettingsActivity : BaseActivity() {
             if (i == -1) {
                 listPref.setSummary(R.string.auto_silence_never)
             } else {
-                listPref.setSummary(Utils.getNumberFormattedQuantityString(getActivity(),
+                listPref.setSummary(Utils.getNumberFormattedQuantityString(getActivity()!!,
                         R.plurals.auto_silence_summary, i))
             }
         }

@@ -25,6 +25,7 @@ import android.content.res.Configuration;
 import android.database.ContentObserver;
 import android.net.Uri;
 import android.os.Handler;
+import android.os.Looper;
 import android.provider.Settings;
 import android.service.dreams.DreamService;
 import android.view.View;
@@ -51,7 +52,7 @@ public final class Screensaver extends DreamService {
 
     /* Register ContentObserver to see alarm changes for pre-L */
     private final ContentObserver mSettingsContentObserver =
-            Utils.isLOrLater() ? null : new ContentObserver(new Handler()) {
+            Utils.isLOrLater() ? null : new ContentObserver(new Handler(Looper.myLooper())) {
                 @Override
                 public void onChange(boolean selfChange) {
                     Utils.refreshAlarm(Screensaver.this, mContentView);
@@ -132,7 +133,7 @@ public final class Screensaver extends DreamService {
         Utils.refreshAlarm(this, mContentView);
 
         startPositionUpdater();
-        UiDataModel.getUiDataModel().addMidnightCallback(mMidnightUpdater, 100);
+        UiDataModel.getUiDataModel().addMidnightCallback(mMidnightUpdater);
     }
 
     @Override

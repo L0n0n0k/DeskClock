@@ -72,7 +72,6 @@ import kotlin.math.roundToInt
 /**
  * Fragment that shows the stopwatch and recorded laps.
  */
-// TODO(colinmarsch) Replace deprecated Fragment related calls
 class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
 
     /** Keep the screen on when this tab is selected.  */
@@ -116,9 +115,9 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
         container: ViewGroup?,
         state: Bundle?
     ): View {
-        mLapsAdapter = LapsAdapter(getActivity())
-        mLapsLayoutManager = LinearLayoutManager(getActivity())
-        mGradientItemDecoration = GradientItemDecoration(getActivity())
+        mLapsAdapter = LapsAdapter(requireActivity())
+        mLapsLayoutManager = LinearLayoutManager(requireActivity())
+        mGradientItemDecoration = GradientItemDecoration(requireActivity())
 
         val v: View = inflater.inflate(R.layout.stopwatch_fragment, container, false)
         mTime = v.findViewById(R.id.stopwatch_circle)
@@ -129,7 +128,7 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
 
         // In landscape layouts, the laps list can reach the top of the screen and thus can cause
         // a drop shadow to appear. The same is not true for portrait landscapes.
-        if (Utils.isLandscape(getActivity())) {
+        if (Utils.isLandscape(requireActivity())) {
             val scrollPositionWatcher = ScrollPositionWatcher()
             mLapsList.addOnLayoutChangeListener(scrollPositionWatcher)
             mLapsList.addOnScrollListener(scrollPositionWatcher)
@@ -144,7 +143,7 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
         mStopwatchTextController = StopwatchTextController(mMainTimeText, mHundredthsTimeText)
         mStopwatchWrapper = v.findViewById(R.id.stopwatch_time_wrapper)
 
-        DataModel.getDataModel().addStopwatchListener(mStopwatchWatcher)
+        DataModel.dataModel.addStopwatchListener(mStopwatchWatcher)
 
         mStopwatchWrapper.setOnClickListener(TimeClickListener())
         if (mTime != null) {
@@ -168,16 +167,16 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
     override fun onStart() {
         super.onStart()
 
-        val activity: Activity = getActivity()
+        val activity: Activity = requireActivity()
         val intent: Intent? = activity.getIntent()
         if (intent != null) {
             val action: String? = intent.getAction()
             if (StopwatchService.Companion.ACTION_START_STOPWATCH == action) {
-                DataModel.getDataModel().startStopwatch()
+                DataModel.dataModel.startStopwatch()
                 // Consume the intent
                 activity.setIntent(null)
             } else if (StopwatchService.Companion.ACTION_PAUSE_STOPWATCH == action) {
-                DataModel.getDataModel().pauseStopwatch()
+                DataModel.dataModel.pauseStopwatch()
                 // Consume the intent
                 activity.setIntent(null)
             }
@@ -190,7 +189,7 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
         updateUI(FabContainer.FAB_AND_BUTTONS_IMMEDIATE)
 
         // Start watching for page changes away from this fragment.
-        UiDataModel.getUiDataModel().addTabListener(mTabWatcher)
+        UiDataModel.uiDataModel.addTabListener(mTabWatcher)
     }
 
     override fun onStop() {
@@ -200,7 +199,7 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
         stopUpdatingTime()
 
         // Stop watching for page changes away from this fragment.
-        UiDataModel.getUiDataModel().removeTabListener(mTabWatcher)
+        UiDataModel.uiDataModel.removeTabListener(mTabWatcher)
 
         // Release the wake lock if it is currently held.
         releaseWakeLock()
@@ -209,7 +208,7 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
     override fun onDestroyView() {
         super.onDestroyView()
 
-        DataModel.getDataModel().removeStopwatchListener(mStopwatchWatcher)
+        DataModel.dataModel.removeStopwatchListener(mStopwatchWatcher)
     }
 
     override fun onFabClick(fab: ImageView) {
@@ -256,7 +255,7 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
 
     override fun onMorphFab(fab: ImageView) {
         // Update the fab's drawable to match the current timer state.
-        updateFab(fab, Utils.isNOrLater())
+        updateFab(fab, Utils.isNOrLater)
         // Animate the drawable.
         AnimatorUtils.startDrawableAnimation(fab)
     }
@@ -306,7 +305,7 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
      */
     private fun doStart() {
         Events.sendStopwatchEvent(R.string.action_start, R.string.label_deskclock)
-        DataModel.getDataModel().startStopwatch()
+        DataModel.dataModel.startStopwatch()
     }
 
     /**
@@ -314,7 +313,7 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
      */
     private fun doPause() {
         Events.sendStopwatchEvent(R.string.action_pause, R.string.label_deskclock)
-        DataModel.getDataModel().pauseStopwatch()
+        DataModel.dataModel.pauseStopwatch()
     }
 
     /**
@@ -323,7 +322,7 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
     private fun doReset() {
         val priorState = stopwatch.state
         Events.sendStopwatchEvent(R.string.action_reset, R.string.label_deskclock)
-        DataModel.getDataModel().resetStopwatch()
+        DataModel.dataModel.resetStopwatch()
         mMainTimeText.setAlpha(1f)
         mHundredthsTimeText.setAlpha(1f)
         if (priorState == Stopwatch.State.RUNNING) {
@@ -344,7 +343,7 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
 
         @SuppressLint("InlinedApi")
         val shareIntent: Intent = Intent(Intent.ACTION_SEND)
-                .addFlags(if (Utils.isLOrLater()) {
+                .addFlags(if (Utils.isLOrLater) {
                     Intent.FLAG_ACTIVITY_NEW_DOCUMENT
                 } else {
                     Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET
@@ -353,7 +352,7 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
                 .putExtra(Intent.EXTRA_TEXT, text)
                 .setType("text/plain")
 
-        val context: Context = getActivity()
+        val context: Context = requireActivity()
         val title: String = context.getString(R.string.sw_share_button)
         val shareChooserIntent: Intent = Intent.createChooser(shareIntent, title)
         try {
@@ -408,7 +407,7 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
         val lapsVisible = mLapsAdapter.getItemCount() > 0
         mLapsList.setVisibility(if (lapsVisible) VISIBLE else GONE)
 
-        if (Utils.isPortrait(getActivity())) {
+        if (Utils.isPortrait(requireActivity())) {
             // When the lap list is visible, it includes the bottom padding. When it is absent the
             // appropriate bottom padding must be applied to the container.
             val res: Resources = getResources()
@@ -421,16 +420,16 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
     }
 
     private fun adjustWakeLock() {
-        val appInForeground = DataModel.getDataModel().isApplicationInForeground
+        val appInForeground = DataModel.dataModel.isApplicationInForeground
         if (stopwatch.isRunning && isTabSelected && appInForeground) {
-            getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+            requireActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         } else {
             releaseWakeLock()
         }
     }
 
     private fun releaseWakeLock() {
-        getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        requireActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
     }
 
     /**
@@ -445,9 +444,9 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
     }
 
     private val stopwatch: Stopwatch
-        get() = DataModel.getDataModel().stopwatch
+        get() = DataModel.dataModel.stopwatch
 
-    private fun canRecordMoreLaps(): Boolean = DataModel.getDataModel().canAddMoreLaps()
+    private fun canRecordMoreLaps(): Boolean = DataModel.dataModel.canAddMoreLaps()
 
     /**
      * Post the first runnable to update times within the UI. It will reschedule itself as needed.
@@ -561,12 +560,12 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
             if (after.isReset) {
                 // Ensure the drop shadow is hidden when the stopwatch is reset.
                 setTabScrolledToTop(true)
-                if (DataModel.getDataModel().isApplicationInForeground) {
+                if (DataModel.dataModel.isApplicationInForeground) {
                     updateUI(FabContainer.BUTTONS_IMMEDIATE)
                 }
                 return
             }
-            if (DataModel.getDataModel().isApplicationInForeground) {
+            if (DataModel.dataModel.isApplicationInForeground) {
                 updateUI(FabContainer.FAB_MORPH or FabContainer.BUTTONS_IMMEDIATE)
             }
         }
@@ -582,9 +581,9 @@ class StopwatchFragment : DeskClockFragment(UiDataModel.Tab.STOPWATCH) {
 
         override fun onClick(view: View?) {
             if (stopwatch.isRunning) {
-                DataModel.getDataModel().pauseStopwatch()
+                DataModel.dataModel.pauseStopwatch()
             } else {
-                DataModel.getDataModel().startStopwatch()
+                DataModel.dataModel.startStopwatch()
             }
         }
     }

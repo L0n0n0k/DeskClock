@@ -50,7 +50,6 @@ import com.android.deskclock.R
 import com.android.deskclock.Utils
 
 import java.util.Calendar
-import java.util.Collections
 
 /**
  * This class handles all the state changes for alarm instances. You need to
@@ -124,7 +123,7 @@ class AlarmStateManager : BroadcastReceiver() {
                     stateChangeIntent, PendingIntent.FLAG_UPDATE_CURRENT)
 
             val am: AlarmManager = context.getSystemService(ALARM_SERVICE) as AlarmManager
-            if (Utils.isMOrLater()) {
+            if (Utils.isMOrLater) {
                 // Ensure the alarm fires even if the device is dozing.
                 am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, timeInMillis, pendingIntent)
             } else {
@@ -190,7 +189,7 @@ class AlarmStateManager : BroadcastReceiver() {
 
         private val currentTime: Calendar
             get() = (if (sCurrentTimeFactory == null) {
-                DataModel.getDataModel().calendar
+                DataModel.dataModel.calendar
             } else {
                 sCurrentTimeFactory!!.currentTime
             })
@@ -210,7 +209,7 @@ class AlarmStateManager : BroadcastReceiver() {
         private fun updateNextAlarm(context: Context) {
             val nextAlarm = getNextFiringAlarm(context)
 
-            if (Utils.isPreL()) {
+            if (Utils.isPreL) {
                 updateNextAlarmInSystemSettings(context, nextAlarm)
             } else {
                 updateNextAlarmInAlarmManager(context, nextAlarm)
@@ -363,7 +362,7 @@ class AlarmStateManager : BroadcastReceiver() {
                     AlarmInstance.createIntent(context, AlarmService::class.java, instance.mId)
             intent.setAction(CHANGE_STATE_ACTION)
             intent.addCategory(tag)
-            intent.putExtra(ALARM_GLOBAL_ID_EXTRA, DataModel.getDataModel().globalIntentId)
+            intent.putExtra(ALARM_GLOBAL_ID_EXTRA, DataModel.dataModel.globalIntentId)
             if (state != null) {
                 intent.putExtra(ALARM_STATE_EXTRA, state.toInt())
             }
@@ -536,7 +535,7 @@ class AlarmStateManager : BroadcastReceiver() {
             AlarmService.stopAlarm(context, instance)
 
             // Calculate the new snooze alarm time
-            val snoozeMinutes = DataModel.getDataModel().snoozeLength
+            val snoozeMinutes = DataModel.dataModel.snoozeLength
             val newAlarmTime = Calendar.getInstance()
             newAlarmTime.add(Calendar.MINUTE, snoozeMinutes)
 
@@ -945,7 +944,7 @@ class AlarmStateManager : BroadcastReceiver() {
                     return
                 }
 
-                val globalId = DataModel.getDataModel().globalIntentId
+                val globalId = DataModel.dataModel.globalIntentId
                 val intentId: Int = intent.getIntExtra(ALARM_GLOBAL_ID_EXTRA, -1)
                 val alarmState: Int = intent.getIntExtra(ALARM_STATE_EXTRA, -1)
                 if (intentId != globalId) {

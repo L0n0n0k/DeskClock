@@ -51,21 +51,21 @@ class CollapsedAlarmViewHolder private constructor(itemView: View) : AlarmItemVi
         // Expand handler
         itemView.setOnClickListener { _ ->
             Events.sendAlarmEvent(R.string.action_expand_implied, R.string.label_deskclock)
-            itemHolder.expand()
+            itemHolder?.expand()
         }
         alarmLabel.setOnClickListener { _ ->
             Events.sendAlarmEvent(R.string.action_expand_implied, R.string.label_deskclock)
-            itemHolder.expand()
+            itemHolder?.expand()
         }
         arrow.setOnClickListener { _ ->
             Events.sendAlarmEvent(R.string.action_expand, R.string.label_deskclock)
-            itemHolder.expand()
+            itemHolder?.expand()
         }
         // Edit time handler
         clock.setOnClickListener { _ ->
-            itemHolder.alarmTimeClickHandler.onClockClicked(itemHolder.item)
+            itemHolder!!.alarmTimeClickHandler.onClockClicked(itemHolder!!.item)
             Events.sendAlarmEvent(R.string.action_expand_implied, R.string.label_deskclock)
-            itemHolder.expand()
+            itemHolder?.expand()
         }
 
         itemView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO)
@@ -95,7 +95,7 @@ class CollapsedAlarmViewHolder private constructor(itemView: View) : AlarmItemVi
 
     private fun bindRepeatText(context: Context, alarm: Alarm) {
         if (alarm.daysOfWeek.isRepeating) {
-            val weekdayOrder = DataModel.getDataModel().weekdayOrder
+            val weekdayOrder = DataModel.dataModel.weekdayOrder
             val daysOfWeekText = alarm.daysOfWeek.toString(context, weekdayOrder)
             daysOfWeek.text = daysOfWeekText
 
@@ -123,7 +123,7 @@ class CollapsedAlarmViewHolder private constructor(itemView: View) : AlarmItemVi
     }
 
     override fun onAnimateChange(
-        payloads: List<Any>,
+        payloads: List<Any>?,
         fromLeft: Int,
         fromTop: Int,
         fromRight: Int,

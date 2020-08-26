@@ -16,11 +16,11 @@
 
 package com.android.deskclock.alarms
 
-import android.app.Fragment
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Vibrator
+import androidx.fragment.app.Fragment
 
 import com.android.deskclock.AlarmClockFragment
 import com.android.deskclock.LabelDialogFragment
@@ -40,7 +40,6 @@ import java.util.Calendar
 /**
  * Click handler for an alarm time item.
  */
-// TODO(b/157255731) Replace deprecated Fragment related calls with AndroidX equivalent
 class AlarmTimeClickHandler(
     private val mFragment: Fragment,
     savedState: Bundle?,
@@ -48,7 +47,7 @@ class AlarmTimeClickHandler(
     private val mScrollHandler: ScrollHandler
 ) {
 
-    private val mContext: Context = mFragment.getActivity().getApplicationContext()
+    private val mContext: Context = mFragment.requireActivity().getApplicationContext()
     private var mSelectedAlarm: Alarm? = null
     private var mPreviousDaysOfWeekMap: Bundle? = null
 
@@ -129,7 +128,7 @@ class AlarmTimeClickHandler(
         val now = Calendar.getInstance()
         val oldNextAlarmTime = alarm.getNextAlarmTime(now)
 
-        val weekday = DataModel.getDataModel().weekdayOrder.calendarDays[index]
+        val weekday = DataModel.dataModel.weekdayOrder.calendarDays[index]
         alarm.daysOfWeek = alarm.daysOfWeek.setBit(weekday, checked)
 
         // if the change altered the next scheduled alarm time, tell the user
@@ -162,7 +161,7 @@ class AlarmTimeClickHandler(
         mAlarmUpdateHandler.showPredismissToast(alarmInstance)
     }
 
-    fun onRingtoneClicked(context: Context, alarm: Alarm?) {
+    fun onRingtoneClicked(context: Context, alarm: Alarm) {
         mSelectedAlarm = alarm
         Events.sendAlarmEvent(R.string.action_set_ringtone, R.string.label_deskclock)
 

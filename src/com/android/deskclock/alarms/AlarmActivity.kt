@@ -39,6 +39,7 @@ import android.media.AudioManager
 import android.os.Bundle
 import android.os.Handler
 import android.os.IBinder
+import android.os.Looper
 import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
@@ -68,8 +69,7 @@ import kotlin.math.max
 import kotlin.math.sqrt
 
 class AlarmActivity : BaseActivity(), View.OnClickListener, View.OnTouchListener {
-    // TODO(b/157255731) Replace Handler with non-deprecated constructor call
-    private val mHandler: Handler = Handler()
+    private val mHandler: Handler = Handler(Looper.myLooper()!!)
 
     private val mReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent) {
@@ -146,14 +146,20 @@ class AlarmActivity : BaseActivity(), View.OnClickListener, View.OnTouchListener
         LOGGER.i("Displaying alarm for instance: %s", mAlarmInstance)
 
         // Get the volume/camera button behavior setting
-        mVolumeBehavior = DataModel.getDataModel().alarmVolumeButtonBehavior
+        mVolumeBehavior = DataModel.dataModel.alarmVolumeButtonBehavior
 
-        // TODO(b/157255731) Replace deprecated LayoutParams flags on Android versions above O
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
-                or WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
-                or WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
-                or WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON
-                or WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON)
+        if (Utils.isOOrLater) {
+            setShowWhenLocked(true)
+            setTurnScreenOn(true)
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
+                    or WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON)
+        } else {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
+                    or WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
+                    or WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
+                    or WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON
+                    or WindowManager.LayoutParams.FLAG_ALLOW_LOCK_WHILE_SCREEN_ON)
+        }
 
         // Hide navigation bar to minimize accidental tap on Home key
         hideNavigationBar()
@@ -467,7 +473,7 @@ class AlarmActivity : BaseActivity(), View.OnClickListener, View.OnTouchListener
         val colorAccent = ThemeUtils.resolveColor(this, R.attr.colorAccent)
         setAnimatedFractions(1.0f /* snoozeFraction */, 0.0f /* dismissFraction */)
 
-        val snoozeMinutes = DataModel.getDataModel().snoozeLength
+        val snoozeMinutes = DataModel.dataModel.snoozeLength
         val infoText: String = getResources().getQuantityString(
                 R.plurals.alarm_alert_snooze_duration, snoozeMinutes, snoozeMinutes)
         val accessibilityText: String = getResources().getQuantityString(

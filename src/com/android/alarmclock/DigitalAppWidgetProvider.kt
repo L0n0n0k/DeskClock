@@ -125,7 +125,7 @@ class DigitalAppWidgetProvider : AppWidgetProvider() {
             }
         }
 
-        val dm = DataModel.getDataModel()
+        val dm = DataModel.dataModel
         dm.updateWidgetCount(javaClass, widgetIds.size, R.string.category_digital_widget)
 
         if (widgetIds.size > 0) {
@@ -164,7 +164,7 @@ class DigitalAppWidgetProvider : AppWidgetProvider() {
      * Add the day-change callback if it is needed (selected cities exist).
      */
     private fun updateDayChangeCallback(context: Context) {
-        val dm = DataModel.getDataModel()
+        val dm = DataModel.dataModel
         val selectedCities = dm.selectedCities
         val showHomeClock = dm.showHomeClock
         if (selectedCities.isEmpty() && !showHomeClock) {
@@ -334,7 +334,7 @@ class DigitalAppWidgetProvider : AppWidgetProvider() {
             rv.setCharSequence(R.id.date, "setFormat12Hour", dateFormat)
             rv.setCharSequence(R.id.date, "setFormat24Hour", dateFormat)
 
-            val nextAlarmTime = Utils.getNextAlarm(context)
+            val nextAlarmTime: String? = Utils.getNextAlarm(context)
             if (TextUtils.isEmpty(nextAlarmTime)) {
                 rv.setViewVisibility(R.id.nextAlarm, GONE)
                 rv.setViewVisibility(R.id.nextAlarmIcon, GONE)
@@ -398,10 +398,14 @@ class DigitalAppWidgetProvider : AppWidgetProvider() {
         }
 
         /**
-         * Inflate an offscreen copy of the widget views. Binary search through the range of sizes until
-         * the optimal sizes that fit within the widget bounds are located.
+         * Inflate an offscreen copy of the widget views. Binary search through the range of sizes
+         * until the optimal sizes that fit within the widget bounds are located.
          */
-        private fun optimizeSizes(context: Context, template: Sizes, nextAlarmTime: String): Sizes {
+        private fun optimizeSizes(
+            context: Context,
+            template: Sizes,
+            nextAlarmTime: String?
+        ): Sizes {
             // Inflate a test layout to compute sizes at different font sizes.
             val inflater: LayoutInflater = LayoutInflater.from(context)
             @SuppressLint("InflateParams") val sizer: View =
@@ -423,7 +427,7 @@ class DigitalAppWidgetProvider : AppWidgetProvider() {
                 nextAlarm.setText(nextAlarmTime)
                 nextAlarm.setVisibility(VISIBLE)
                 nextAlarmIcon.setVisibility(VISIBLE)
-                nextAlarmIcon.setTypeface(UiDataModel.getUiDataModel().alarmIconTypeface)
+                nextAlarmIcon.setTypeface(UiDataModel.uiDataModel.alarmIconTypeface)
             }
 
             // Measure the widget at the largest possible size.
