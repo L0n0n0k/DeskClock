@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fec6323d_b7694722",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-09-03T22:38:04Z",
+      "side": 1,
+      "message": "This CL is having merge conflicts in git_master. I will submit this change to git_master and then will CP to aosp-master.",
+      "revId": "4c61b2871bbb2ed977939613d24f9f654ebfb013",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
