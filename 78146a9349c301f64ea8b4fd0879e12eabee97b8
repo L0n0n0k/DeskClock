@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "177ad41c_cb002ad5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-09-03T19:58:23Z",
+      "side": 1,
+      "message": "Hi Bob and Xin,\n  I have verified that CTS tests still pass. I will merge the history of java files into kotlin files next and will delete java files.\n\n  The following is the summary of CTS tssts and they pass.\n\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Summary \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nTotal Run time: 3m 30s\n3/3 modules completed\nTotal Tests       : 2\nPASSED            : 2\nFAILED            : 0\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d End of Results \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n",
+      "revId": "78146a9349c301f64ea8b4fd0879e12eabee97b8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
