@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a621fb15_4e4d9fc6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-09-08T18:34:36Z",
+      "side": 1,
+      "message": "Hi Xin,\n  Cherry picking the change from git_master into aosp-master. ",
+      "revId": "f9596c3ed16bc2ad34b445d29b7c3c8cc02d3644",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
