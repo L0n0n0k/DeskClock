@@ -16,6 +16,23 @@
       "revId": "f9596c3ed16bc2ad34b445d29b7c3c8cc02d3644",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e6859179_a0aed352",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-09-10T15:36:20Z",
+      "side": 1,
+      "message": "Hi Xin,\n  Will ag/12539433 be merged into aosp-master? If so, we can ignore this CL.\n\nThanks\nRaman",
+      "revId": "f9596c3ed16bc2ad34b445d29b7c3c8cc02d3644",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
