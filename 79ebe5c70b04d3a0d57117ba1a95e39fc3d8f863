@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fbc39700_5c7b9fea",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2020-09-11T00:02:29Z",
+      "side": 1,
+      "message": "Hi Luca,\n  I am deleting all java files. We have updated aosp/master with all R changes. Can you rebase this cl and other CLs and we can Presubmit-Verify all your changes? Thanks",
+      "revId": "79ebe5c70b04d3a0d57117ba1a95e39fc3d8f863",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
