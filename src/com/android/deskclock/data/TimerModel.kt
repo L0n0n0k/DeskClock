@@ -205,7 +205,7 @@ internal class TimerModel(
      * @param service used to start foreground notifications related to expired timers
      * @param timer the timer to be expired
      */
-    fun expireTimer(service: Service, timer: Timer) {
+    fun expireTimer(service: Service?, timer: Timer) {
         if (mService == null) {
             // If this is the first expired timer, retain the service that will be used to start
             // the heads-up notification in the foreground.
@@ -798,7 +798,7 @@ internal class TimerModel(
         private val MISSED_THRESHOLD: Long = -MINUTE_IN_MILLIS
 
         fun schedulePendingIntent(am: AlarmManager, triggerTime: Long, pi: PendingIntent?) {
-            if (Utils.isMOrLater()) {
+            if (Utils.isMOrLater) {
                 // Ensure the timer fires even if the device is dozing.
                 am.setExactAndAllowWhileIdle(ELAPSED_REALTIME_WAKEUP, triggerTime, pi)
             } else {
