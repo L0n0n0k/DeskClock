@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "534d6727_129b7782",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1101726
+      },
+      "writtenOn": "2021-03-02T21:07:40Z",
+      "side": 1,
+      "message": "Updated the commit message to omit functionality not present in AOSP.",
+      "revId": "49a4e3db44641a507600cc0cd63a16e39d10fb6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
