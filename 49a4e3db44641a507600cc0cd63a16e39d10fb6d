@@ -16,6 +16,23 @@
       "message": "Updated the commit message to omit functionality not present in AOSP.",
       "revId": "49a4e3db44641a507600cc0cd63a16e39d10fb6d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fae3b115_7f93b900",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003801
+      },
+      "writtenOn": "2021-03-02T21:16:01Z",
+      "side": 1,
+      "message": "@Suprabh did you actually merge the permission to AOSP?",
+      "revId": "49a4e3db44641a507600cc0cd63a16e39d10fb6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
