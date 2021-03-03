@@ -33,6 +33,24 @@
       "message": "@Suprabh did you actually merge the permission to AOSP?",
       "revId": "49a4e3db44641a507600cc0cd63a16e39d10fb6d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "56aa0632_aaa20171",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1101726
+      },
+      "writtenOn": "2021-03-03T23:57:23Z",
+      "side": 1,
+      "message": "Nope. Because it requires permission model and cts chaanges.\nThe app should still build and work fine.",
+      "parentUuid": "fae3b115_7f93b900",
+      "revId": "49a4e3db44641a507600cc0cd63a16e39d10fb6d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
