@@ -757,6 +757,10 @@ internal class TimerModel(
             return
         }
 
+        if (!mNotificationBuilder.isCreateChannel) {
+            mNotificationBuilder.buildChannel(mContext, mNotificationManager)
+        }
+
         // Otherwise build and post a foreground notification reflecting the latest expired timers.
         val notification: Notification = mNotificationBuilder.buildHeadsUp(mContext, expired)
         val notificationId = mNotificationModel.expiredTimerNotificationId
