@@ -119,7 +119,7 @@ class AlarmStateManager : BroadcastReceiver() {
             // Treat alarm state change as high priority, use foreground broadcasts
             stateChangeIntent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND)
             val pendingIntent: PendingIntent =
-                    PendingIntent.getService(context, instance.hashCode(),
+                    PendingIntent.getForegroundService(context, instance.hashCode(),
                     stateChangeIntent, PendingIntent.FLAG_UPDATE_CURRENT)
 
             val am: AlarmManager = context.getSystemService(ALARM_SERVICE) as AlarmManager
