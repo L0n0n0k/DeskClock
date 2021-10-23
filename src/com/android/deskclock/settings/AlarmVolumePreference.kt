@@ -51,16 +51,21 @@ class AlarmVolumePreference(context: Context?, attrs: AttributeSet?) : Preferenc
 
         // Disable click feedback for this preference.
         holder.itemView.setClickable(false)
+        // Minimum volume for alarm is not 0, calculate it.
+        val maxVolume = audioManager.getStreamMaxVolume(STREAM_ALARM) -
+                audioManager.getStreamMinVolume(STREAM_ALARM)
         mSeekbar = holder.findViewById(R.id.alarm_volume_slider) as SeekBar
-        mSeekbar.setMax(audioManager.getStreamMaxVolume(STREAM_ALARM))
-        mSeekbar.setProgress(audioManager.getStreamVolume(STREAM_ALARM))
+        mSeekbar.setMax(maxVolume)
+        mSeekbar.setProgress(audioManager.getStreamVolume(STREAM_ALARM) -
+                audioManager.getStreamMinVolume(STREAM_ALARM))
         mAlarmIcon = holder.findViewById(R.id.alarm_icon) as ImageView
         onSeekbarChanged()
 
         val volumeObserver: ContentObserver = object : ContentObserver(mSeekbar.getHandler()) {
             override fun onChange(selfChange: Boolean) {
                 // Volume was changed elsewhere, update our slider.
-                mSeekbar.setProgress(audioManager.getStreamVolume(STREAM_ALARM))
+                mSeekbar.setProgress(audioManager.getStreamVolume(STREAM_ALARM) -
+                        audioManager.getStreamMinVolume(STREAM_ALARM))
             }
         }
 
@@ -78,7 +83,8 @@ class AlarmVolumePreference(context: Context?, attrs: AttributeSet?) : Preferenc
         mSeekbar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 if (fromUser) {
-                    audioManager.setStreamVolume(STREAM_ALARM, progress, 0)
+                    val newVolume = progress + audioManager.getStreamMinVolume(STREAM_ALARM)
+                    audioManager.setStreamVolume(newVolume, progress, 0)
                 }
                 onSeekbarChanged()
             }
