@@ -51,16 +51,22 @@ class AlarmVolumePreference(context: Context?, attrs: AttributeSet?) : Preferenc
 
         // Disable click feedback for this preference.
         holder.itemView.setClickable(false)
+        // Minimum volume for alarm is not 0, calculate it.
+        val maxVolume = audioManager.getStreamMaxVolume(STREAM_ALARM) -
+                audioManager.getStreamMinVolume(STREAM_ALARM)
         mSeekbar = holder.findViewById(R.id.alarm_volume_slider) as SeekBar
-        mSeekbar.setMax(audioManager.getStreamMaxVolume(STREAM_ALARM))
-        mSeekbar.setProgress(audioManager.getStreamVolume(STREAM_ALARM))
+        mSeekbar.setMax(maxVolume)
+        mSeekbar.setProgress(audioManager.getStreamVolume(STREAM_ALARM) -
+                audioManager.getStreamMinVolume(STREAM_ALARM))
         mAlarmIcon = holder.findViewById(R.id.alarm_icon) as ImageView
         onSeekbarChanged()
+        mAlarmIcon.setImageResource(R.drawable.ic_alarm_small)
 
         val volumeObserver: ContentObserver = object : ContentObserver(mSeekbar.getHandler()) {
             override fun onChange(selfChange: Boolean) {
                 // Volume was changed elsewhere, update our slider.
-                mSeekbar.setProgress(audioManager.getStreamVolume(STREAM_ALARM))
+                mSeekbar.setProgress(audioManager.getStreamVolume(STREAM_ALARM) -
+                        audioManager.getStreamMinVolume(STREAM_ALARM))
             }
         }
 
@@ -78,7 +84,8 @@ class AlarmVolumePreference(context: Context?, attrs: AttributeSet?) : Preferenc
         mSeekbar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 if (fromUser) {
-                    audioManager.setStreamVolume(STREAM_ALARM, progress, 0)
+                    val newVolume = progress + audioManager.getStreamMinVolume(STREAM_ALARM)
+                    audioManager.setStreamVolume(STREAM_ALARM, newVolume, 0)
                 }
                 onSeekbarChanged()
             }
@@ -103,12 +110,6 @@ class AlarmVolumePreference(context: Context?, attrs: AttributeSet?) : Preferenc
 
     private fun onSeekbarChanged() {
         mSeekbar.setEnabled(doesDoNotDisturbAllowAlarmPlayback())
-        val imageRes = if (mSeekbar.getProgress() == 0) {
-            R.drawable.ic_alarm_off_24dp
-        } else {
-            R.drawable.ic_alarm_small
-        }
-        mAlarmIcon.setImageResource(imageRes)
     }
 
     private fun doesDoNotDisturbAllowAlarmPlayback(): Boolean {
