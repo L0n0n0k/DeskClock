@@ -33,6 +33,23 @@
       "message": "Thanks Luca. Adding jplemieux@.  jplemieux@, would appreciate if you could review this change.",
       "revId": "1e4532f2aa7e7e4ea4e1cebad192270c5881d616",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e0f85fcb_fac58169",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121603
+      },
+      "writtenOn": "2021-10-26T01:13:14Z",
+      "side": 1,
+      "message": "How about creating helper functions instead.\n1. val isPOrLater: Boolean\n2. fun getMinVolume(): Int {\n    return Util.isPOrLater ? audioManager.getStreamMinVolume(STREAM_ALARM) : 0\n  }",
+      "revId": "1e4532f2aa7e7e4ea4e1cebad192270c5881d616",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
