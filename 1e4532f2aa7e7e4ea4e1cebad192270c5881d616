@@ -50,6 +50,24 @@
       "message": "How about creating helper functions instead.\n1. val isPOrLater: Boolean\n2. fun getMinVolume(): Int {\n    return Util.isPOrLater ? audioManager.getStreamMinVolume(STREAM_ALARM) : 0\n  }",
       "revId": "1e4532f2aa7e7e4ea4e1cebad192270c5881d616",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "332621f3_3ce89d33",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1815899
+      },
+      "writtenOn": "2021-10-27T19:42:53Z",
+      "side": 1,
+      "message": "Thanks, I will do that.\n\nQuestion for me is that framework allows the volume to mute even when I think it\u0027s not supposed to (https://android.googlesource.com/platform/frameworks/base/+/e05eef8449e5314c1bd0278b1484130c170a379a). So I\u0027m not sure what is the proper behaviour for this.",
+      "parentUuid": "e0f85fcb_fac58169",
+      "revId": "1e4532f2aa7e7e4ea4e1cebad192270c5881d616",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
