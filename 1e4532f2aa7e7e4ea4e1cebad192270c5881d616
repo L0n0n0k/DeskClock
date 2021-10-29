@@ -68,6 +68,23 @@
       "parentUuid": "e0f85fcb_fac58169",
       "revId": "1e4532f2aa7e7e4ea4e1cebad192270c5881d616",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0f6b009_7e8da95f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1121603
+      },
+      "writtenOn": "2021-10-29T01:23:17Z",
+      "side": 1,
+      "message": "@jplemieux,\nCurrent minSdkVersion is 23. But AudioManager#getStreamMinVolume is added in API level 28. Is it ok?",
+      "revId": "1e4532f2aa7e7e4ea4e1cebad192270c5881d616",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
