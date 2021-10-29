@@ -85,6 +85,24 @@
       "message": "@jplemieux,\nCurrent minSdkVersion is 23. But AudioManager#getStreamMinVolume is added in API level 28. Is it ok?",
       "revId": "1e4532f2aa7e7e4ea4e1cebad192270c5881d616",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a1f17114_85381168",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1060499
+      },
+      "writtenOn": "2021-10-29T01:38:24Z",
+      "side": 1,
+      "message": "It should be guarded with Utils.isPOrLater as you stated. That method must be introduced here:\nhttps://android.googlesource.com/platform/packages/apps/DeskClock/+/master/src/com/android/deskclock/Utils.kt#154",
+      "parentUuid": "a0f6b009_7e8da95f",
+      "revId": "1e4532f2aa7e7e4ea4e1cebad192270c5881d616",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
