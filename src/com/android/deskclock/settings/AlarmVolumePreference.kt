@@ -40,7 +40,6 @@ import com.android.deskclock.data.DataModel
 
 class AlarmVolumePreference(context: Context?, attrs: AttributeSet?) : Preference(context, attrs) {
     private lateinit var mSeekbar: SeekBar
-    private lateinit var mAlarmIcon: ImageView
 
     private var mPreviewPlaying = false
 
@@ -53,8 +52,11 @@ class AlarmVolumePreference(context: Context?, attrs: AttributeSet?) : Preferenc
         holder.itemView.setClickable(false)
         mSeekbar = holder.findViewById(R.id.alarm_volume_slider) as SeekBar
         mSeekbar.setMax(audioManager.getStreamMaxVolume(STREAM_ALARM))
+        mSeekbar.setMin(
+                if (Utils.isPOrLater) audioManager.getStreamMinVolume(STREAM_ALARM) else 0);
         mSeekbar.setProgress(audioManager.getStreamVolume(STREAM_ALARM))
-        mAlarmIcon = holder.findViewById(R.id.alarm_icon) as ImageView
+        (holder.findViewById(R.id.alarm_icon) as ImageView)
+                .setImageResource(R.drawable.ic_alarm_small)
         onSeekbarChanged()
 
         val volumeObserver: ContentObserver = object : ContentObserver(mSeekbar.getHandler()) {
@@ -103,12 +105,6 @@ class AlarmVolumePreference(context: Context?, attrs: AttributeSet?) : Preferenc
 
     private fun onSeekbarChanged() {
         mSeekbar.setEnabled(doesDoNotDisturbAllowAlarmPlayback())
-        val imageRes = if (mSeekbar.getProgress() == 0) {
-            R.drawable.ic_alarm_off_24dp
-        } else {
-            R.drawable.ic_alarm_small
-        }
-        mAlarmIcon.setImageResource(imageRes)
     }
 
     private fun doesDoNotDisturbAllowAlarmPlayback(): Boolean {
