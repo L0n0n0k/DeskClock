@@ -103,6 +103,24 @@
       "parentUuid": "a0f6b009_7e8da95f",
       "revId": "1e4532f2aa7e7e4ea4e1cebad192270c5881d616",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8796c20b_b158dec5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2021-11-17T18:18:15Z",
+      "side": 1,
+      "message": "Hi taesu82.lee@,\n  Is your comment resolved? Thanks",
+      "parentUuid": "a1f17114_85381168",
+      "revId": "1e4532f2aa7e7e4ea4e1cebad192270c5881d616",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
