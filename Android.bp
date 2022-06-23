@@ -36,4 +36,8 @@ android_app {
     ],
 
     aaptflags: ["--legacy"],
+    kotlincflags: [
+        // TODO(b/237017037): remove this once the UNEXPECTED_SAFE_CALL warnings are fixed.
+        "-language-version 1.6",
+    ],
 }
