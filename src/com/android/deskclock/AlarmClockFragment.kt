@@ -28,6 +28,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.loader.app.LoaderManager
 import androidx.loader.app.LoaderManager.LoaderCallbacks
 import androidx.loader.content.Loader
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -80,7 +81,7 @@ class AlarmClockFragment : DeskClockFragment(UiDataModel.Tab.ALARMS),
 
     override fun onCreate(savedState: Bundle?) {
         super.onCreate(savedState)
-        mCursorLoader = loaderManager.initLoader(0, Bundle.EMPTY, this)
+        mCursorLoader = LoaderManager.getInstance(this).initLoader(0, Bundle.EMPTY, this)
         savedState?.let {
             mExpandedAlarmId = it.getLong(KEY_EXPANDED_ID, Alarm.INVALID_ID)
         }
@@ -97,6 +98,7 @@ class AlarmClockFragment : DeskClockFragment(UiDataModel.Tab.ALARMS),
 
         mRecyclerView = v.findViewById<View>(R.id.alarms_recycler_view) as RecyclerView
         mLayoutManager = object : LinearLayoutManager(context) {
+            @SuppressWarnings("DeprecatedIsStillUsed")
             override fun getExtraLayoutSpace(state: RecyclerView.State): Int {
                 val extraSpace: Int = super.getExtraLayoutSpace(state)
                 return if (state.willRunPredictiveAnimations()) {

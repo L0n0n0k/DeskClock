@@ -35,5 +35,7 @@ android_app {
         "androidx.recyclerview_recyclerview",
     ],
 
+    kotlincflags: ["-Werror"],
+
     aaptflags: ["--legacy"],
 }
