@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "99ffcc42_fcb6d3f2",
+        "filename": "src/com/android/deskclock/widget/CircleView.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 1338311
+      },
+      "writtenOn": "2022-07-18T23:28:13Z",
+      "side": 1,
+      "message": "nit: Please delete this method. If we want to get it back, we can retrieve it from\ngit history.",
+      "revId": "710a841b37663ba7bbe682032a0b74aa2fad301c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
