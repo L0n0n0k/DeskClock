@@ -106,6 +106,8 @@ internal class TimerModel(
      */
     private var mService: Service? = null
 
+    private var channelSetupComplete: Boolean = false
+
     init {
         // Clear caches affected by preferences when preferences change.
         mPrefs.registerOnSharedPreferenceChangeListener(mPreferenceListener)
@@ -683,12 +685,6 @@ internal class TimerModel(
      * when the application is not open.
      */
     fun updateNotification() {
-        // Notifications should be hidden if the app is open.
-        if (mNotificationModel.isApplicationInForeground) {
-            mNotificationManager.cancel(mNotificationModel.unexpiredTimerNotificationId)
-            return
-        }
-
         // Filter the timers to just include unexpired ones.
         val unexpired: MutableList<Timer> = mutableListOf()
         for (timer in mutableTimers) {
@@ -699,18 +695,33 @@ internal class TimerModel(
 
         // If no unexpired timers exist, cancel the notification.
         if (unexpired.isEmpty()) {
-            mNotificationManager.cancel(mNotificationModel.unexpiredTimerNotificationId)
+            if(mNotificationBuilder.isChannelCreated(mNotificationManager)) {
+                LogUtils.i("Cancelling Notifications when list is empty")
+                mNotificationManager.cancel(mNotificationModel.unexpiredTimerNotificationId)
+            }
             return
         }
 
         // Sort the unexpired timers to locate the next one scheduled to expire.
         unexpired.sortWith(Timer.EXPIRY_COMPARATOR)
 
+        //Build and setup a channel for notifications
+        LogUtils.i("Channel being setup!!!!")
         // Otherwise build and post a notification reflecting the latest unexpired timers.
         val notification: Notification =
                 mNotificationBuilder.build(mContext, mNotificationModel, unexpired)
         val notificationId = mNotificationModel.unexpiredTimerNotificationId
         mNotificationBuilder.buildChannel(mContext, mNotificationManager)
+
+        // Notifications should be hidden if the app is open.
+        if (mNotificationModel.isApplicationInForeground) {
+            if(mNotificationBuilder.isChannelCreated(mNotificationManager)) {
+                LogUtils.i("Cancelling notifications when the app is in foreground")
+                mNotificationManager.cancel(mNotificationModel.unexpiredTimerNotificationId)
+            }
+            return
+        }
+
         mNotificationManager.notify(notificationId, notification)
     }
 
