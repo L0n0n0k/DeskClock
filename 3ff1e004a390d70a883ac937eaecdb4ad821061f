@@ -16,6 +16,24 @@
       "message": "nit: I am guessing this variable will be used in future (it is not used in this file).",
       "revId": "3ff1e004a390d70a883ac937eaecdb4ad821061f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1631ac11_95febc61",
+        "filename": "src/com/android/deskclock/data/TimerModel.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1043473
+      },
+      "writtenOn": "2022-08-09T20:32:39Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "e82dda09_41199246",
+      "revId": "3ff1e004a390d70a883ac937eaecdb4ad821061f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
