@@ -349,7 +349,7 @@ class AlarmInstance : InstancesColumns {
         fun getInstance(cr: ContentResolver, instanceId: Long): AlarmInstance? {
             val cursor: Cursor? =
                     cr.query(getContentUri(instanceId), QUERY_COLUMNS, null, null, null)
-            cursor?.let {
+            cursor?.use {
                 if (cursor.moveToFirst()) {
                     return AlarmInstance(cursor, false /* joinedTable */)
                 }
@@ -455,7 +455,7 @@ class AlarmInstance : InstancesColumns {
             val cursor: Cursor? =
                     cr.query(InstancesColumns.CONTENT_URI, QUERY_COLUMNS,
                             selection, selectionArgs, null)
-            cursor?.let {
+            cursor?.use {
                 if (cursor.moveToFirst()) {
                     do {
                         result.add(AlarmInstance(cursor, false /* joinedTable */))

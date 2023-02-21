@@ -135,7 +135,7 @@ internal class RingtoneModel(private val mContext: Context, private val mPrefs: 
         // Cache a title for each system ringtone.
         try {
             val cursor: Cursor? = ringtoneManager.getCursor()
-            cursor?.let {
+            cursor?.use {
                 cursor.moveToFirst()
                 while (!cursor.isAfterLast()) {
                     val ringtoneTitle: String = cursor.getString(TITLE_COLUMN_INDEX)

@@ -91,34 +91,36 @@ class ClockDatabaseHelper(context: Context)
             )
             val cursor: Cursor? =
                     db.query(OLD_ALARMS_TABLE_NAME, OLD_TABLE_COLUMNS, null, null, null, null, null)
-            val currentTime: Calendar = Calendar.getInstance()
-            while (cursor != null && cursor.moveToNext()) {
-                val alarm = Alarm()
-                alarm.id = cursor.getLong(0)
-                alarm.hour = cursor.getInt(1)
-                alarm.minutes = cursor.getInt(2)
-                alarm.daysOfWeek = Weekdays.fromBits(cursor.getInt(3))
-                alarm.enabled = cursor.getInt(4) == 1
-                alarm.vibrate = cursor.getInt(5) == 1
-                alarm.label = cursor.getString(6)
+            cursor.use {
+                val currentTime: Calendar = Calendar.getInstance()
+                while (cursor != null && cursor.moveToNext()) {
+                    val alarm = Alarm()
+                    alarm.id = cursor.getLong(0)
+                    alarm.hour = cursor.getInt(1)
+                    alarm.minutes = cursor.getInt(2)
+                    alarm.daysOfWeek = Weekdays.fromBits(cursor.getInt(3))
+                    alarm.enabled = cursor.getInt(4) == 1
+                    alarm.vibrate = cursor.getInt(5) == 1
+                    alarm.label = cursor.getString(6)
 
-                val alertString: String = cursor.getString(7)
-                if ("silent" == alertString) {
-                    alarm.alert = AlarmSettingColumns.NO_RINGTONE_URI
-                } else {
-                    alarm.alert = if (TextUtils.isEmpty(alertString)) {
-                        null
+                    val alertString: String = cursor.getString(7)
+                    if ("silent" == alertString) {
+                        alarm.alert = AlarmSettingColumns.NO_RINGTONE_URI
                     } else {
-                        Uri.parse(alertString)
+                        alarm.alert = if (TextUtils.isEmpty(alertString)) {
+                            null
+                        } else {
+                            Uri.parse(alertString)
+                        }
                     }
-                }
 
-                // Save new version of alarm and create alarm instance for it
-                db.insert(ALARMS_TABLE_NAME, null, Alarm.createContentValues(alarm))
-                if (alarm.enabled) {
-                    val newInstance: AlarmInstance = alarm.createInstanceAfter(currentTime)
-                    db.insert(INSTANCES_TABLE_NAME, null,
-                            AlarmInstance.createContentValues(newInstance))
+                    // Save new version of alarm and create alarm instance for it
+                    db.insert(ALARMS_TABLE_NAME, null, Alarm.createContentValues(alarm))
+                    if (alarm.enabled) {
+                        val newInstance: AlarmInstance = alarm.createInstanceAfter(currentTime)
+                        db.insert(INSTANCES_TABLE_NAME, null,
+                                AlarmInstance.createContentValues(newInstance))
+                    }
                 }
             }
 
@@ -145,9 +147,11 @@ class ClockDatabaseHelper(context: Context)
                     val cursor: Cursor =
                             db.query(ALARMS_TABLE_NAME, columns,
                                     selection, selectionArgs, null, null, null)
-                    if (cursor.moveToFirst()) {
-                        // Record exists. Remove the id so sqlite can generate a new one.
-                        values.putNull(BaseColumns._ID)
+                    cursor.use {
+                        if (cursor.moveToFirst()) {
+                            // Record exists. Remove the id so sqlite can generate a new one.
+                            values.putNull(BaseColumns._ID)
+                        }
                     }
                 }
             }

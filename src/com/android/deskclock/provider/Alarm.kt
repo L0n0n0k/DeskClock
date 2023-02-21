@@ -396,7 +396,7 @@ class Alarm : Parcelable, AlarmsColumns {
         @JvmStatic
         fun getAlarm(cr: ContentResolver, alarmId: Long): Alarm? {
             val cursor: Cursor? = cr.query(getContentUri(alarmId), QUERY_COLUMNS, null, null, null)
-            cursor?.let {
+            cursor?.use {
                 if (cursor.moveToFirst()) {
                     return Alarm(cursor)
                 }
@@ -427,7 +427,7 @@ class Alarm : Parcelable, AlarmsColumns {
             val cursor: Cursor? =
                     cr.query(AlarmsColumns.CONTENT_URI, QUERY_COLUMNS,
                             selection, selectionArgs, null)
-            cursor?.let {
+            cursor?.use {
                 if (cursor.moveToFirst()) {
                     do {
                         result.add(Alarm(cursor))
